@@ -8,7 +8,7 @@
 
 #include <assert.h>
 
-#include <omp.h>
+//#include <omp.h>
 
 
 int main (int argc, char* argv[]){
@@ -28,7 +28,7 @@ int main (int argc, char* argv[]){
 // int nthreads, tid;
 
 // /* Fork a team of threads giving them their own copies of variables */
-// #pragma omp parallel for num_threads(4)
+// //#pragma omp parallel for num_threads(4)
 //     for(int i = 1; i < 13; i++)
 //     {
 //     //    c[i] = a[i] + b[i];

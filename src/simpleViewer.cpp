@@ -1,5 +1,5 @@
 #include "include/simpleViewer.h"
-#include <omp.h>
+//#include <omp.h>
 
 Camera* SimpleView::camera;
 
@@ -230,7 +230,8 @@ void SimpleView::err_callback( int error, const char* description ) {
 }
 
 void SimpleView::start(){
-  while( !glfwWindowShouldClose( window ) ) update();
+  // while( !glfwWindowShouldClose( window ) ) update();
+  update();
 }
 
 void SimpleView::setPerspective(){
@@ -385,6 +386,11 @@ void SimpleView::timeStep(){
     grid->hashParticles();
     pSet->rasterizeParticlesOntoNodes();
 
+    // double totmass = 0., totmass2 = 0.;
+    // for(auto& node : grid->nodes){
+    //   totmass += node->mass;
+    // }
+    // std::cout << "total mass : " << totmass << std::endl;
 
     mesh->updatePosition(pSet->consts.dt);
     grid->calculateSignedDistance(); 
@@ -392,6 +398,12 @@ void SimpleView::timeStep(){
     if (currentTimeStep == 0 ){
         //Initialize
         pSet->estimateParticleVolume();       
+        // double totmass2 = 0.;
+        // for(auto& p : pSet->particleSet){
+        //   totmass2 += p.volume * p.density;
+        // }
+        // std::cout << "total mass : " << totmass2 << std::endl;
+
     }
 
     //Grid Velocity update.

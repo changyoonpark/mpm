@@ -226,7 +226,7 @@ extern int LoadEXRFromMemory(float *out_rgba, const unsigned char *memory,
 #include "tinyexr.h"
 
 #ifdef _OPENMP
-#include <omp.h>
+//#include <omp.h>
 #endif
 
 namespace {

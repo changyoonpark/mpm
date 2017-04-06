@@ -6,7 +6,7 @@
 
 #include <math.h>
 #include <assert.h>
-#include <omp.h>
+// #include <omp.h>
 
 #define DBL_MAX 1.7976931348623158e+308
 
@@ -83,8 +83,8 @@ void GridNode::calcNodalForce(){
 		for (auto& particle : cell->pList){
 			if (particle == NULL) break;			
 			force += -(particle->volume) * (particle->J) *
-						 consts.snowModel->cauchyStress(particle->J,particle->J_P,particle->J_E,particle->F, particle->F_E,particle->R_E, particle->D)
-						 * gW(particle->pos);
+					   consts.snowModel->cauchyStress(particle->J,particle->J_P,particle->J_E,particle->F, particle->F_E,particle->R_E, particle->D)
+					   * gW(particle->pos);
 
 		}
 	}
@@ -92,11 +92,7 @@ void GridNode::calcNodalForce(){
 }
 
 void GridNode::updateVelocityWithNodalForce(){
-	if(mass > 0.){
-		velNext = vel + consts.dt * force / mass;
-	} else{
-		velNext = vel;
-	}
+	velNext = vel + consts.dt * force / mass;
 }
 
 void GridNode::calcGeometryInteractions(){
@@ -174,18 +170,19 @@ void GridNode::sampleVelocity(){
 void Grid::construct(){
 
 	//Allocate Nodes and associated Cells
-	for(int i = 0; i < gridDim.nx; i++)
-	for(int j = 0; j < gridDim.ny; j++)
-	for(int k = 0; k < gridDim.nz; k++)
+	for(int i = 0; i < gridDim.nx; i++){
+	for(int j = 0; j < gridDim.ny; j++){
+	for(int k = 0; k < gridDim.nz; k++){
 		nodes[idx(i,j,k)] = new GridNode(i,j,k,this,constants);
+	}}}
 
 	//Assign Neighbor Cells.
-	for(int i = 0; i < gridDim.nx; i++)
-	for(int j = 0; j < gridDim.ny; j++)
-	for(int k = 0; k < gridDim.nz; k++)
+	for(int i = 0; i < gridDim.nx; i++){
+	for(int j = 0; j < gridDim.ny; j++){
+	for(int k = 0; k < gridDim.nz; k++){
 
-		for(int ii = -1; ii <= 2; ii++)
-		for(int jj = -1; jj <= 2; jj++)
+		for(int ii = -1; ii <= 2; ii++){
+		for(int jj = -1; jj <= 2; jj++){
 		for(int kk = -1; kk <= 2; kk++){
 
 			GridCell* neigh;
@@ -196,7 +193,8 @@ void Grid::construct(){
 
 			nodes[idx(i,j,k)]->nearCells.push_back(neigh);
 
-		}
+		}}}
+	}}}
 
 }
 
@@ -231,7 +229,7 @@ inline unsigned int Grid::idx(int i, int j, int k){
 void Grid::hashParticles(){
 	activeNodes.clear();
 	//Clear the pList for each Cell
-	#pragma omp parallel for num_threads(THREADCOUNT)
+	//#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < nodes.size(); i++){
 		nodes[i]->isActive = false;
 		nodes[i]->mass = 0.;
@@ -239,7 +237,7 @@ void Grid::hashParticles(){
 		nodes[i]->cell->clearPList();
 	}
 
-	#pragma omp parallel for num_threads(THREADCOUNT)
+	//#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < pSet->particleSet.size(); i++){
 		Particle& particle = pSet->particleSet[i];
 		particle.hash = hash(particle);
@@ -252,7 +250,7 @@ void Grid::hashParticles(){
 //This Function is called every timestep.
 void Grid::rasterizeNodes(){
 	
-	#pragma omp parallel for num_threads(THREADCOUNT)
+	//#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < nodes.size(); i++){
         nodes[i]->sampleMass();
 		nodes[i]->sampleVelocity();
@@ -262,7 +260,7 @@ void Grid::rasterizeNodes(){
 
 void Grid::calculateNodalForcesAndUpdateVelocities(){
 	std::cout << "updating nodal forces" << std::endl;
-	#pragma omp parallel for num_threads(THREADCOUNT)
+	//#pragma omp parallel for num_threads(THREADCOUNT)
 
 	for(int i=0;i<activeNodes.size();i++){
 		auto dataIt = activeNodes.begin();
@@ -275,13 +273,14 @@ void Grid::calculateNodalForcesAndUpdateVelocities(){
 		node->calcNodalForce();
 		node->updateVelocityWithNodalForce();
 	}	
+
 	std::cout << "done" << std::endl;
 
 }
 
 
 void Grid::calculateGeometryInteractions(){
-	#pragma omp parallel for num_threads(THREADCOUNT)
+	//#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i=0;i<activeNodes.size();i++){
 		auto dataIt = activeNodes.begin();
 		std::advance(dataIt,i);
@@ -297,7 +296,7 @@ void Grid::calculateGeometryInteractions(){
 
 void Grid::calculateSignedDistance(){
 	std::cout << "Initializing signed distance" << std::endl;
-	#pragma omp parallel for num_threads(THREADCOUNT)
+	//#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i=0;i<nodes.size();i++){
 		GridNode* node = nodes[i];
 		node->calcSignedDist();
@@ -313,7 +312,7 @@ Grid::Grid(Constants& _constants, ParticleSet* _pSet)
    constants( _constants )
 {
 	pSet = _pSet;
-	nodes.resize(gridDim.nx * gridDim.nx * gridDim.nz);	
+	nodes.resize(gridDim.nx * gridDim.ny * gridDim.nz);	
 	std::cout << "Grid Dimensions : " << (gridDim.nx) << " x " << (gridDim.ny) << " x " << (gridDim.nz) << std::endl;
 	std::cout << "Total Nodes : " << nodes.size() << std::endl;
 	construct();

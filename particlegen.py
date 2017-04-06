@@ -40,6 +40,6 @@ for p in pos:
                                     0,0,0.,
                                     pmass))
 
-print("{} particles generated".format(len(pos)))
+print("{} particles generated. total mass : {} kg".format(len(pos),totmass))
 
 text_file.close()
