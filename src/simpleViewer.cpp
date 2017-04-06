@@ -380,24 +380,31 @@ void SimpleView::draw_faces(){
 
 void SimpleView::timeStep(){
 
+
+    //Map particle properties onto the grid.
     grid->hashParticles();
-    grid->rasterizeNodes();
+    pSet->rasterizeParticlesOntoNodes();
+
+
+    mesh->updatePosition(pSet->consts.dt);
+    grid->calculateSignedDistance(); 
 
     if (currentTimeStep == 0 ){
-        pSet->estimateParticleVolume();   
-        grid->calculateSignedDistance();     
+        //Initialize
+        pSet->estimateParticleVolume();       
     }
 
+    //Grid Velocity update.
     grid->calculateNodalForcesAndUpdateVelocities();
     grid->calculateGeometryInteractions();
     
 
     pSet->calculateParticleVelocityGradient();
     pSet->updateParticleDeformationGradient();
-
-    pSet->updateParticleSignedDistance();
-    pSet->calculateGeometryInteractions();
     pSet->updateParticlePosition();
+
+    // pSet->updateParticleSignedDistance();
+    // pSet->calculateGeometryInteractions();
 
     std::cout << "End of Timestep : " << currentTimeStep << std::endl;
     currentTimeStep ++;

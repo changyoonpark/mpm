@@ -8,9 +8,10 @@ void Particle::collectVelocity(velType veltype){
     for(int jj = -2; jj <= 1; jj++){
     for(int kk = -2; kk <= 1; kk++){
         
-        int3 nidx = int3(ii,jj,kk);
+        int3 nidx = int3(ii,jj,kk);        
         GridNode* gn = cell->node->neighborNode(nidx);
-        if (gn == NULL){ continue; }
+        if (gn == NULL) continue; 
+        if (!gn->isActive) continue;
 
         if(veltype == NOW){ velNowCollected += gn->vel * gn->W(pos); }
         else if(veltype == NEXT){ velNextCollected += gn->velNext * gn->W(pos); }
@@ -37,6 +38,7 @@ void Particle::calculateSignedDistance(){
         int3 nidx = int3(ii,jj,kk);
         GridNode* gn = cell->node->neighborNode(nidx);
         if (gn == NULL) continue;
+        if (!gn->isActive) continue;
         signedDist += gn->signedDist * gn->W(pos);
         gradSignedDist += gn->contactingTriangle->getNormal() * gn->W(pos);
     }    
@@ -59,6 +61,7 @@ void Particle::calculateDensityAndVolume(){
         int3 nidx = int3(ii,jj,kk);
         GridNode* gn = cell->node->neighborNode(nidx);
         if (gn == NULL) continue;
+        if (!gn->isActive) continue;
         density += gn->mass * gn->W(pos);
 
     }}}
@@ -67,6 +70,8 @@ void Particle::calculateDensityAndVolume(){
     volume = mass / density;
     printf("Volume = %f, Density = %f\n",volume,density);
 }
+
+
 
 void Particle::calculateVelocityGradient(){
     gradVelocity = 0. * gradVelocity;
@@ -79,6 +84,7 @@ void Particle::calculateVelocityGradient(){
         int3 nidx = int3(ii,jj,kk);
         GridNode* gn = cell->node->neighborNode(nidx);
         if (gn == NULL) continue;
+        if (!gn->isActive) continue;
         gW = gn->gW(pos);
         gradVelocity += Matrix3x3(gn->velNext.x * gW,
                                   gn->velNext.y * gW,
@@ -162,11 +168,10 @@ void Particle::updateDeformationGradient(){
 
     F_E = U * SIGMA * V.T();
     F_P = V * SIGMA.inv() * U.T() * F;
-    F = F_E * F_P;
 
     J_E = F_E.det();
     J_P = F_P.det();
-    J = F.det();
+    J = J_E * J_P;
 
 
 }
@@ -192,6 +197,62 @@ ParticleSet::ParticleSet(Constants& _consts, InitData& dat)
     }    
 }
 
+void ParticleSet::rasterizeParticlesOntoNodes(){
+	#pragma omp parallel for num_threads(THREADCOUNT)
+	for (int i = 0; i < particleSet.size(); i++){
+
+        double W;
+        //Index through the surrounding nodes.
+        for(int ii = -2; ii <= 1; ii++){
+        for(int jj = -2; jj <= 1; jj++){
+        for(int kk = -2; kk <= 1; kk++){
+
+            int3 nidx = int3(ii,jj,kk);
+            GridNode* gn = particleSet[i].cell->node->neighborNode(nidx);
+
+            if (gn == NULL) continue;
+            W = gn->W(particleSet[i].pos);
+
+
+            #pragma omp critical (activateNodes)
+            {
+                gn->_grid->activeNodes[std::make_tuple(gn->idx.nx,gn->idx.ny,gn->idx.nz)] = gn;
+                gn->isActive = true;
+            }
+    
+            #pragma omp atomic
+                gn->mass += particleSet[i].mass * W;
+
+        }}}
+
+    }        
+
+	#pragma omp parallel for num_threads(THREADCOUNT)
+	for (int i = 0; i < particleSet.size(); i++){
+
+        double W;
+        //Index through the surrounding nodes.
+        for(int ii = -2; ii <= 1; ii++){
+        for(int jj = -2; jj <= 1; jj++){
+        for(int kk = -2; kk <= 1; kk++){
+
+            int3 nidx = int3(ii,jj,kk);
+            GridNode* gn = particleSet[i].cell->node->neighborNode(nidx);
+
+            if (gn == NULL) continue;
+            if (!gn->isActive) continue;
+            W = gn->W(particleSet[i].pos);
+
+            #pragma omp critical (velcollect)
+            {
+                gn->vel += particleSet[i].vel * particleSet[i].mass * W / gn->mass;
+            }   
+
+        }}}
+
+    }        
+
+}
 
 void ParticleSet::updateParticleSignedDistance(){
 	#pragma omp parallel for num_threads(THREADCOUNT)

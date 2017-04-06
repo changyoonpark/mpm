@@ -159,7 +159,7 @@ void GridNode::sampleVelocity(){
 		}
 	}
 	
-	if (mass > 4.94066e-324) vel = vel / mass;
+	if (mass != 0.) vel = vel / mass;
 	else vel = Vector3D(0.,0.,0.);
 
 	// if (vel.z != 0) std::cout << "sampled vel : " << vel << std::endl;
@@ -226,12 +226,16 @@ inline unsigned int Grid::idx(int i, int j, int k){
 
 
 
+
 //This Function is called every timestep.
 void Grid::hashParticles(){
-	
+	activeNodes.clear();
 	//Clear the pList for each Cell
 	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < nodes.size(); i++){
+		nodes[i]->isActive = false;
+		nodes[i]->mass = 0.;
+		nodes[i]->vel = nodes[i]->vel * 0.;
 		nodes[i]->cell->clearPList();
 	}
 
@@ -259,9 +263,17 @@ void Grid::rasterizeNodes(){
 void Grid::calculateNodalForcesAndUpdateVelocities(){
 	std::cout << "updating nodal forces" << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
-	for (int i = 0; i < nodes.size(); i++){
-		nodes[i]->calcNodalForce();
-		nodes[i]->updateVelocityWithNodalForce();
+
+	for(int i=0;i<activeNodes.size();i++){
+		auto dataIt = activeNodes.begin();
+		std::advance(dataIt,i);
+		GridNode* node = dataIt->second;
+
+	// for(int i=0;i<nodes.size();i++){
+	// 	GridNode* node = nodes[i];
+
+		node->calcNodalForce();
+		node->updateVelocityWithNodalForce();
 	}	
 	std::cout << "done" << std::endl;
 
@@ -270,8 +282,15 @@ void Grid::calculateNodalForcesAndUpdateVelocities(){
 
 void Grid::calculateGeometryInteractions(){
 	#pragma omp parallel for num_threads(THREADCOUNT)
-	for (int i = 0; i < nodes.size(); i++){
-		GridNode* node = nodes[i];
+	for(int i=0;i<activeNodes.size();i++){
+		auto dataIt = activeNodes.begin();
+		std::advance(dataIt,i);
+		GridNode* node = dataIt->second;
+
+	// for(int i=0;i<nodes.size();i++){
+	// 	GridNode* node = nodes[i];
+
+
 		node->calcGeometryInteractions();
 	}
 }
@@ -279,7 +298,7 @@ void Grid::calculateGeometryInteractions(){
 void Grid::calculateSignedDistance(){
 	std::cout << "Initializing signed distance" << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
-	for (int i = 0; i < nodes.size(); i++){
+	for(int i=0;i<nodes.size();i++){
 		GridNode* node = nodes[i];
 		node->calcSignedDist();
 	}

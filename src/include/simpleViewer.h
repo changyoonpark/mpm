@@ -156,7 +156,7 @@ private:
         // float dist = length(posEye);
 
         gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
-        gl_PointSize =  1. * pointRadius * (pointScale / pointDist);
+        gl_PointSize =  0.5 * pointRadius * (pointScale / pointDist);
         gl_TexCoord[0] = gl_MultiTexCoord0;
         gl_FrontColor = gl_Color;
       }

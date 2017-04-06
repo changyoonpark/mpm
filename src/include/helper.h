@@ -20,6 +20,7 @@ namespace myMath {
  * Defines 3D vectors.
  */
 
+
 struct int3{
   public:
     int nx,ny,nz;
@@ -29,6 +30,7 @@ struct int3{
       return int3( nx + i.nx, ny + i.ny, nz + i.nz );
     }    
 };
+
 
 class Vector3D {
  public:

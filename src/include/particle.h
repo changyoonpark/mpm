@@ -83,6 +83,7 @@ struct Particle{
             F  =  F  .identity();
             F_E = F_E.identity();
             F_P = F_P.identity();       
+            R_E = R_E.identity();
 
             J = 1.;
             J_E = 1.;
@@ -114,6 +115,7 @@ class ParticleSet{
         void calculateGeometryInteractions();
         void updateParticleDeformationGradient();      
         void updateParticlePosition();
+        void rasterizeParticlesOntoNodes();
 };
 
 #endif

@@ -37,6 +37,7 @@ public:
         return triangles[primID];
     }
 
+    void updatePosition(double dt);
 
 };
 

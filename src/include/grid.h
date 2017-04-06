@@ -44,11 +44,13 @@ class GridNode{
 		Vector3D x;
 		int3 idx;
 		GridCell* cell;	
+		Grid* _grid;
 		std::vector<GridCell*> nearCells;
 		
 		double mass;
 		double density0;
-
+		
+		bool isActive;
 		bool isInsideGeometry;
 		Triangle* contactingTriangle;
 		double signedDist;
@@ -82,7 +84,6 @@ class GridNode{
 
 	private:
 
-		Grid* _grid;
 
 		inline double N(double _x) const {
 			double abx = std::abs(_x);
@@ -112,7 +113,8 @@ class Grid{
 
 		ParticleSet* pSet;
 		std::vector<GridNode* > nodes;
-
+		std::map<std::tuple<int,int,int>,GridNode*> activeNodes;
+		std::map<std::tuple<int,int,int>,GridNode*>::iterator dataIt;
 		void hashParticles();
 		void rasterizeNodes();
 		void calculateSignedDistance();

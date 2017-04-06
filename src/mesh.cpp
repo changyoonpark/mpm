@@ -36,7 +36,6 @@ bool Triangle::getDistance(Vector3D& pos, double& dist){
   
 }
 
-
 Mesh::Mesh(std::string s){
 
     std::string line;
@@ -83,4 +82,13 @@ Mesh::Mesh(std::string s){
         }
         inputFile.close();
     }        
+}
+
+
+void Mesh::updatePosition(double dt){
+    for(auto& tri : triangles){
+        tri.p1 += tri.vel * dt;
+        tri.p2 += tri.vel * dt;
+        tri.p3 += tri.vel * dt;
+    }
 }
