@@ -6,7 +6,7 @@
 
 #include <math.h>
 #include <assert.h>
-// #include <omp.h>
+#include <omp.h>
 
 #define DBL_MAX 1.7976931348623158e+308
 
@@ -98,32 +98,32 @@ void GridNode::updateVelocityWithNodalForce(){
 void GridNode::calcGeometryInteractions(){
 		// std::cout << "vel : " << vel << std::endl;
 
-	if (isInsideGeometry){		
-		Vector3D relVel = velNext - contactingTriangle->vel;
-		double vn = dot(relVel, contactingTriangle->getNormal());
-		//material and boundary is coming together
+	// if (isInsideGeometry){		
+	// 	Vector3D relVel = velNext - contactingTriangle->vel;
+	// 	double vn = dot(relVel, contactingTriangle->getNormal());
+	// 	//material and boundary is coming together
 
-		if ( vn  < 0. ){
-			Vector3D vTan = relVel - vn * contactingTriangle->getNormal(); 
-			double vTanLength = vTan.norm();
+	// 	if ( vn  < 0. ){
+	// 		Vector3D vTan = relVel - vn * contactingTriangle->getNormal(); 
+	// 		double vTanLength = vTan.norm();
 
-			// if (vel.norm() > 0.01) std::cout << vTanLength << std::endl;
-			if(vTanLength <  - consts.snowModel->muStick * vn){
-				relVel = Vector3D(0.,0.,0.);
-			} else{
-				relVel = vTan + consts.snowModel->muStick * vn * vTan / vTanLength;
-			}
+	// 		// if (vel.norm() > 0.01) std::cout << vTanLength << std::endl;
+	// 		if(vTanLength <  - consts.snowModel->muStick * vn){
+	// 			relVel = Vector3D(0.,0.,0.);
+	// 		} else{
+	// 			relVel = vTan + consts.snowModel->muStick * vn * vTan / vTanLength;
+	// 		}
 
-			velNext = relVel + contactingTriangle->vel;
-		}
+	// 		velNext = relVel + contactingTriangle->vel;
+	// 	}
 
-	} 
+	// } 
 
-	// if (isInsideGeometry){
-	// 	velNext = velNext * 0.0;
-	// } else{
-	// 	velNext = vel;
-	// }
+	if (isInsideGeometry){
+		velNext = contactingTriangle->vel;
+	} else{
+		velNext = vel;
+	}
 
 }
 
@@ -229,7 +229,7 @@ inline unsigned int Grid::idx(int i, int j, int k){
 void Grid::hashParticles(){
 	activeNodes.clear();
 	//Clear the pList for each Cell
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < nodes.size(); i++){
 		nodes[i]->isActive = false;
 		nodes[i]->mass = 0.;
@@ -237,7 +237,7 @@ void Grid::hashParticles(){
 		nodes[i]->cell->clearPList();
 	}
 
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < pSet->particleSet.size(); i++){
 		Particle& particle = pSet->particleSet[i];
 		particle.hash = hash(particle);
@@ -250,7 +250,7 @@ void Grid::hashParticles(){
 //This Function is called every timestep.
 void Grid::rasterizeNodes(){
 	
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < nodes.size(); i++){
         nodes[i]->sampleMass();
 		nodes[i]->sampleVelocity();
@@ -260,7 +260,7 @@ void Grid::rasterizeNodes(){
 
 void Grid::calculateNodalForcesAndUpdateVelocities(){
 	std::cout << "updating nodal forces" << std::endl;
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 
 	for(int i=0;i<activeNodes.size();i++){
 		auto dataIt = activeNodes.begin();
@@ -280,7 +280,7 @@ void Grid::calculateNodalForcesAndUpdateVelocities(){
 
 
 void Grid::calculateGeometryInteractions(){
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i=0;i<activeNodes.size();i++){
 		auto dataIt = activeNodes.begin();
 		std::advance(dataIt,i);
@@ -296,7 +296,7 @@ void Grid::calculateGeometryInteractions(){
 
 void Grid::calculateSignedDistance(){
 	std::cout << "Initializing signed distance" << std::endl;
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i=0;i<nodes.size();i++){
 		GridNode* node = nodes[i];
 		node->calcSignedDist();

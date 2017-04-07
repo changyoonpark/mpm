@@ -77,9 +77,9 @@ class GridNode{
 			double xeval = (xp.x - x.x) / consts.h;
 			double yeval = (xp.y - x.y) / consts.h;
 			double zeval = (xp.z - x.z) / consts.h;
-			return Vector3D( Nx(xeval)*N(yeval)*N(zeval),
-							 N(xeval)*Nx(yeval)*N(zeval),
-							 N(xeval)*N(yeval)*Nx(zeval)) / consts.h;
+			return Vector3D(  (1. / consts.h) * Nx(xeval) * N (yeval) * N (zeval),
+							  (1. / consts.h) * N (xeval) * Nx(yeval) * N (zeval),
+							  (1. / consts.h) * N (xeval) * N (yeval) * Nx(zeval));
 		}
 
 	private:

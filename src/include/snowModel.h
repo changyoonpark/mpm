@@ -22,11 +22,11 @@ public:
 // Snow Parameters
 
     double calcMu(double J_P) const {
-        return mu0 * exp(xi * (1. - J_P));
+        return mu0 * std::exp(std::min(xi * (1. - J_P), 20.));
     }
 
     double calcLambda(double J_P) const {
-        return lambda0 * exp(xi * (1. - J_P));
+        return lambda0 * std::exp(std::min(xi * (1. - J_P), 20.));
     }
 
     // double workFunction(Matrix3x3& F_P, Matrix3x3& F_E, Matrix3x3& R_E) const {

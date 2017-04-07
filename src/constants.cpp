@@ -15,13 +15,13 @@ Constants::Constants(std::string meshin){
                                   0.05, //muStick
                                   1.4e5, //Youngs Modulus
                                   0.2, //Poisson Ratio
-                                  30., //xi
+                                  10., //xi
                                   0.95 //FLIP contribution
                                  );
 
         mesh = new Mesh(meshin);
-        h = 1.0;
+        h = 0.5;
         dt = 0.0001;
         domainExtent = Vector3D(8.,8.,8.);        
-        bodyForce = Vector3D(0.,0.,0.);
+        bodyForce = Vector3D(0.,0.,-10.0);
     };

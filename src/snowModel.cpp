@@ -15,7 +15,7 @@ SnowModel::SnowModel(double theta_compression,
                      v0(v0),
                      xi(xi),
                      alpha(alpha),
-                     lambda0(E0 * v0 / ((1.+v0) * (1.-2.*v0))),
+                     lambda0( E0 * v0 / ((1.+v0) * (1.-2.*v0))),
                      mu0(E0 / (2. * (1.+v0))) 
                      
                      {}

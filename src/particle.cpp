@@ -1,6 +1,6 @@
 #include "include/particle.h"
 #include "include/constants.h"
-//#include <omp.h>
+#include <omp.h>
 
 void Particle::collectVelocity(velType veltype){
 
@@ -167,7 +167,7 @@ void Particle::updateDeformationGradient(){
                 1. + consts.snowModel->theta_stretch     );
 
     F_E = U * SIGMA * V.T();
-    F_P = V * SIGMA.inv() * U.T() * F;
+    F_P = F_E.inv() * F;
 
     J_E = F_E.det();
     J_P = F_P.det();
@@ -198,7 +198,7 @@ ParticleSet::ParticleSet(Constants& _consts, InitData& dat)
 }
 
 void ParticleSet::rasterizeParticlesOntoNodes(){
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < particleSet.size(); i++){
 
         double W;
@@ -214,20 +214,20 @@ void ParticleSet::rasterizeParticlesOntoNodes(){
             W = gn->W(particleSet[i].pos);
 
 
-            //#pragma omp critical (activateNodes)
+            #pragma omp critical (activateNodes)
             {
                 gn->_grid->activeNodes[std::make_tuple(gn->idx.nx,gn->idx.ny,gn->idx.nz)] = gn;
                 gn->isActive = true;
             }
     
-            //#pragma omp atomic
+            #pragma omp atomic
                 gn->mass += particleSet[i].mass * W;
 
         }}}
 
     }        
 
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < particleSet.size(); i++){
 
         double W;
@@ -243,7 +243,7 @@ void ParticleSet::rasterizeParticlesOntoNodes(){
             if (!gn->isActive) continue;
             W = gn->W(particleSet[i].pos);
 
-            //#pragma omp critical (velcollect)
+            #pragma omp critical (velcollect)
             {
                 gn->vel += particleSet[i].vel * particleSet[i].mass * W / gn->mass;
             }   
@@ -255,7 +255,7 @@ void ParticleSet::rasterizeParticlesOntoNodes(){
 }
 
 void ParticleSet::updateParticleSignedDistance(){
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < particleSet.size(); i++){
         particleSet[i].calculateSignedDistance();    
     }    
@@ -263,14 +263,14 @@ void ParticleSet::updateParticleSignedDistance(){
 
 void ParticleSet::estimateParticleVolume(){
     // std::cout << "size : " << particleSet.size() << std::endl;
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < particleSet.size(); i++){
         particleSet[i].calculateDensityAndVolume();    
     }
 }
 
 void ParticleSet::calculateParticleVelocityGradient(){
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < particleSet.size(); i++){
         particleSet[i].calculateVelocityGradient();    
     }
@@ -278,12 +278,12 @@ void ParticleSet::calculateParticleVelocityGradient(){
 
 void ParticleSet::updateParticlePosition(){
 
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < particleSet.size(); i++){
         particleSet[i].updateVelNext();    
     }
 
-	//#pragma omp parallel for num_threads(THREADCOUNT)
+	#pragma omp parallel for num_threads(THREADCOUNT)
  	for (int i = 0; i < particleSet.size(); i++){
         particleSet[i].force = particleSet[i].mass * (particleSet[i].velNext - particleSet[i].vel)/consts.dt;      
         particleSet[i].vel = particleSet[i].velNext;
@@ -295,7 +295,7 @@ void ParticleSet::updateParticlePosition(){
 
 
 void ParticleSet::updateParticleDeformationGradient(){
-	//#pragma omp parallel for num_threads(THREADCOUNT)    
+	#pragma omp parallel for num_threads(THREADCOUNT)    
 	for (int i = 0; i < particleSet.size(); i++){        
         particleSet[i].updateDeformationGradient();    
     }    
@@ -303,7 +303,7 @@ void ParticleSet::updateParticleDeformationGradient(){
 }
 
 void ParticleSet::calculateGeometryInteractions(){
-	//#pragma omp parallel for num_threads(THREADCOUNT)    
+	#pragma omp parallel for num_threads(THREADCOUNT)    
 	for (int i = 0; i < particleSet.size(); i++){        
         particleSet[i].calculateGeometryInteraction();    
     }    

@@ -1,5 +1,5 @@
 #include "include/simpleViewer.h"
-//#include <omp.h>
+#include <omp.h>
 
 Camera* SimpleView::camera;
 
@@ -230,8 +230,8 @@ void SimpleView::err_callback( int error, const char* description ) {
 }
 
 void SimpleView::start(){
-  // while( !glfwWindowShouldClose( window ) ) update();
-  update();
+  while( !glfwWindowShouldClose( window ) ) update();
+  // update();
 }
 
 void SimpleView::setPerspective(){
@@ -413,6 +413,13 @@ void SimpleView::timeStep(){
 
     pSet->calculateParticleVelocityGradient();
     pSet->updateParticleDeformationGradient();
+
+    std::cout << pSet->particleSet[171].F_E * pSet->particleSet[171].F_P << std::endl;
+    std::cout << pSet->particleSet[171].F_E << std::endl;
+    std::cout << pSet->particleSet[171].F_P << std::endl;
+    std::cout << "J_P : " << pSet->particleSet[171].F_P.det() << std::endl;
+    std::cout << pSet->particleSet[171].SIGMA << std::endl;
+
     pSet->updateParticlePosition();
 
     // pSet->updateParticleSignedDistance();
@@ -576,8 +583,8 @@ void SimpleView::update(){
     draw_domainOutline();
     draw_faces();
     draw_spheres();
-    // draw_nodes();
-    // draw_particleForce();
+    draw_nodes();
+    draw_particleForce();
     // draw_nodeForce();
     // draw_nodeVelNext();
 
