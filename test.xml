@@ -1,0 +1,47 @@
+<scene version="0.5.0">
+	<integrator type="path">
+		<!-- Path trace with a max. path length of 8 -->
+		<integer name="maxDepth" value="8"/>
+	</integrator>
+	<!-- Instantiate a perspective camera with 45 degrees field of view -->
+	<sensor type="perspective">
+		<!-- Rotate the camera around the Y axis by 180 degrees -->
+		<transform name="toWorld">
+			<rotate y="1" angle="180"/>
+		</transform>
+
+		<float name="fov" value="45"/>
+		<!-- Render with 32 samples per pixel using a basic		
+		independent sampling strategy -->
+		
+		<sampler type="independent">
+			<integer name="sampleCount" value="32"/>
+		</sampler>
+
+		<!-- Generate an EXR image at HD resolution -->
+		<film type="hdrfilm">
+			<integer name="width" value="1920"/>
+			<integer name="height" value="1080"/>
+		</film>
+	</sensor>
+	<!-- Add a dragon mesh made of rough glass (stored as OBJ file) -->
+	<shape type="obj">
+	<string name="filename" value="dragon.obj"/>
+	<bsdf type="roughdielectric">
+	<!-- Tweak the roughness parameter of the material -->
+	<float name="alpha" value="0.01"/>
+	</bsdf>
+	</shape>
+	<!-- Add another mesh -- this time, stored using Mitsuba's own
+	(compact) binary representation -->
+	<shape type="serialized">
+	<string name="filename" value="lightsource.serialized"/>
+	<transform name="toWorld">
+	<translate x="5" y="-3" z="1"/>
+	</transform>
+	<!-- This mesh is an area emitter -->
+	<emitter type="area">
+	<rgb name="radiance" value="100,400,100"/>
+	</emitter>
+	</shape>
+</scene>

@@ -1,3 +1,6 @@
+#include <fstream>
+#include <iostream>
+
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 #include "CGL/matrix3x3.h"
@@ -156,7 +159,7 @@ private:
         // float dist = length(posEye);
 
         gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
-        gl_PointSize =  0.5 * pointRadius * (pointScale / pointDist);
+        gl_PointSize =  2.0 * pointRadius * (pointScale / pointDist);
         gl_TexCoord[0] = gl_MultiTexCoord0;
         gl_FrontColor = gl_Color;
       }
@@ -230,6 +233,7 @@ private:
     void update( void );
     void update_gl_camera();
 
+    void spitToFile();
 
 
 

@@ -334,9 +334,9 @@ void SimpleView::draw_nodeVelNext(){
         glBegin(GL_LINE_STRIP);           
         glColor3f(1.0,0.0,0.0);  
         glVertex3f( node->x.x, node->x.y, node->x.z);
-        glVertex3f( node->x.x + node->velNext.x * 0.2,
-                    node->x.y + node->velNext.y * 0.2,
-                    node->x.z + node->velNext.z * 0.2);
+        glVertex3f( node->x.x + node->velNext.x,
+                    node->x.y + node->velNext.y,
+                    node->x.z + node->velNext.z);
         glEnd();
     }  
 }
@@ -414,13 +414,15 @@ void SimpleView::timeStep(){
     pSet->calculateParticleVelocityGradient();
     pSet->updateParticleDeformationGradient();
 
-    std::cout << pSet->particleSet[171].F_E * pSet->particleSet[171].F_P << std::endl;
-    std::cout << pSet->particleSet[171].F_E << std::endl;
-    std::cout << pSet->particleSet[171].F_P << std::endl;
-    std::cout << "J_P : " << pSet->particleSet[171].F_P.det() << std::endl;
-    std::cout << pSet->particleSet[171].SIGMA << std::endl;
+    // std::cout << pSet->particleSet[171].F_E * pSet->particleSet[171].F_P << std::endl;
+    // std::cout << pSet->particleSet[171].F_E << std::endl;
+    // std::cout << pSet->particleSet[171].F_P << std::endl;
+    // std::cout << "J_P : " << pSet->particleSet[171].F_P.det() << std::endl;
+    // std::cout << pSet->particleSet[171].SIGMA << std::endl;
 
     pSet->updateParticlePosition();
+
+    spitToFile();
 
     // pSet->updateParticleSignedDistance();
     // pSet->calculateGeometryInteractions();
@@ -430,6 +432,35 @@ void SimpleView::timeStep(){
 
 }
 
+void SimpleView::spitToFile(){
+  double h3 = pSet->consts.h * pSet->consts.h * pSet->consts.h;
+
+  std::cout << "outputing data." << std::endl;
+
+  std::ofstream timeStepData;
+  std::string fileName = "./outputs/grid_t_";
+  fileName += std::to_string(currentTimeStep);
+  fileName += ".txt";
+  timeStepData.open(fileName);
+	for(int i=0;i<grid->activeNodes.size();i++){
+		auto dataIt = grid->activeNodes.begin();
+		std::advance(dataIt,i);
+		GridNode* gn = dataIt->second;
+    timeStepData << gn->x.x << "," <<  gn->x.y << "," << gn->x.z << " ";
+    timeStepData << gn->mass / h3 << "\n";
+  }
+  timeStepData.close();
+
+  fileName = "./outputs/particle_t_";
+  fileName += std::to_string(currentTimeStep);
+  fileName += ".txt";
+  timeStepData.open(fileName);
+  for (auto& p : pSet->particleSet){
+    timeStepData << p.pos.x << "," <<  p.pos.y << "," << p.pos.z << "\n";
+  }
+  timeStepData.close();
+
+}
 
 void SimpleView::createGLProgram(){
   shaderProgram = glCreateProgram();
@@ -584,7 +615,7 @@ void SimpleView::update(){
     draw_faces();
     draw_spheres();
     draw_nodes();
-    draw_particleForce();
+    // draw_particleForce();
     // draw_nodeForce();
     // draw_nodeVelNext();
 

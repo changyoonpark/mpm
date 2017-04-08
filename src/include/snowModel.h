@@ -45,8 +45,9 @@ public:
         // return lambda0 * trace * I + 2.0 * mu0 * strain;
 
         Matrix3x3 I = F_E.identity();
-
-        return 2. * (calcMu(J_P) / J) * (F_E - R_E) * F_E.T() + (calcLambda(J_P) / J) * (J_E - 1.) * J_E * I;
+        double hardening = std::exp(std::min(xi * (1. - J_P), 50.));
+        // std::cout << hardening << std::endl;
+        return hardening * (2. * (mu0 / J) * (F_E - R_E) * F_E.T() + (lambda0 / J) * (J_E - 1.) * J_E * I);
     }
 
     const double theta_compression;

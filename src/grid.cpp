@@ -82,48 +82,46 @@ void GridNode::calcNodalForce(){
 		if (cell == NULL) continue;
 		for (auto& particle : cell->pList){
 			if (particle == NULL) break;			
-			force += -(particle->volume) * (particle->J) *
-					   consts.snowModel->cauchyStress(particle->J,particle->J_P,particle->J_E,particle->F, particle->F_E,particle->R_E, particle->D)
-					   * gW(particle->pos);
+			force = force + (particle->volume) * (particle->J) *
+					   		consts.snowModel->cauchyStress(particle->J,particle->J_P,particle->J_E,particle->F, particle->F_E,particle->R_E, particle->D)
+					   	   * gW(particle->pos);
 
 		}
 	}
-	force += mass * consts.bodyForce;
+	// force = force + mass * consts.bodyForce;
 }
 
 void GridNode::updateVelocityWithNodalForce(){
-	velNext = vel + consts.dt * force / mass;
+	velNext = vel + consts.dt * (consts.bodyForce - force / mass);
 }
 
 void GridNode::calcGeometryInteractions(){
 		// std::cout << "vel : " << vel << std::endl;
 
-	// if (isInsideGeometry){		
-	// 	Vector3D relVel = velNext - contactingTriangle->vel;
-	// 	double vn = dot(relVel, contactingTriangle->getNormal());
-	// 	//material and boundary is coming together
+	if (isInsideGeometry){		
+		Vector3D relVel = velNext - contactingTriangle->vel;
+		double vn = dot(relVel, contactingTriangle->getNormal());
+		//material and boundary is coming together
 
-	// 	if ( vn  < 0. ){
-	// 		Vector3D vTan = relVel - vn * contactingTriangle->getNormal(); 
-	// 		double vTanLength = vTan.norm();
+		if ( vn  < 0. ){
+			Vector3D vTan = relVel - vn * contactingTriangle->getNormal(); 
+			double vTanLength = vTan.norm();
 
-	// 		// if (vel.norm() > 0.01) std::cout << vTanLength << std::endl;
-	// 		if(vTanLength <  - consts.snowModel->muStick * vn){
-	// 			relVel = Vector3D(0.,0.,0.);
-	// 		} else{
-	// 			relVel = vTan + consts.snowModel->muStick * vn * vTan / vTanLength;
-	// 		}
+			// if (vel.norm() > 0.01) std::cout << vTanLength << std::endl;
+			if(vTanLength <  - consts.snowModel->muStick * vn){
+				relVel = Vector3D(0.,0.,0.);
+			} else{
+				relVel = vTan + consts.snowModel->muStick * vn * vTan / vTanLength;
+			}
 
-	// 		velNext = relVel + contactingTriangle->vel;
-	// 	}
+			velNext = relVel + contactingTriangle->vel;
+		}
 
+	} 
+
+	// if (isInsideGeometry){
+	// 	velNext = contactingTriangle->vel;
 	// } 
-
-	if (isInsideGeometry){
-		velNext = contactingTriangle->vel;
-	} else{
-		velNext = vel;
-	}
 
 }
 
@@ -271,6 +269,7 @@ void Grid::calculateNodalForcesAndUpdateVelocities(){
 	// 	GridNode* node = nodes[i];
 
 		node->calcNodalForce();
+		// node->calcImplicitNodalForce();
 		node->updateVelocityWithNodalForce();
 	}	
 
