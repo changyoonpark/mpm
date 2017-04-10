@@ -39,6 +39,11 @@ namespace myMath{
 
   }
 
+  void Matrix3x3::tensorProductComponent(Matrix3x3& B, int i, int j, int k, int l){
+    const Matrix3x3& A( *this );
+    return A(i,j) * B(k,l);
+  }
+
   void Matrix3x3::singularValueDecompose( Matrix3x3& U, Matrix3x3& S, Matrix3x3& V){
 
     const Matrix3x3& A( *this );

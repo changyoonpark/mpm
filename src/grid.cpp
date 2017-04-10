@@ -6,7 +6,7 @@
 
 #include <math.h>
 #include <assert.h>
-#include <omp.h>
+//#include <omp.h>
 
 #define DBL_MAX 1.7976931348623158e+308
 

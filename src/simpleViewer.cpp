@@ -1,5 +1,5 @@
 #include "include/simpleViewer.h"
-#include <omp.h>
+//#include <omp.h>
 
 Camera* SimpleView::camera;
 
@@ -230,7 +230,10 @@ void SimpleView::err_callback( int error, const char* description ) {
 }
 
 void SimpleView::start(){
-  while( !glfwWindowShouldClose( window ) ) update();
+  while( !glfwWindowShouldClose( window ) ){
+    // if (currentTimeStep == 0 ) update();
+    update();
+  } 
   // update();
 }
 
@@ -278,8 +281,11 @@ void SimpleView::update_gl_camera() {
 void SimpleView::draw_nodes(){
     glUseProgram(shaderProgram);    
     for (auto& node : grid->nodes){      
+      double dens = std::min(node->mass,1.0);
       glBegin(GL_POINTS);    
-      glColor3f(1,1,1);
+      glPointSize(10.0);
+      // glColor3f(dens,dens,dens);
+      glColor3f(1.0,1.0,1.0);
       glVertex3f(node->x.x,node->x.y,node->x.z);
       glEnd();
     }
@@ -320,9 +326,12 @@ void SimpleView::draw_nodeForce(){
         glBegin(GL_LINE_STRIP);           
         glColor3f(1.0,0.0,0.0);  
         glVertex3f( node->x.x, node->x.y, node->x.z);
-        glVertex3f( node->x.x + node->force.x * 0.2,
-                    node->x.y + node->force.y * 0.2,
-                    node->x.z + node->force.z * 0.2);
+        glVertex3f( node->x.x,
+                    node->x.y,
+                    node->x.z + node->mass);
+        // glVertex3f( node->x.x + node->force.x * 0.2,
+        //             node->x.y + node->force.y * 0.2,
+        //             node->x.z + node->force.z * 0.2);
         glEnd();
     }  
 }
@@ -613,18 +622,19 @@ void SimpleView::update(){
     glEnable(GL_LIGHTING);
     draw_domainOutline();
     draw_faces();
-    draw_spheres();
-    draw_nodes();
+    // draw_spheres();
+    // draw_nodes();
     // draw_particleForce();
-    // draw_nodeForce();
+    draw_nodeForce();
     // draw_nodeVelNext();
 
     glDisable(GL_LIGHTING);
     // }
     // draw_edges();
     
-
+    // if (currentTimeStep == 0 ){
     timeStep();
+    // }
     // if (currentTimeStep % 100 == 0){    
     glfwSwapBuffers(window); 
     glfwPollEvents();

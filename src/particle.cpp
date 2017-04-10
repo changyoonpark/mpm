@@ -1,6 +1,6 @@
 #include "include/particle.h"
 #include "include/constants.h"
-#include <omp.h>
+//#include <omp.h>
 
 void Particle::collectVelocity(velType veltype){
 
@@ -142,6 +142,21 @@ void Particle::calculateGeometryInteraction(){
 		}
                 	
     }    
+
+}
+void Particle::calcUglyMatrix1(double J, Matrix3x3& F, Matrix3x3& F_inv, Matrix3x3& delta_F){
+    // calculates partial { JF^(-T)} / partial{F} : delta_F
+    Matrix3x3 result;
+    result.zero();
+    for (int i = 0; i < 3; i++){
+    for (int j = 0; j < 3; j++){
+        for (int k = 0; k < 3; k++){
+        for (int l = 0; l < 3; l++){
+            (F_inv.T()).tensorProductComponent(F_inv.T(),)
+        }
+        }
+    }
+    }
 
 }
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/chang/Desktop/Research/mpm/CGL
+# Install script for directory: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chang/Desktop/Research/mpm/CGL")
+  set(CMAKE_INSTALL_PREFIX "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,16 +27,11 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/chang/Desktop/Research/mpm/build/CGL/deps/glew/cmake_install.cmake")
-  include("/home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/cmake_install.cmake")
-  include("/home/chang/Desktop/Research/mpm/build/CGL/src/cmake_install.cmake")
+  include("/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew/cmake_install.cmake")
+  include("/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/cmake_install.cmake")
+  include("/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/cmake_install.cmake")
 
 endif()
 
