@@ -1,5 +1,5 @@
 #include "include/simpleViewer.h"
-//#include <omp.h>
+#include <omp.h>
 
 Camera* SimpleView::camera;
 
@@ -423,21 +423,14 @@ void SimpleView::timeStep(){
     //Grid Velocity update.
     grid->calculateNodalForcesAndUpdateVelocities();
     grid->calculateGeometryInteractions();
-    // grid->solveForVelNextAndUpdateVelocities();
+    grid->solveForVelNextAndUpdateVelocities();
 
     
     pSet->calculateParticleVelocityGradient();
     pSet->updateParticleDeformationGradient();
 
-    // std::cout << pSet->particleSet[171].F_E * pSet->particleSet[171].F_P << std::endl;
-    // std::cout << pSet->particleSet[171].F_E << std::endl;
-    // std::cout << pSet->particleSet[171].F_P << std::endl;
-    // std::cout << "J_P : " << pSet->particleSet[171].F_P.det() << std::endl;
-    // std::cout << pSet->particleSet[171].SIGMA << std::endl;
     pSet->updateParticlePosition();
-    spitToFile();
-    // pSet->updateParticleSignedDistance();
-    // pSet->calculateGeometryInteractions();
+    if(currentTimeStep % 10 == 0) spitToFile();
 
     std::cout << "End of Timestep : " << currentTimeStep << std::endl;
     currentTimeStep ++;

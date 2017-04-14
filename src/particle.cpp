@@ -226,8 +226,8 @@ ParticleSet::ParticleSet(Constants& _consts, InitData& dat)
 }
 
 void ParticleSet::rasterizeParticlesOntoNodes(){
-	#pragma omp parallel for num_threads(THREADCOUNT)
     std::cout << "rasterizing .. " << std::endl;
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	for (int i = 0; i < particleSet.size(); i++){
         double W;   
         //Index through the surrounding nodes.

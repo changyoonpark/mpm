@@ -6,7 +6,7 @@
 
 #include <math.h>
 #include <assert.h>
-//#include <omp.h>
+#include <omp.h>
 
 #define DBL_MAX 1.7976931348623158e+308
 #define EPS_D (0.00000000001)
@@ -239,7 +239,6 @@ inline unsigned int Grid::idx(int i, int j, int k){
 
 //This Function is called every timestep.
 void Grid::hashParticles(){
-	#pragma omp parallel for num_threads(THREADCOUNT)
 	activeNodes.clear();
 	//Clear the pList for each Cell
 	#pragma omp parallel for num_threads(THREADCOUNT)
@@ -273,7 +272,6 @@ void Grid::rasterizeNodes(){
 void Grid::calculateNodalForcesAndUpdateVelocities(){
 	std::cout << "updating nodal forces" << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
-
 	for(int i=0;i<activeNodes.size();i++){
 		auto dataIt = activeNodes.begin();
 		std::advance(dataIt,i);
@@ -380,18 +378,15 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 }
 
 void Grid::calculateGeometryInteractions(){
+	std::cout << "calculating geometry interactions" << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i=0;i<activeNodes.size();i++){
 		auto dataIt = activeNodes.begin();
 		std::advance(dataIt,i);
 		GridNode* node = dataIt->second;
-
-	// for(int i=0;i<nodes.size();i++){
-	// 	GridNode* node = nodes[i];
-
-
 		node->calcGeometryInteractions();
 	}
+	std::cout << "done" << std::endl;
 }
 
 void Grid::calculateSignedDistance(){
