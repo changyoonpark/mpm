@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glew.c" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o"
-  "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glewinfo.c" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o"
-  "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/visualinfo.c" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o"
+  "/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/glew.c" "/home/chang/Desktop/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o"
+  "/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/glewinfo.c" "/home/chang/Desktop/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o"
+  "/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/visualinfo.c" "/home/chang/Desktop/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o"
   )
-set(CMAKE_C_COMPILER_ID "Clang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
