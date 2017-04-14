@@ -6,7 +6,8 @@
 
 #include <iostream>
 
-#define THREADCOUNT 4
+#define THREADCOUNT 16
+#define WITH_GUI 0
 
 struct Constants{
 
@@ -14,7 +15,8 @@ struct Constants{
 
     double h;
     double dt;
-
+    double dt2;
+    double beta;
     Vector3D domainExtent;
     Vector3D bodyForce;
     Mesh* mesh;

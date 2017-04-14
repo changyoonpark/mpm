@@ -1,13 +1,13 @@
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7b182/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_7b182.dir/build.make CMakeFiles/cmTC_7b182.dir/build
-Building C object CMakeFiles/cmTC_7b182.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp=libomp   -o CMakeFiles/cmTC_7b182.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+Run Build Command:"/usr/bin/make" "cmTC_0edad/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_0edad.dir/build.make CMakeFiles/cmTC_0edad.dir/build
+Building C object CMakeFiles/cmTC_0edad.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp=libomp   -o CMakeFiles/cmTC_0edad.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
 clang: error: unsupported argument 'libomp' to option 'fopenmp='
-make[1]: *** [CMakeFiles/cmTC_7b182.dir/src.c.o] Error 1
-make: *** [cmTC_7b182/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_0edad.dir/src.c.o] Error 1
+make: *** [cmTC_0edad/fast] Error 2
 
 Source file was:
 
@@ -21,18 +21,18 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8afe8/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8afe8.dir/build.make CMakeFiles/cmTC_8afe8.dir/build
-Building C object CMakeFiles/cmTC_8afe8.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED   -o CMakeFiles/cmTC_8afe8.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
-/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: 'omp.h' file not found
+Run Build Command:"/usr/bin/make" "cmTC_303c4/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_303c4.dir/build.make CMakeFiles/cmTC_303c4.dir/build
+Building C object CMakeFiles/cmTC_303c4.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED   -o CMakeFiles/cmTC_303c4.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: 'omp.h' file not found
 #include <omp.h>
          ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_8afe8.dir/src.c.o] Error 1
-make: *** [cmTC_8afe8/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_303c4.dir/src.c.o] Error 1
+make: *** [cmTC_303c4/fast] Error 2
 
 Source file was:
 
@@ -46,15 +46,15 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8393f/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8393f.dir/build.make CMakeFiles/cmTC_8393f.dir/build
-Building C object CMakeFiles/cmTC_8393f.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_8393f.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+Run Build Command:"/usr/bin/make" "cmTC_c73ea/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_c73ea.dir/build.make CMakeFiles/cmTC_c73ea.dir/build
+Building C object CMakeFiles/cmTC_c73ea.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_c73ea.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
 clang: error: unsupported option '-fopenmp'
-make[1]: *** [CMakeFiles/cmTC_8393f.dir/src.c.o] Error 1
-make: *** [cmTC_8393f/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_c73ea.dir/src.c.o] Error 1
+make: *** [cmTC_c73ea/fast] Error 2
 
 Source file was:
 
@@ -68,15 +68,15 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8d925/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8d925.dir/build.make CMakeFiles/cmTC_8d925.dir/build
-Building C object CMakeFiles/cmTC_8d925.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED /openmp   -o CMakeFiles/cmTC_8d925.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+Run Build Command:"/usr/bin/make" "cmTC_554ae/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_554ae.dir/build.make CMakeFiles/cmTC_554ae.dir/build
+Building C object CMakeFiles/cmTC_554ae.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED /openmp   -o CMakeFiles/cmTC_554ae.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
 clang: error: no such file or directory: '/openmp'
-make[1]: *** [CMakeFiles/cmTC_8d925.dir/src.c.o] Error 1
-make: *** [cmTC_8d925/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_554ae.dir/src.c.o] Error 1
+make: *** [cmTC_554ae/fast] Error 2
 
 Source file was:
 
@@ -90,15 +90,15 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5e4b5/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_5e4b5.dir/build.make CMakeFiles/cmTC_5e4b5.dir/build
-Building C object CMakeFiles/cmTC_5e4b5.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -Qopenmp   -o CMakeFiles/cmTC_5e4b5.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+Run Build Command:"/usr/bin/make" "cmTC_568c2/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_568c2.dir/build.make CMakeFiles/cmTC_568c2.dir/build
+Building C object CMakeFiles/cmTC_568c2.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED -Qopenmp   -o CMakeFiles/cmTC_568c2.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
 clang: error: unknown argument: '-Qopenmp'
-make[1]: *** [CMakeFiles/cmTC_5e4b5.dir/src.c.o] Error 1
-make: *** [cmTC_5e4b5/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_568c2.dir/src.c.o] Error 1
+make: *** [cmTC_568c2/fast] Error 2
 
 Source file was:
 
@@ -112,18 +112,18 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_eea09/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_eea09.dir/build.make CMakeFiles/cmTC_eea09.dir/build
-Building C object CMakeFiles/cmTC_eea09.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -openmp   -o CMakeFiles/cmTC_eea09.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
-/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: 'omp.h' file not found
+Run Build Command:"/usr/bin/make" "cmTC_9b336/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_9b336.dir/build.make CMakeFiles/cmTC_9b336.dir/build
+Building C object CMakeFiles/cmTC_9b336.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED -openmp   -o CMakeFiles/cmTC_9b336.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: 'omp.h' file not found
 #include <omp.h>
          ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_eea09.dir/src.c.o] Error 1
-make: *** [cmTC_eea09/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_9b336.dir/src.c.o] Error 1
+make: *** [cmTC_9b336/fast] Error 2
 
 Source file was:
 
@@ -137,16 +137,16 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_eb9d8/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_eb9d8.dir/build.make CMakeFiles/cmTC_eb9d8.dir/build
-Building C object CMakeFiles/cmTC_eb9d8.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -xopenmp   -o CMakeFiles/cmTC_eb9d8.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+Run Build Command:"/usr/bin/make" "cmTC_49711/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_49711.dir/build.make CMakeFiles/cmTC_49711.dir/build
+Building C object CMakeFiles/cmTC_49711.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED -xopenmp   -o CMakeFiles/cmTC_49711.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
 clang: error: language not recognized: 'openmp'
-clang: warning: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c: 'linker' input unused
-make[1]: *** [CMakeFiles/cmTC_eb9d8.dir/src.c.o] Error 1
-make: *** [cmTC_eb9d8/fast] Error 2
+clang: warning: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c: 'linker' input unused [-Wunused-command-line-argument]
+make[1]: *** [CMakeFiles/cmTC_49711.dir/src.c.o] Error 1
+make: *** [cmTC_49711/fast] Error 2
 
 Source file was:
 
@@ -160,15 +160,15 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_07d1e/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_07d1e.dir/build.make CMakeFiles/cmTC_07d1e.dir/build
-Building C object CMakeFiles/cmTC_07d1e.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED +Oopenmp   -o CMakeFiles/cmTC_07d1e.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+Run Build Command:"/usr/bin/make" "cmTC_b8a4b/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b8a4b.dir/build.make CMakeFiles/cmTC_b8a4b.dir/build
+Building C object CMakeFiles/cmTC_b8a4b.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED +Oopenmp   -o CMakeFiles/cmTC_b8a4b.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
 clang: error: no such file or directory: '+Oopenmp'
-make[1]: *** [CMakeFiles/cmTC_07d1e.dir/src.c.o] Error 1
-make: *** [cmTC_07d1e/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_b8a4b.dir/src.c.o] Error 1
+make: *** [cmTC_b8a4b/fast] Error 2
 
 Source file was:
 
@@ -182,15 +182,15 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4effd/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4effd.dir/build.make CMakeFiles/cmTC_4effd.dir/build
-Building C object CMakeFiles/cmTC_4effd.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -qsmp   -o CMakeFiles/cmTC_4effd.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+Run Build Command:"/usr/bin/make" "cmTC_10c18/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_10c18.dir/build.make CMakeFiles/cmTC_10c18.dir/build
+Building C object CMakeFiles/cmTC_10c18.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED -qsmp   -o CMakeFiles/cmTC_10c18.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
 clang: error: unknown argument: '-qsmp'
-make[1]: *** [CMakeFiles/cmTC_4effd.dir/src.c.o] Error 1
-make: *** [cmTC_4effd/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_10c18.dir/src.c.o] Error 1
+make: *** [cmTC_10c18/fast] Error 2
 
 Source file was:
 
@@ -204,15 +204,15 @@ int main() {
 }
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_77a0b/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_77a0b.dir/build.make CMakeFiles/cmTC_77a0b.dir/build
-Building C object CMakeFiles/cmTC_77a0b.dir/src.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -mp   -o CMakeFiles/cmTC_77a0b.dir/src.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
+Run Build Command:"/usr/bin/make" "cmTC_0a79f/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_0a79f.dir/build.make CMakeFiles/cmTC_0a79f.dir/build
+Building C object CMakeFiles/cmTC_0a79f.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -DOpenMP_FLAG_DETECTED -mp   -o CMakeFiles/cmTC_0a79f.dir/src.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.c"
 clang: error: unknown argument: '-mp'
-make[1]: *** [CMakeFiles/cmTC_77a0b.dir/src.c.o] Error 1
-make: *** [cmTC_77a0b/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_0a79f.dir/src.c.o] Error 1
+make: *** [cmTC_0a79f/fast] Error 2
 
 Source file was:
 
@@ -226,15 +226,15 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4864c/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4864c.dir/build.make CMakeFiles/cmTC_4864c.dir/build
-Building CXX object CMakeFiles/cmTC_4864c.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -fopenmp=libomp   -o CMakeFiles/cmTC_4864c.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+Run Build Command:"/usr/bin/make" "cmTC_1b52f/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_1b52f.dir/build.make CMakeFiles/cmTC_1b52f.dir/build
+Building CXX object CMakeFiles/cmTC_1b52f.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -fopenmp=libomp   -o CMakeFiles/cmTC_1b52f.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
 clang: error: unsupported argument 'libomp' to option 'fopenmp='
-make[1]: *** [CMakeFiles/cmTC_4864c.dir/src.cxx.o] Error 1
-make: *** [cmTC_4864c/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_1b52f.dir/src.cxx.o] Error 1
+make: *** [cmTC_1b52f/fast] Error 2
 
 Source file was:
 
@@ -248,18 +248,18 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4985e/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4985e.dir/build.make CMakeFiles/cmTC_4985e.dir/build
-Building CXX object CMakeFiles/cmTC_4985e.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED   -o CMakeFiles/cmTC_4985e.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
-/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'omp.h' file not found
+Run Build Command:"/usr/bin/make" "cmTC_9036a/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_9036a.dir/build.make CMakeFiles/cmTC_9036a.dir/build
+Building CXX object CMakeFiles/cmTC_9036a.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED   -o CMakeFiles/cmTC_9036a.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'omp.h' file not found
 #include <omp.h>
          ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_4985e.dir/src.cxx.o] Error 1
-make: *** [cmTC_4985e/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_9036a.dir/src.cxx.o] Error 1
+make: *** [cmTC_9036a/fast] Error 2
 
 Source file was:
 
@@ -273,15 +273,15 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0b4cd/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_0b4cd.dir/build.make CMakeFiles/cmTC_0b4cd.dir/build
-Building CXX object CMakeFiles/cmTC_0b4cd.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_0b4cd.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+Run Build Command:"/usr/bin/make" "cmTC_b90b0/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b90b0.dir/build.make CMakeFiles/cmTC_b90b0.dir/build
+Building CXX object CMakeFiles/cmTC_b90b0.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_b90b0.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
 clang: error: unsupported option '-fopenmp'
-make[1]: *** [CMakeFiles/cmTC_0b4cd.dir/src.cxx.o] Error 1
-make: *** [cmTC_0b4cd/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_b90b0.dir/src.cxx.o] Error 1
+make: *** [cmTC_b90b0/fast] Error 2
 
 Source file was:
 
@@ -295,15 +295,15 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1f43f/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_1f43f.dir/build.make CMakeFiles/cmTC_1f43f.dir/build
-Building CXX object CMakeFiles/cmTC_1f43f.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED /openmp   -o CMakeFiles/cmTC_1f43f.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+Run Build Command:"/usr/bin/make" "cmTC_97e57/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_97e57.dir/build.make CMakeFiles/cmTC_97e57.dir/build
+Building CXX object CMakeFiles/cmTC_97e57.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED /openmp   -o CMakeFiles/cmTC_97e57.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
 clang: error: no such file or directory: '/openmp'
-make[1]: *** [CMakeFiles/cmTC_1f43f.dir/src.cxx.o] Error 1
-make: *** [cmTC_1f43f/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_97e57.dir/src.cxx.o] Error 1
+make: *** [cmTC_97e57/fast] Error 2
 
 Source file was:
 
@@ -317,15 +317,15 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_29bc3/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_29bc3.dir/build.make CMakeFiles/cmTC_29bc3.dir/build
-Building CXX object CMakeFiles/cmTC_29bc3.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -Qopenmp   -o CMakeFiles/cmTC_29bc3.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+Run Build Command:"/usr/bin/make" "cmTC_7c21b/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_7c21b.dir/build.make CMakeFiles/cmTC_7c21b.dir/build
+Building CXX object CMakeFiles/cmTC_7c21b.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -Qopenmp   -o CMakeFiles/cmTC_7c21b.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
 clang: error: unknown argument: '-Qopenmp'
-make[1]: *** [CMakeFiles/cmTC_29bc3.dir/src.cxx.o] Error 1
-make: *** [cmTC_29bc3/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_7c21b.dir/src.cxx.o] Error 1
+make: *** [cmTC_7c21b/fast] Error 2
 
 Source file was:
 
@@ -339,18 +339,18 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_05d69/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_05d69.dir/build.make CMakeFiles/cmTC_05d69.dir/build
-Building CXX object CMakeFiles/cmTC_05d69.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -openmp   -o CMakeFiles/cmTC_05d69.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
-/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'omp.h' file not found
+Run Build Command:"/usr/bin/make" "cmTC_d4140/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_d4140.dir/build.make CMakeFiles/cmTC_d4140.dir/build
+Building CXX object CMakeFiles/cmTC_d4140.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -openmp   -o CMakeFiles/cmTC_d4140.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'omp.h' file not found
 #include <omp.h>
          ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_05d69.dir/src.cxx.o] Error 1
-make: *** [cmTC_05d69/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_d4140.dir/src.cxx.o] Error 1
+make: *** [cmTC_d4140/fast] Error 2
 
 Source file was:
 
@@ -364,16 +364,16 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ada1c/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_ada1c.dir/build.make CMakeFiles/cmTC_ada1c.dir/build
-Building CXX object CMakeFiles/cmTC_ada1c.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -xopenmp   -o CMakeFiles/cmTC_ada1c.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+Run Build Command:"/usr/bin/make" "cmTC_b65c3/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b65c3.dir/build.make CMakeFiles/cmTC_b65c3.dir/build
+Building CXX object CMakeFiles/cmTC_b65c3.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -xopenmp   -o CMakeFiles/cmTC_b65c3.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
 clang: error: language not recognized: 'openmp'
-clang: warning: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx: 'linker' input unused
-make[1]: *** [CMakeFiles/cmTC_ada1c.dir/src.cxx.o] Error 1
-make: *** [cmTC_ada1c/fast] Error 2
+clang: warning: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx: 'linker' input unused [-Wunused-command-line-argument]
+make[1]: *** [CMakeFiles/cmTC_b65c3.dir/src.cxx.o] Error 1
+make: *** [cmTC_b65c3/fast] Error 2
 
 Source file was:
 
@@ -387,15 +387,15 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a5afe/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_a5afe.dir/build.make CMakeFiles/cmTC_a5afe.dir/build
-Building CXX object CMakeFiles/cmTC_a5afe.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED +Oopenmp   -o CMakeFiles/cmTC_a5afe.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+Run Build Command:"/usr/bin/make" "cmTC_2dfd1/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_2dfd1.dir/build.make CMakeFiles/cmTC_2dfd1.dir/build
+Building CXX object CMakeFiles/cmTC_2dfd1.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED +Oopenmp   -o CMakeFiles/cmTC_2dfd1.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
 clang: error: no such file or directory: '+Oopenmp'
-make[1]: *** [CMakeFiles/cmTC_a5afe.dir/src.cxx.o] Error 1
-make: *** [cmTC_a5afe/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_2dfd1.dir/src.cxx.o] Error 1
+make: *** [cmTC_2dfd1/fast] Error 2
 
 Source file was:
 
@@ -409,15 +409,15 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5955d/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_5955d.dir/build.make CMakeFiles/cmTC_5955d.dir/build
-Building CXX object CMakeFiles/cmTC_5955d.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -qsmp   -o CMakeFiles/cmTC_5955d.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+Run Build Command:"/usr/bin/make" "cmTC_2aed0/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_2aed0.dir/build.make CMakeFiles/cmTC_2aed0.dir/build
+Building CXX object CMakeFiles/cmTC_2aed0.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -qsmp   -o CMakeFiles/cmTC_2aed0.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
 clang: error: unknown argument: '-qsmp'
-make[1]: *** [CMakeFiles/cmTC_5955d.dir/src.cxx.o] Error 1
-make: *** [cmTC_5955d/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_2aed0.dir/src.cxx.o] Error 1
+make: *** [cmTC_2aed0/fast] Error 2
 
 Source file was:
 
@@ -431,15 +431,15 @@ int main() {
 }
 
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
-Change Dir: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9f3ce/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_9f3ce.dir/build.make CMakeFiles/cmTC_9f3ce.dir/build
-Building CXX object CMakeFiles/cmTC_9f3ce.dir/src.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -mp   -o CMakeFiles/cmTC_9f3ce.dir/src.cxx.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
+Run Build Command:"/usr/bin/make" "cmTC_e62a6/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_e62a6.dir/build.make CMakeFiles/cmTC_e62a6.dir/build
+Building CXX object CMakeFiles/cmTC_e62a6.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -std=c++11 -m64 -g -DOpenMP_FLAG_DETECTED -mp   -o CMakeFiles/cmTC_e62a6.dir/src.cxx.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles/CMakeTmp/src.cxx"
 clang: error: unknown argument: '-mp'
-make[1]: *** [CMakeFiles/cmTC_9f3ce.dir/src.cxx.o] Error 1
-make: *** [cmTC_9f3ce/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_e62a6.dir/src.cxx.o] Error 1
+make: *** [cmTC_e62a6/fast] Error 2
 
 Source file was:
 

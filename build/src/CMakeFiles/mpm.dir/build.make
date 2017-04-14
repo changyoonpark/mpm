@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.7.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm"
+CMAKE_SOURCE_DIR = "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build"
+CMAKE_BINARY_DIR = "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build"
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/mpm.dir/depend.make
@@ -59,16 +59,16 @@ include src/CMakeFiles/mpm.dir/flags.make
 
 src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o: ../src/sifakis/sifakisSVD.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.cpp"
 
 src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.cpp" > CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.cpp" > CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.i
 
 src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.cpp" -o CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.cpp" -o CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.s
 
 src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o.requires:
 
@@ -83,16 +83,16 @@ src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o.provides.build: src/CMakeFiles/m
 
 src/CMakeFiles/mpm.dir/grid.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/grid.cpp.o: ../src/grid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/mpm.dir/grid.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/grid.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/grid.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/mpm.dir/grid.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/grid.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/grid.cpp"
 
 src/CMakeFiles/mpm.dir/grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/grid.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/grid.cpp" > CMakeFiles/mpm.dir/grid.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/grid.cpp" > CMakeFiles/mpm.dir/grid.cpp.i
 
 src/CMakeFiles/mpm.dir/grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/grid.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/grid.cpp" -o CMakeFiles/mpm.dir/grid.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/grid.cpp" -o CMakeFiles/mpm.dir/grid.cpp.s
 
 src/CMakeFiles/mpm.dir/grid.cpp.o.requires:
 
@@ -107,16 +107,16 @@ src/CMakeFiles/mpm.dir/grid.cpp.o.provides.build: src/CMakeFiles/mpm.dir/grid.cp
 
 src/CMakeFiles/mpm.dir/helper.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/helper.cpp.o: ../src/helper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/mpm.dir/helper.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/helper.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/helper.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/mpm.dir/helper.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/helper.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/helper.cpp"
 
 src/CMakeFiles/mpm.dir/helper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/helper.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/helper.cpp" > CMakeFiles/mpm.dir/helper.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/helper.cpp" > CMakeFiles/mpm.dir/helper.cpp.i
 
 src/CMakeFiles/mpm.dir/helper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/helper.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/helper.cpp" -o CMakeFiles/mpm.dir/helper.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/helper.cpp" -o CMakeFiles/mpm.dir/helper.cpp.s
 
 src/CMakeFiles/mpm.dir/helper.cpp.o.requires:
 
@@ -131,16 +131,16 @@ src/CMakeFiles/mpm.dir/helper.cpp.o.provides.build: src/CMakeFiles/mpm.dir/helpe
 
 src/CMakeFiles/mpm.dir/initer.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/initer.cpp.o: ../src/initer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/mpm.dir/initer.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/initer.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/initer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/mpm.dir/initer.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/initer.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/initer.cpp"
 
 src/CMakeFiles/mpm.dir/initer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/initer.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/initer.cpp" > CMakeFiles/mpm.dir/initer.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/initer.cpp" > CMakeFiles/mpm.dir/initer.cpp.i
 
 src/CMakeFiles/mpm.dir/initer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/initer.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/initer.cpp" -o CMakeFiles/mpm.dir/initer.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/initer.cpp" -o CMakeFiles/mpm.dir/initer.cpp.s
 
 src/CMakeFiles/mpm.dir/initer.cpp.o.requires:
 
@@ -155,16 +155,16 @@ src/CMakeFiles/mpm.dir/initer.cpp.o.provides.build: src/CMakeFiles/mpm.dir/inite
 
 src/CMakeFiles/mpm.dir/mesh.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/mesh.cpp.o: ../src/mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/mpm.dir/mesh.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/mesh.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/mesh.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/mpm.dir/mesh.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/mesh.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/mesh.cpp"
 
 src/CMakeFiles/mpm.dir/mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/mesh.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/mesh.cpp" > CMakeFiles/mpm.dir/mesh.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/mesh.cpp" > CMakeFiles/mpm.dir/mesh.cpp.i
 
 src/CMakeFiles/mpm.dir/mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/mesh.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/mesh.cpp" -o CMakeFiles/mpm.dir/mesh.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/mesh.cpp" -o CMakeFiles/mpm.dir/mesh.cpp.s
 
 src/CMakeFiles/mpm.dir/mesh.cpp.o.requires:
 
@@ -179,16 +179,16 @@ src/CMakeFiles/mpm.dir/mesh.cpp.o.provides.build: src/CMakeFiles/mpm.dir/mesh.cp
 
 src/CMakeFiles/mpm.dir/particle.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/particle.cpp.o: ../src/particle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/mpm.dir/particle.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/particle.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/particle.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/mpm.dir/particle.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/particle.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/particle.cpp"
 
 src/CMakeFiles/mpm.dir/particle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/particle.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/particle.cpp" > CMakeFiles/mpm.dir/particle.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/particle.cpp" > CMakeFiles/mpm.dir/particle.cpp.i
 
 src/CMakeFiles/mpm.dir/particle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/particle.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/particle.cpp" -o CMakeFiles/mpm.dir/particle.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/particle.cpp" -o CMakeFiles/mpm.dir/particle.cpp.s
 
 src/CMakeFiles/mpm.dir/particle.cpp.o.requires:
 
@@ -203,16 +203,16 @@ src/CMakeFiles/mpm.dir/particle.cpp.o.provides.build: src/CMakeFiles/mpm.dir/par
 
 src/CMakeFiles/mpm.dir/simpleViewer.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/simpleViewer.cpp.o: ../src/simpleViewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/mpm.dir/simpleViewer.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/simpleViewer.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/simpleViewer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/mpm.dir/simpleViewer.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/simpleViewer.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/simpleViewer.cpp"
 
 src/CMakeFiles/mpm.dir/simpleViewer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/simpleViewer.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/simpleViewer.cpp" > CMakeFiles/mpm.dir/simpleViewer.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/simpleViewer.cpp" > CMakeFiles/mpm.dir/simpleViewer.cpp.i
 
 src/CMakeFiles/mpm.dir/simpleViewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/simpleViewer.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/simpleViewer.cpp" -o CMakeFiles/mpm.dir/simpleViewer.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/simpleViewer.cpp" -o CMakeFiles/mpm.dir/simpleViewer.cpp.s
 
 src/CMakeFiles/mpm.dir/simpleViewer.cpp.o.requires:
 
@@ -227,16 +227,16 @@ src/CMakeFiles/mpm.dir/simpleViewer.cpp.o.provides.build: src/CMakeFiles/mpm.dir
 
 src/CMakeFiles/mpm.dir/snowModel.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/snowModel.cpp.o: ../src/snowModel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/mpm.dir/snowModel.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/snowModel.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/snowModel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/mpm.dir/snowModel.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/snowModel.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/snowModel.cpp"
 
 src/CMakeFiles/mpm.dir/snowModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/snowModel.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/snowModel.cpp" > CMakeFiles/mpm.dir/snowModel.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/snowModel.cpp" > CMakeFiles/mpm.dir/snowModel.cpp.i
 
 src/CMakeFiles/mpm.dir/snowModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/snowModel.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/snowModel.cpp" -o CMakeFiles/mpm.dir/snowModel.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/snowModel.cpp" -o CMakeFiles/mpm.dir/snowModel.cpp.s
 
 src/CMakeFiles/mpm.dir/snowModel.cpp.o.requires:
 
@@ -251,16 +251,16 @@ src/CMakeFiles/mpm.dir/snowModel.cpp.o.provides.build: src/CMakeFiles/mpm.dir/sn
 
 src/CMakeFiles/mpm.dir/constants.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/constants.cpp.o: ../src/constants.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/mpm.dir/constants.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/constants.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/constants.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/mpm.dir/constants.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/constants.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/constants.cpp"
 
 src/CMakeFiles/mpm.dir/constants.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/constants.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/constants.cpp" > CMakeFiles/mpm.dir/constants.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/constants.cpp" > CMakeFiles/mpm.dir/constants.cpp.i
 
 src/CMakeFiles/mpm.dir/constants.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/constants.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/constants.cpp" -o CMakeFiles/mpm.dir/constants.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/constants.cpp" -o CMakeFiles/mpm.dir/constants.cpp.s
 
 src/CMakeFiles/mpm.dir/constants.cpp.o.requires:
 
@@ -275,16 +275,16 @@ src/CMakeFiles/mpm.dir/constants.cpp.o.provides.build: src/CMakeFiles/mpm.dir/co
 
 src/CMakeFiles/mpm.dir/main.cpp.o: src/CMakeFiles/mpm.dir/flags.make
 src/CMakeFiles/mpm.dir/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/mpm.dir/main.cpp.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/main.cpp.o -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/mpm.dir/main.cpp.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mpm.dir/main.cpp.o -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/main.cpp"
 
 src/CMakeFiles/mpm.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpm.dir/main.cpp.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/main.cpp" > CMakeFiles/mpm.dir/main.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/main.cpp" > CMakeFiles/mpm.dir/main.cpp.i
 
 src/CMakeFiles/mpm.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpm.dir/main.cpp.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/main.cpp" -o CMakeFiles/mpm.dir/main.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/main.cpp" -o CMakeFiles/mpm.dir/main.cpp.s
 
 src/CMakeFiles/mpm.dir/main.cpp.o.requires:
 
@@ -330,8 +330,8 @@ mpm: CGL/deps/glfw/src/libglfw3.a
 mpm: /usr/local/lib/libfreetype.dylib
 mpm: /usr/local/lib/libfreetype.dylib
 mpm: src/CMakeFiles/mpm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ../mpm"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpm.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ../mpm"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/mpm.dir/build: mpm
@@ -352,10 +352,10 @@ src/CMakeFiles/mpm.dir/requires: src/CMakeFiles/mpm.dir/main.cpp.o.requires
 .PHONY : src/CMakeFiles/mpm.dir/requires
 
 src/CMakeFiles/mpm.dir/clean:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && $(CMAKE_COMMAND) -P CMakeFiles/mpm.dir/cmake_clean.cmake
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" && $(CMAKE_COMMAND) -P CMakeFiles/mpm.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/mpm.dir/clean
 
 src/CMakeFiles/mpm.dir/depend:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src/CMakeFiles/mpm.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src/CMakeFiles/mpm.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : src/CMakeFiles/mpm.dir/depend
 

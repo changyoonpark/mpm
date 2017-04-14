@@ -7,7 +7,7 @@
 #include "grid.h"
 #include "constants.h"
 #include "mesh.h"
-
+#define EPS_D (0.00000000001)
 using namespace myMath;
 
 enum velType {
@@ -42,7 +42,9 @@ struct Particle{
         Vector3D X_initial;
         Vector3D x_current;
 
-        Matrix3x3 F,F_P,F_E,D;
+        Matrix3x3 F,F_P,F_E,F_E_inv,D;
+        Matrix3x3 A;
+        Matrix3x3 delta_F_E;
         
 
         Matrix3x3 U;
@@ -67,6 +69,8 @@ struct Particle{
         void calculateSingularValueDecompose();
         void calculateContactState();
         void calculateGeometryInteraction();
+        void calculateDeltaF();
+        Matrix3x3 calculateAMatrix(Vector3D& delta_u);
         void updateVelNext();
         void updateWithPIC();
         void updateWithFLIP();
@@ -84,6 +88,7 @@ struct Particle{
             F_E = F_E.identity();
             F_P = F_P.identity();       
             R_E = R_E.identity();
+            S_E = S_E.identity();
 
             J = 1.;
             J_E = 1.;

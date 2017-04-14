@@ -1,6 +1,7 @@
 #include "include/helper.h"
 #include "sifakis/sifakisSVD.h"
 
+class Matrix3x3;
 
 template<typename Out>
 void split(const std::string &s, char delim, Out result) {
@@ -39,9 +40,20 @@ namespace myMath{
 
   }
 
-  void Matrix3x3::tensorProductComponent(Matrix3x3& B, int i, int j, int k, int l){
+  double Matrix3x3::tensorProductComponent(Matrix3x3& B, int i, int j, int k, int l) const {
     const Matrix3x3& A( *this );
     return A(i,j) * B(k,l);
+  }
+
+  double Matrix3x3::doubleContraction(Matrix3x3& B) const {
+    const Matrix3x3& A( *this );
+    double value = 0.;
+    for (int i=0;i<3;i++){
+      for (int j=0;j<3;j++){
+        value += A(i,j) * B(i,j);
+      }
+    }
+    return value;
   }
 
   void Matrix3x3::singularValueDecompose( Matrix3x3& U, Matrix3x3& S, Matrix3x3& V){

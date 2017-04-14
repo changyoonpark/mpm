@@ -1,4 +1,4 @@
-# Install script for directory: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src
+# Install script for directory: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,18 +29,18 @@ endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/mpm")
+   "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/mpm")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm" TYPE EXECUTABLE FILES "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/mpm")
-  if(EXISTS "$ENV{DESTDIR}/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/mpm" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/mpm")
+file(INSTALL DESTINATION "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm" TYPE EXECUTABLE FILES "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/mpm")
+  if(EXISTS "$ENV{DESTDIR}/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/mpm" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/mpm")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" "$ENV{DESTDIR}/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/mpm")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/mpm")
     endif()
   endif()
 endif()

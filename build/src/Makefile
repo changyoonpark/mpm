@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.7.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm"
+CMAKE_SOURCE_DIR = "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build"
+CMAKE_BINARY_DIR = "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src/CMakeFiles/progress.marks"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" 0
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src/CMakeFiles/progress.marks"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/mpm.dir/rule:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/mpm.dir/rule
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/mpm.dir/rule
 .PHONY : src/CMakeFiles/mpm.dir/rule
 
 # Convenience name for target.
@@ -166,7 +166,7 @@ mpm: src/CMakeFiles/mpm.dir/rule
 
 # fast build rule for target.
 mpm/fast:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/build
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/build
 .PHONY : mpm/fast
 
 constants.o: constants.cpp.o
@@ -175,7 +175,7 @@ constants.o: constants.cpp.o
 
 # target to build an object file
 constants.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/constants.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/constants.cpp.o
 .PHONY : constants.cpp.o
 
 constants.i: constants.cpp.i
@@ -184,7 +184,7 @@ constants.i: constants.cpp.i
 
 # target to preprocess a source file
 constants.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/constants.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/constants.cpp.i
 .PHONY : constants.cpp.i
 
 constants.s: constants.cpp.s
@@ -193,7 +193,7 @@ constants.s: constants.cpp.s
 
 # target to generate assembly for a file
 constants.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/constants.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/constants.cpp.s
 .PHONY : constants.cpp.s
 
 grid.o: grid.cpp.o
@@ -202,7 +202,7 @@ grid.o: grid.cpp.o
 
 # target to build an object file
 grid.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/grid.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/grid.cpp.o
 .PHONY : grid.cpp.o
 
 grid.i: grid.cpp.i
@@ -211,7 +211,7 @@ grid.i: grid.cpp.i
 
 # target to preprocess a source file
 grid.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/grid.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/grid.cpp.i
 .PHONY : grid.cpp.i
 
 grid.s: grid.cpp.s
@@ -220,7 +220,7 @@ grid.s: grid.cpp.s
 
 # target to generate assembly for a file
 grid.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/grid.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/grid.cpp.s
 .PHONY : grid.cpp.s
 
 helper.o: helper.cpp.o
@@ -229,7 +229,7 @@ helper.o: helper.cpp.o
 
 # target to build an object file
 helper.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/helper.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/helper.cpp.o
 .PHONY : helper.cpp.o
 
 helper.i: helper.cpp.i
@@ -238,7 +238,7 @@ helper.i: helper.cpp.i
 
 # target to preprocess a source file
 helper.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/helper.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/helper.cpp.i
 .PHONY : helper.cpp.i
 
 helper.s: helper.cpp.s
@@ -247,7 +247,7 @@ helper.s: helper.cpp.s
 
 # target to generate assembly for a file
 helper.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/helper.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/helper.cpp.s
 .PHONY : helper.cpp.s
 
 initer.o: initer.cpp.o
@@ -256,7 +256,7 @@ initer.o: initer.cpp.o
 
 # target to build an object file
 initer.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/initer.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/initer.cpp.o
 .PHONY : initer.cpp.o
 
 initer.i: initer.cpp.i
@@ -265,7 +265,7 @@ initer.i: initer.cpp.i
 
 # target to preprocess a source file
 initer.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/initer.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/initer.cpp.i
 .PHONY : initer.cpp.i
 
 initer.s: initer.cpp.s
@@ -274,7 +274,7 @@ initer.s: initer.cpp.s
 
 # target to generate assembly for a file
 initer.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/initer.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/initer.cpp.s
 .PHONY : initer.cpp.s
 
 main.o: main.cpp.o
@@ -283,7 +283,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/main.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -292,7 +292,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/main.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -301,7 +301,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/main.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mesh.o: mesh.cpp.o
@@ -310,7 +310,7 @@ mesh.o: mesh.cpp.o
 
 # target to build an object file
 mesh.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/mesh.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/mesh.cpp.o
 .PHONY : mesh.cpp.o
 
 mesh.i: mesh.cpp.i
@@ -319,7 +319,7 @@ mesh.i: mesh.cpp.i
 
 # target to preprocess a source file
 mesh.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/mesh.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/mesh.cpp.i
 .PHONY : mesh.cpp.i
 
 mesh.s: mesh.cpp.s
@@ -328,7 +328,7 @@ mesh.s: mesh.cpp.s
 
 # target to generate assembly for a file
 mesh.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/mesh.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/mesh.cpp.s
 .PHONY : mesh.cpp.s
 
 particle.o: particle.cpp.o
@@ -337,7 +337,7 @@ particle.o: particle.cpp.o
 
 # target to build an object file
 particle.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/particle.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/particle.cpp.o
 .PHONY : particle.cpp.o
 
 particle.i: particle.cpp.i
@@ -346,7 +346,7 @@ particle.i: particle.cpp.i
 
 # target to preprocess a source file
 particle.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/particle.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/particle.cpp.i
 .PHONY : particle.cpp.i
 
 particle.s: particle.cpp.s
@@ -355,7 +355,7 @@ particle.s: particle.cpp.s
 
 # target to generate assembly for a file
 particle.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/particle.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/particle.cpp.s
 .PHONY : particle.cpp.s
 
 sifakis/sifakisSVD.o: sifakis/sifakisSVD.cpp.o
@@ -364,7 +364,7 @@ sifakis/sifakisSVD.o: sifakis/sifakisSVD.cpp.o
 
 # target to build an object file
 sifakis/sifakisSVD.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.o
 .PHONY : sifakis/sifakisSVD.cpp.o
 
 sifakis/sifakisSVD.i: sifakis/sifakisSVD.cpp.i
@@ -373,7 +373,7 @@ sifakis/sifakisSVD.i: sifakis/sifakisSVD.cpp.i
 
 # target to preprocess a source file
 sifakis/sifakisSVD.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.i
 .PHONY : sifakis/sifakisSVD.cpp.i
 
 sifakis/sifakisSVD.s: sifakis/sifakisSVD.cpp.s
@@ -382,7 +382,7 @@ sifakis/sifakisSVD.s: sifakis/sifakisSVD.cpp.s
 
 # target to generate assembly for a file
 sifakis/sifakisSVD.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/sifakis/sifakisSVD.cpp.s
 .PHONY : sifakis/sifakisSVD.cpp.s
 
 simpleViewer.o: simpleViewer.cpp.o
@@ -391,7 +391,7 @@ simpleViewer.o: simpleViewer.cpp.o
 
 # target to build an object file
 simpleViewer.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/simpleViewer.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/simpleViewer.cpp.o
 .PHONY : simpleViewer.cpp.o
 
 simpleViewer.i: simpleViewer.cpp.i
@@ -400,7 +400,7 @@ simpleViewer.i: simpleViewer.cpp.i
 
 # target to preprocess a source file
 simpleViewer.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/simpleViewer.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/simpleViewer.cpp.i
 .PHONY : simpleViewer.cpp.i
 
 simpleViewer.s: simpleViewer.cpp.s
@@ -409,7 +409,7 @@ simpleViewer.s: simpleViewer.cpp.s
 
 # target to generate assembly for a file
 simpleViewer.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/simpleViewer.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/simpleViewer.cpp.s
 .PHONY : simpleViewer.cpp.s
 
 snowModel.o: snowModel.cpp.o
@@ -418,7 +418,7 @@ snowModel.o: snowModel.cpp.o
 
 # target to build an object file
 snowModel.cpp.o:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/snowModel.cpp.o
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/snowModel.cpp.o
 .PHONY : snowModel.cpp.o
 
 snowModel.i: snowModel.cpp.i
@@ -427,7 +427,7 @@ snowModel.i: snowModel.cpp.i
 
 # target to preprocess a source file
 snowModel.cpp.i:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/snowModel.cpp.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/snowModel.cpp.i
 .PHONY : snowModel.cpp.i
 
 snowModel.s: snowModel.cpp.s
@@ -436,7 +436,7 @@ snowModel.s: snowModel.cpp.s
 
 # target to generate assembly for a file
 snowModel.cpp.s:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/snowModel.cpp.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(MAKE) -f src/CMakeFiles/mpm.dir/build.make src/CMakeFiles/mpm.dir/snowModel.cpp.s
 .PHONY : snowModel.cpp.s
 
 # Help Target
@@ -493,6 +493,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

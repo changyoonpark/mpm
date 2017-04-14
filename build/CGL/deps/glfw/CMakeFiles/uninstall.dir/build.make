@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.7.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm"
+CMAKE_SOURCE_DIR = "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build"
+CMAKE_BINARY_DIR = "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build"
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Re
 include CGL/deps/glfw/CMakeFiles/uninstall.dir/progress.make
 
 CGL/deps/glfw/CMakeFiles/uninstall:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw" && /usr/local/Cellar/cmake/3.7.2/bin/cmake -P /Users/chang/Library/Mobile\ Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/cmake_uninstall.cmake
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw" && /usr/local/Cellar/cmake/3.7.2/bin/cmake -P /Users/SJCY/Library/Mobile\ Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/cmake_uninstall.cmake
 
 uninstall: CGL/deps/glfw/CMakeFiles/uninstall
 uninstall: CGL/deps/glfw/CMakeFiles/uninstall.dir/build.make
@@ -67,10 +67,10 @@ CGL/deps/glfw/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/build
 
 CGL/deps/glfw/CMakeFiles/uninstall.dir/clean:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw" && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw" && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/clean
 
 CGL/deps/glfw/CMakeFiles/uninstall.dir/depend:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/depend
 

@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.7.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm"
+CMAKE_SOURCE_DIR = "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build"
+CMAKE_BINARY_DIR = "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build"
 
 # Include any dependencies generated for this target.
 include CGL/deps/glew/CMakeFiles/glew.dir/depend.make
@@ -59,16 +59,16 @@ include CGL/deps/glew/CMakeFiles/glew.dir/flags.make
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o: CGL/deps/glew/CMakeFiles/glew.dir/flags.make
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o: ../CGL/deps/glew/src/glew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glew.dir/src/glew.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glew.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glew.dir/src/glew.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glew.c"
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glew.dir/src/glew.c.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glew.c" > CMakeFiles/glew.dir/src/glew.c.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glew.c" > CMakeFiles/glew.dir/src/glew.c.i
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glew.dir/src/glew.c.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glew.c" -o CMakeFiles/glew.dir/src/glew.c.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glew.c" -o CMakeFiles/glew.dir/src/glew.c.s
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o.requires:
 
@@ -83,16 +83,16 @@ CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o.provides.build: CGL/deps/glew/CMa
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: CGL/deps/glew/CMakeFiles/glew.dir/flags.make
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: ../CGL/deps/glew/src/glewinfo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glew.dir/src/glewinfo.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glewinfo.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glew.dir/src/glewinfo.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glewinfo.c"
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glew.dir/src/glewinfo.c.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glewinfo.c" > CMakeFiles/glew.dir/src/glewinfo.c.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glewinfo.c" > CMakeFiles/glew.dir/src/glewinfo.c.i
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glew.dir/src/glewinfo.c.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glewinfo.c" -o CMakeFiles/glew.dir/src/glewinfo.c.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/glewinfo.c" -o CMakeFiles/glew.dir/src/glewinfo.c.s
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o.requires:
 
@@ -107,16 +107,16 @@ CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o.provides.build: CGL/deps/glew
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: CGL/deps/glew/CMakeFiles/glew.dir/flags.make
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: ../CGL/deps/glew/src/visualinfo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glew.dir/src/visualinfo.c.o   -c "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/visualinfo.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glew.dir/src/visualinfo.c.o   -c "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/visualinfo.c"
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glew.dir/src/visualinfo.c.i"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/visualinfo.c" > CMakeFiles/glew.dir/src/visualinfo.c.i
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/visualinfo.c" > CMakeFiles/glew.dir/src/visualinfo.c.i
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glew.dir/src/visualinfo.c.s"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/visualinfo.c" -o CMakeFiles/glew.dir/src/visualinfo.c.s
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew/src/visualinfo.c" -o CMakeFiles/glew.dir/src/visualinfo.c.s
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o.requires:
 
@@ -143,9 +143,9 @@ CGL/deps/glew/libglew.a: CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o
 CGL/deps/glew/libglew.a: CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o
 CGL/deps/glew/libglew.a: CGL/deps/glew/CMakeFiles/glew.dir/build.make
 CGL/deps/glew/libglew.a: CGL/deps/glew/CMakeFiles/glew.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libglew.a"
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && $(CMAKE_COMMAND) -P CMakeFiles/glew.dir/cmake_clean_target.cmake
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glew.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libglew.a"
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && $(CMAKE_COMMAND) -P CMakeFiles/glew.dir/cmake_clean_target.cmake
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glew.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CGL/deps/glew/CMakeFiles/glew.dir/build: CGL/deps/glew/libglew.a
@@ -159,10 +159,10 @@ CGL/deps/glew/CMakeFiles/glew.dir/requires: CGL/deps/glew/CMakeFiles/glew.dir/sr
 .PHONY : CGL/deps/glew/CMakeFiles/glew.dir/requires
 
 CGL/deps/glew/CMakeFiles/glew.dir/clean:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && $(CMAKE_COMMAND) -P CMakeFiles/glew.dir/cmake_clean.cmake
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" && $(CMAKE_COMMAND) -P CMakeFiles/glew.dir/cmake_clean.cmake
 .PHONY : CGL/deps/glew/CMakeFiles/glew.dir/clean
 
 CGL/deps/glew/CMakeFiles/glew.dir/depend:
-	cd "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glew" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew" "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CGL/deps/glew/CMakeFiles/glew.dir/depend
 

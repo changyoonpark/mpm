@@ -230,10 +230,16 @@ void SimpleView::err_callback( int error, const char* description ) {
 }
 
 void SimpleView::start(){
-  while( !glfwWindowShouldClose( window ) ){
-    // if (currentTimeStep == 0 ) update();
-    update();
-  } 
+  #if WITH_GUI == 1
+    while( !glfwWindowShouldClose( window ) ){
+      // if (currentTimeStep == 0 ) update();
+      update();
+    } 
+  #else
+    while(1){
+      update();
+    }
+  #endif  
   // update();
 }
 
@@ -394,7 +400,6 @@ void SimpleView::timeStep(){
     //Map particle properties onto the grid.
     grid->hashParticles();
     pSet->rasterizeParticlesOntoNodes();
-
     // double totmass = 0., totmass2 = 0.;
     // for(auto& node : grid->nodes){
     //   totmass += node->mass;
@@ -418,8 +423,9 @@ void SimpleView::timeStep(){
     //Grid Velocity update.
     grid->calculateNodalForcesAndUpdateVelocities();
     grid->calculateGeometryInteractions();
-    
+    // grid->solveForVelNextAndUpdateVelocities();
 
+    
     pSet->calculateParticleVelocityGradient();
     pSet->updateParticleDeformationGradient();
 
@@ -428,11 +434,8 @@ void SimpleView::timeStep(){
     // std::cout << pSet->particleSet[171].F_P << std::endl;
     // std::cout << "J_P : " << pSet->particleSet[171].F_P.det() << std::endl;
     // std::cout << pSet->particleSet[171].SIGMA << std::endl;
-
     pSet->updateParticlePosition();
-
     spitToFile();
-
     // pSet->updateParticleSignedDistance();
     // pSet->calculateGeometryInteractions();
 
@@ -519,22 +522,24 @@ void SimpleView::initGLFW(){
   screenW = 600;
   screenH = 600;
   std::string title = "MPM SOLVER";
-  window = glfwCreateWindow( screenW, screenH, title.c_str(), NULL, NULL );
-  if (!window) {
-    std::cout << "WINDOW CREATE FAILED" << std::endl;
-    glfwTerminate();
-    exit( 1 );
-  }
 
-  glfwMakeContextCurrent( window );
-  glfwSwapInterval(1);
-  
-  // initialize glew
-  if (glewInit() != GLEW_OK) {
-    std::cout << "GLEW INIT FAILED" << std::endl;
-    glfwTerminate();
-    exit( 1 );
-  }
+    window = glfwCreateWindow( screenW, screenH, title.c_str(), NULL, NULL );
+    if (!window) {
+      std::cout << "WINDOW CREATE FAILED" << std::endl;
+      glfwTerminate();
+      exit( 1 );
+    }
+
+    glfwMakeContextCurrent( window );
+    glfwSwapInterval(1);
+    
+    // initialize glew
+    if (glewInit() != GLEW_OK) {
+      std::cout << "GLEW INIT FAILED" << std::endl;
+      glfwTerminate();
+      exit( 1 );
+    }
+
 }
 
 void SimpleView::setGLSettings(){
@@ -611,35 +616,23 @@ void SimpleView::draw_domainOutline(){
 }
 
 void SimpleView::update(){
+    #if WITH_GUI == 1
+      glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+      update_gl_camera();
 
-    // clear frame
-    // if (currentTimeStep % 100 == 0){
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    // }
-    update_gl_camera();
+      glEnable(GL_LIGHTING);
+      draw_domainOutline();
+      draw_faces();
+      draw_spheres();
+      glDisable(GL_LIGHTING);
+    #endif
 
-    // if (currentTimeStep % 100 == 0){
-    glEnable(GL_LIGHTING);
-    draw_domainOutline();
-    draw_faces();
-    // draw_spheres();
-    // draw_nodes();
-    // draw_particleForce();
-    draw_nodeForce();
-    // draw_nodeVelNext();
-
-    glDisable(GL_LIGHTING);
-    // }
-    // draw_edges();
-    
-    // if (currentTimeStep == 0 ){
     timeStep();
-    // }
-    // if (currentTimeStep % 100 == 0){    
-    glfwSwapBuffers(window); 
-    glfwPollEvents();
-    // }
-    
+
+    #if WITH_GUI == 1
+      glfwSwapBuffers(window); 
+      glfwPollEvents();
+    #endif    
 }
 
 
@@ -653,36 +646,38 @@ void SimpleView::init(){
 
   // resize elements to current size
   //   resize_callback(window, buffer_w, buffer_h);  
-  
-  initGLFW();
-  setGLSettings();
-  createGLProgram();
+  #if WITH_GUI == 1
+    initGLFW();
+    setGLSettings();
+    createGLProgram();
 
-  camera->configure(screenW, screenH);
-  camera->viewDist = domainExtent.norm() * 10.0;
-
+    camera->configure(screenW, screenH);
+    camera->viewDist = domainExtent.norm() * 10.0;
 
 // void Camera::place(const Vector3D& targetPos, const double phi,
 //                    const double theta, const double r, const double minR,
 //                    const double maxR) {
 
 
-  camera->place(domainExtent / 2.,
-               -2.0,
-               1.0,
-              //  1.0,
-               camera->viewDist * 5.0,
-               camera->nClip,
-               camera->fClip
-  );
-  // camera.place(domainExtent / 2.,
-  //              0.,
-  //              0.,
-  //              domainExtent.norm() * 10,
-  //              domainExtent.norm() * 0.1,
-  //              domainExtent.norm() * 20.0
-  //   );
-  setPerspective();
+    camera->place(domainExtent / 2.,
+                  0.,0.,
+                 // -2.0,
+                 // 1.0,
+                //  1.0,
+                 camera->viewDist * 5.0,
+                 camera->nClip,
+                 camera->fClip
+    );
+    // camera.place(domainExtent / 2.,
+    //              0.,
+    //              0.,
+    //              domainExtent.norm() * 10,
+    //              domainExtent.norm() * 0.1,
+    //              domainExtent.norm() * 20.0
+    //   );
+    setPerspective();
+  #endif
+
 }
 
 

@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/install_manifest.txt\"")
+if (NOT EXISTS "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/install_manifest.txt" files)
+file(READ "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

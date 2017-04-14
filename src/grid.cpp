@@ -9,6 +9,7 @@
 //#include <omp.h>
 
 #define DBL_MAX 1.7976931348623158e+308
+#define EPS_D (0.00000000001)
 
 using namespace myMath;
 
@@ -91,8 +92,20 @@ void GridNode::calcNodalForce(){
 	// force = force + mass * consts.bodyForce;
 }
 
+Vector3D GridNode::getHessianSum(Vector3D& delta_u){
+	Vector3D sum(0,0,0);
+	for (auto& cell : nearCells){
+		if (cell == NULL) continue;
+		for (auto& particle : cell->pList){
+			if (particle == NULL) break;						
+			sum += particle->volume * particle->calculateAMatrix(delta_u) * (particle->F_E.T() * gW(particle->pos));
+		}
+	}
+	return sum;	
+}
+
 void GridNode::updateVelocityWithNodalForce(){
-	velNext = vel + consts.dt * (consts.bodyForce - force / mass);
+	velNext = vel + consts.dt * (consts.bodyForce - force / (mass + EPS_D));
 }
 
 void GridNode::calcGeometryInteractions(){
@@ -158,6 +171,7 @@ void GridNode::sampleVelocity(){
 
 	// if (vel.z != 0) std::cout << "sampled vel : " << vel << std::endl;
 }
+
 
 /*---------------------------------------------------------------*/
 
@@ -225,16 +239,17 @@ inline unsigned int Grid::idx(int i, int j, int k){
 
 //This Function is called every timestep.
 void Grid::hashParticles(){
+	#pragma omp parallel for num_threads(THREADCOUNT)
 	activeNodes.clear();
 	//Clear the pList for each Cell
 	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < nodes.size(); i++){
 		nodes[i]->isActive = false;
 		nodes[i]->mass = 0.;
-		nodes[i]->vel = nodes[i]->vel * 0.;
+		nodes[i]->vel = Vector3D(0,0,0);
 		nodes[i]->cell->clearPList();
-	}
 
+	}
 	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < pSet->particleSet.size(); i++){
 		Particle& particle = pSet->particleSet[i];
@@ -242,7 +257,6 @@ void Grid::hashParticles(){
 		particle.cell = idxNode(particle.hash)->cell;
 		particle.cell->addToPList(&particle);
 	}
-
 }
 
 //This Function is called every timestep.
@@ -277,6 +291,93 @@ void Grid::calculateNodalForcesAndUpdateVelocities(){
 
 }
 
+void Grid::solveForVelNextAndUpdateVelocities(){
+	//Initialize values for Conjugate Residual
+	std::cout << "Performing Implicit Velocity Update" << std::endl;
+
+	// #pragma omp parallel for num_threads(THREADCOUNT)
+	// for(int i=0;i<activeNodes.size();i++){
+	// 	auto dataIt = activeNodes.begin();
+	// 	std::advance(dataIt,i);
+	// 	GridNode* node = dataIt->second;		
+	// 	std::cout << "Velnext : " << std::endl;
+	// 	std::cout << node->velNext << std::endl;
+	// 	std::cout << "mass : " << std::endl;
+	// 	std::cout << node->mass << std::endl;
+	// }
+
+
+
+	double residualSum = 0.;
+	std::vector<double> residuals(activeNodes.size(),0);
+
+	#pragma omp parallel for num_threads(THREADCOUNT) reduction(+:residualSum)	
+	for(int i=0;i<activeNodes.size();i++){
+		auto dataIt = activeNodes.begin();
+		std::advance(dataIt,i);
+		GridNode* node = dataIt->second;		
+		// std::cout << node->velNext << std::endl;
+		node->r     =  -(node->consts.beta * node->consts.dt2 / (node->mass + EPS_D)) * node->getHessianSum(node->velNext);
+		node->s     =  node->r + (node->consts.beta * node->consts.dt2 / (node->mass + EPS_D)) * node->getHessianSum(node->r);
+		node->p     =  node->r;
+		node->q     =  node->s;
+		node->gamma =  dot(node->r,node->s);		
+		node->alpha   = node->gamma / (dot(node->q,node->q) + EPS_D);
+
+		// std::cout << "---------" << std::endl;
+		// std::cout << node->velNext << std::endl;
+		// std::cout << node->getHessianSum(node->velNext) << std::endl;
+		// std::cout << node->r << std::endl;
+		// std::cout << node->s << std::endl;
+		// std::cout << node->gamma << std::endl;
+		// std::cout << node->alpha << std::endl;
+
+		residuals[i] = node->alpha * node->alpha * node->p.norm2();
+		residualSum += residuals[i];
+	}	
+
+	//Start iterations
+	std::cout << "Starting Conjugate  : " << residualSum << std::endl;
+
+	#pragma omp parallel for num_threads(THREADCOUNT)
+	for(int i=0;i<activeNodes.size();i++){
+		auto dataIt = activeNodes.begin();
+		std::advance(dataIt,i);
+		GridNode* node = dataIt->second;		
+	}
+
+	int iterCount = 0;
+	while(residualSum > 1.E-5 && (iterCount < 10) ){
+	// while(1){
+		residualSum = 0;
+
+		#pragma omp parallel for num_threads(THREADCOUNT) reduction(+:residualSum)
+		for(int i=0;i<activeNodes.size();i++){
+			auto dataIt = activeNodes.begin();
+			std::advance(dataIt,i);
+			GridNode* node = dataIt->second;
+
+
+			node->alpha   = node->gamma / (dot(node->q,node->q) + 1.E-10);
+
+			residuals[i] = node->alpha * node->alpha * node->p.norm2();
+			residualSum += residuals[i];
+
+			node->velNext = node->velNext + node->alpha * node->p;
+			node->r       = node->r - node->alpha * node->q;
+			node->s       = node->r + (node->consts.beta * node->consts.dt2 / node->mass) * node->getHessianSum(node->r);
+			node->beta    = dot(node->r,node->s) / node->gamma;
+			node->gamma   = node->beta * node->gamma;
+			node->p       = node->r + node->beta * node->p;
+			node->q       = node->s + node->beta * node->q;
+
+		}
+		std::cout << "Conjugate Residual : " << residualSum << std::endl;
+
+		iterCount ++;
+	}
+
+}
 
 void Grid::calculateGeometryInteractions(){
 	#pragma omp parallel for num_threads(THREADCOUNT)

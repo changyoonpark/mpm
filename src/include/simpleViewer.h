@@ -11,6 +11,7 @@
 #include "particle.h"
 #include "grid.h"
 #include "mesh.h"
+#include "constants.h"
 
 #define STR(A) #A
 

@@ -93,6 +93,30 @@ void Particle::calculateVelocityGradient(){
 
 }
 
+
+
+Matrix3x3 Particle::calculateAMatrix(Vector3D& delta_u){
+    //Calculate delta_F_E
+    delta_F_E.zero();
+    for(int ii = -2; ii <= 1; ii++){
+    for(int jj = -2; jj <= 1; jj++){
+    for(int kk = -2; kk <= 1; kk++){
+        int3 nidx = int3(ii,jj,kk);
+        GridNode* gn = cell->node->neighborNode(nidx);
+        if (gn == NULL) continue;
+        if (!gn->isActive) continue;
+        delta_F_E += tensorProduct(delta_u, gn->gW(pos)) * F_E;
+    }}}    
+
+    return consts.snowModel->hessianWrtF_doubleContractionDeltaF(J_E,J_P,
+                                                                 F_E,
+                                                                 R_E,
+                                                                 S_E,
+                                                                 F_E_inv,
+                                                                 delta_F_E);    
+
+}
+
 void Particle::updateVelNext(){
     velNextCollected = Vector3D(0.,0.,0.);
     velNowCollected = Vector3D(0.,0.,0.);
@@ -110,6 +134,7 @@ void Particle::updateVelNext(){
     velPIC = velNextCollected;
     velFLIP = (vel + velNextCollected - velNowCollected);
     velNext = (1. - consts.snowModel->alpha ) * velPIC + consts.snowModel->alpha * velFLIP;
+    // std::cout << velNextCollected << ", " << velNowCollected << std::endl;
     // velNext = velFLIP;
     // velNext = 0.5 * velNowCollected + 0.5 * velNextCollected;
     // std::cout << "********" << std::endl;
@@ -144,21 +169,7 @@ void Particle::calculateGeometryInteraction(){
     }    
 
 }
-void Particle::calcUglyMatrix1(double J, Matrix3x3& F, Matrix3x3& F_inv, Matrix3x3& delta_F){
-    // calculates partial { JF^(-T)} / partial{F} : delta_F
-    Matrix3x3 result;
-    result.zero();
-    for (int i = 0; i < 3; i++){
-    for (int j = 0; j < 3; j++){
-        for (int k = 0; k < 3; k++){
-        for (int l = 0; l < 3; l++){
-            (F_inv.T()).tensorProductComponent(F_inv.T(),)
-        }
-        }
-    }
-    }
 
-}
 
 void Particle::updateDeformationGradient(){
     // Simple update.
@@ -177,6 +188,7 @@ void Particle::updateDeformationGradient(){
 
     F_E.singularValueDecompose(U,SIGMA,V);
     R_E = U * V.T();
+    S_E = R_E.inv() * F_E;
 
     SIGMA.clamp(1. - consts.snowModel->theta_compression,
                 1. + consts.snowModel->theta_stretch     );
@@ -188,6 +200,7 @@ void Particle::updateDeformationGradient(){
     J_P = F_P.det();
     J = J_E * J_P;
 
+    F_E_inv = F_E.inv();
 
 }
 
@@ -214,9 +227,9 @@ ParticleSet::ParticleSet(Constants& _consts, InitData& dat)
 
 void ParticleSet::rasterizeParticlesOntoNodes(){
 	#pragma omp parallel for num_threads(THREADCOUNT)
+    std::cout << "rasterizing .. " << std::endl;
 	for (int i = 0; i < particleSet.size(); i++){
-
-        double W;
+        double W;   
         //Index through the surrounding nodes.
         for(int ii = -2; ii <= 1; ii++){
         for(int jj = -2; jj <= 1; jj++){
@@ -260,7 +273,7 @@ void ParticleSet::rasterizeParticlesOntoNodes(){
 
             #pragma omp critical (velcollect)
             {
-                gn->vel += particleSet[i].vel * particleSet[i].mass * W / gn->mass;
+                gn->vel += particleSet[i].vel * particleSet[i].mass * W / (gn->mass + EPS_D);
             }   
 
         }}}
@@ -308,7 +321,6 @@ void ParticleSet::updateParticlePosition(){
  
 }
 
-
 void ParticleSet::updateParticleDeformationGradient(){
 	#pragma omp parallel for num_threads(THREADCOUNT)    
 	for (int i = 0; i < particleSet.size(); i++){        
@@ -324,3 +336,4 @@ void ParticleSet::calculateGeometryInteractions(){
     }    
     
 }
+

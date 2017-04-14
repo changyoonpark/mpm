@@ -7,7 +7,7 @@
 #include "constants.h"
 #include "mesh.h"
 
-#define MAX_PARTICLE_PER_CELL 100
+#define MAX_PARTICLE_PER_CELL 200
 
 
 using namespace myMath;
@@ -59,6 +59,14 @@ class GridNode{
 		Vector3D velNext;
 		Vector3D force;
 
+		Vector3D r;
+		Vector3D s;
+		Vector3D p;
+		Vector3D q;
+		double gamma;
+		double alpha,beta;
+
+
 		void sampleMass();
 		void sampleVelocity();
 		void calcSignedDist();
@@ -66,6 +74,7 @@ class GridNode{
 		void calcGeometryInteractions();
 		void calcNodalForce();
 		void updateVelocityWithNodalForce();
+		Vector3D getHessianSum(Vector3D& delta_u);
 
 		GridNode* neighborNode(int3& i);
 
@@ -117,6 +126,7 @@ class Grid{
 		std::map<std::tuple<int,int,int>,GridNode*>::iterator dataIt;
 		void hashParticles();
 		void rasterizeNodes();
+		void solveForVelNextAndUpdateVelocities();
 		void calculateSignedDistance();
 		void calculateGeometryInteractions();
 		void calculateNodalForcesAndUpdateVelocities();

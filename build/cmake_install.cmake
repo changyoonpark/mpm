@@ -1,8 +1,8 @@
-# Install script for directory: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm
+# Install script for directory: /Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/")
+  set(CMAKE_INSTALL_PREFIX "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,8 +29,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/cmake_install.cmake")
-  include("/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src/cmake_install.cmake")
+  include("/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/cmake_install.cmake")
+  include("/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src/cmake_install.cmake")
 
 endif()
 
@@ -42,5 +42,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

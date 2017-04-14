@@ -29,26 +29,30 @@ public:
         return lambda0 * std::exp(std::min(xi * (1. - J_P), 20.));
     }
 
+    double hardening(double J_P) const{
+        return std::exp(std::min(xi * (1. - J_P), 20.));
+    }
+
     // double workFunction(Matrix3x3& F_P, Matrix3x3& F_E, Matrix3x3& R_E) const {
     //     double J_E = F_E.det();
     //     double J_P = F_P.det();        
     //     return calcMu(J_P) * (F_E - R_E).norm2() + 
     //            0.5 * calcLambda(J_P) * (J_E - 1.) * (J_E - 1.);
     // }
+    
 
-    Matrix3x3 cauchyStress(double J, double J_P, double J_E, Matrix3x3& F, Matrix3x3& F_E, Matrix3x3& R_E, Matrix3x3& D) const {
-        
-        // Matrix3x3 I = F.identity();
-        // Matrix3x3 strain = 0.5 * (F.T() * F - I);
+    Matrix3x3 calcUglyMatrix1(double J, Matrix3x3& F_inv, Matrix3x3& delta_F) const;
+    Matrix3x3 calcUglyMatrix2(double J, Matrix3x3& R, Matrix3x3& S, Matrix3x3& delta_F) const;
 
-        // double trace = strain(0,0) + strain(1,1) + strain(2,2); 
-        // return lambda0 * trace * I + 2.0 * mu0 * strain;
+    Matrix3x3 hessianWrtF_doubleContractionDeltaF(double J_E, double J_P, 
+                                                  Matrix3x3& F_E, 
+                                                  Matrix3x3& R_E,
+                                                  Matrix3x3& S_E,                                                  
+                                                  Matrix3x3& F_E_inv, 
+                                                  Matrix3x3& delta_F_E) const;
+                                                  
+    Matrix3x3 cauchyStress(double J, double J_P, double J_E, Matrix3x3& F, Matrix3x3& F_E, Matrix3x3& R_E, Matrix3x3& D) const;
 
-        Matrix3x3 I = F_E.identity();
-        double hardening = std::exp(std::min(xi * (1. - J_P), 50.));
-        // std::cout << hardening << std::endl;
-        return hardening * (2. * (mu0 / J) * (F_E - R_E) * F_E.T() + (lambda0 / J) * (J_E - 1.) * J_E * I);
-    }
 
     const double theta_compression;
     const double theta_stretch;

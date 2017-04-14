@@ -19,7 +19,7 @@ namespace myMath {
 /**
  * Defines 3D vectors.
  */
-
+class Matrix3x3;
 
 struct int3{
   public:
@@ -137,7 +137,6 @@ class Vector3D {
   inline double norm2( void ) const {
     return x*x + y*y + z*z;
   }
-
   /**
    * Returns unit vector.
    */
@@ -238,6 +237,10 @@ class Matrix3x3 {
    */
   static Matrix3x3 crossProduct( const Vector3D& u );
 
+
+  double tensorProductComponent(Matrix3x3& B, int i, int j, int k, int l) const;
+  double doubleContraction(Matrix3x3& B) const;
+
   /**
    * Returns the ith column.
    */
@@ -296,6 +299,13 @@ class Matrix3x3 {
 
 // returns the outer product of u and v
 Matrix3x3 outer( const Vector3D& u, const Vector3D& v );
+
+// returns the tensor product of two vectors
+inline Matrix3x3 tensorProduct( const Vector3D& u, const Vector3D& v ){
+  return Matrix3x3(Vector3D(u.x * v.x, u.x * v.y, u.x * v.z),
+                   Vector3D(u.y * v.x, u.y * v.y, u.y * v.z),
+                   Vector3D(u.z * v.x, u.z * v.y, u.z * v.z));
+}
 
 // returns c*A
 Matrix3x3 operator*( double c, const Matrix3x3& A );
