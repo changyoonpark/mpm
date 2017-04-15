@@ -231,10 +231,10 @@ void SimpleView::err_callback( int error, const char* description ) {
 
 void SimpleView::start(){
   #if WITH_GUI == 1
-    while( !glfwWindowShouldClose( window ) ){
+    // while( !glfwWindowShouldClose( window ) ){
       // if (currentTimeStep == 0 ) update();
       update();
-    } 
+    // } 
   #else
     while(1){
       update();
@@ -442,28 +442,39 @@ void SimpleView::spitToFile(){
 
   std::cout << "outputing data." << std::endl;
 
-  std::ofstream timeStepData;
-  std::string fileName = "./outputs/grid_t_";
-  fileName += std::to_string(currentTimeStep);
-  fileName += ".txt";
-  timeStepData.open(fileName);
-	for(int i=0;i<grid->activeNodes.size();i++){
-		auto dataIt = grid->activeNodes.begin();
-		std::advance(dataIt,i);
-		GridNode* gn = dataIt->second;
-    timeStepData << gn->x.x << "," <<  gn->x.y << "," << gn->x.z << " ";
-    timeStepData << gn->mass / h3 << "\n";
-  }
-  timeStepData.close();
 
-  fileName = "./outputs/particle_t_";
-  fileName += std::to_string(currentTimeStep);
-  fileName += ".txt";
-  timeStepData.open(fileName);
-  for (auto& p : pSet->particleSet){
-    timeStepData << p.pos.x << "," <<  p.pos.y << "," << p.pos.z << "\n";
+  #pragma omp parallel for num_threads(THREADCOUNT)
+  for(int t = 0; t < THREADCOUNT; t ++){
+    int nodesPerThread = grid->activeNodes.size() / THREADCOUNT;
+    int tid = omp_get_thread_num();
+
+    int startIdx = tid * nodesPerThread;
+    int endIdx = (tid + 1) * nodesPerThread;
+
+    if (tid == THREADCOUNT - 1){
+      nodesPerThread = grid->activeNodes.size() - nodesPerThread * (THREADCOUNT - 1);      
+      endIdx = grid->activeNodes.size();
+    } 
+    
+    std::ofstream timeStepData;
+    std::string fileName = "./outputs/grid_t_";
+
+    fileName += std::to_string(currentTimeStep);
+    fileName += "_part_";
+    fileName += std::to_string(tid);
+    fileName += ".txt";
+
+    timeStepData.open(fileName);
+    for(int i=startIdx;i<endIdx;i++){
+      auto dataIt = grid->activeNodes.begin();
+      std::advance(dataIt,i);
+      GridNode* gn = dataIt->second;
+      timeStepData << gn->x.x << "," <<  gn->x.y << "," << gn->x.z << " ";
+      timeStepData << gn->mass / h3 << "\n";
+    }
+    timeStepData.close();
   }
-  timeStepData.close();
+
 
 }
 

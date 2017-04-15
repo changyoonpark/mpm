@@ -242,14 +242,15 @@ void ParticleSet::rasterizeParticlesOntoNodes(){
             W = gn->W(particleSet[i].pos);
 
 
+            #pragma omp atomic
+                gn->mass += particleSet[i].mass * W;
+
             #pragma omp critical (activateNodes)
             {
                 gn->_grid->activeNodes[std::make_tuple(gn->idx.nx,gn->idx.ny,gn->idx.nz)] = gn;
                 gn->isActive = true;
             }
     
-            #pragma omp atomic
-                gn->mass += particleSet[i].mass * W;
 
         }}}
 

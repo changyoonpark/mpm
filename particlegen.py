@@ -6,7 +6,7 @@ text_file = open("./input/input.in", "w")
 
 start = [0.595,0.5,0.5]
 # h = 0.01
-h = 0.025
+h = 0.1
 r = 0.3
 rho = 400;
 # totmass = 3.141592 * (r*r) * (h * 3) * rho
@@ -14,7 +14,7 @@ totmass = 3.141592 * 4./3. * (r*r*r) * rho
 # totmass = (h * 7) * (h * 7) * (h * 7) * rho 
 # totmass = 3.14 * (2.5) * (2.5) * (h * 8) * rho
 pos = []
-noise = 1.0;
+noise = 0;
 for i in range(-100,101):
     for j in range(-100,101):
         for k in range(-100,101):
