@@ -4,10 +4,10 @@ from numpy import random
 template = "x:{},{},{} v:{},{},{} m:{},0,0\n"
 text_file = open("./input/input.in", "w")
 
-start = [0.595,0.5,0.5]
+start = [0.695,0.5,0.6]
 # h = 0.01
-h = 0.1
-r = 0.3
+h = 0.00625
+r = 0.2
 rho = 400;
 # totmass = 3.141592 * (r*r) * (h * 3) * rho
 totmass = 3.141592 * 4./3. * (r*r*r) * rho
@@ -39,7 +39,7 @@ for p in pos:
     #                                     0,0,0.,
     #                                     pmass))
     text_file.write(template.format(p[0],p[1],p[2],
-                                    3,0,-1,
+                                    15,0,-3,
                                     pmass))
 
 print("{} particles generated. total mass : {} kg".format(len(pos),totmass))

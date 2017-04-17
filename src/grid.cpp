@@ -339,7 +339,6 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 			std::advance(dataIt,i);
 			GridNode* node = dataIt->second;
 
-
 			node->alpha   = node->gamma / (dot(node->q,node->q) + EPS_D);
 
 			residuals[i] = node->alpha * node->alpha * node->p.norm2();
