@@ -220,15 +220,15 @@ GL/glext.h
 GL/glu.h
 -
 
-/home/chang/Desktop/Research/mpm/CGL/src/base64.cpp
+/home/ubuntu/snowsim/CGL/src/base64.cpp
 base64.h
-/home/chang/Desktop/Research/mpm/CGL/src/base64.h
+/home/ubuntu/snowsim/CGL/src/base64.h
 iostream
 -
 
-/home/chang/Desktop/Research/mpm/CGL/src/color.cpp
+/home/ubuntu/snowsim/CGL/src/color.cpp
 color.h
-/home/chang/Desktop/Research/mpm/CGL/src/color.h
+/home/ubuntu/snowsim/CGL/src/color.h
 stdio.h
 -
 string.h
@@ -238,13 +238,13 @@ ostream
 sstream
 -
 
-/home/chang/Desktop/Research/mpm/CGL/src/complex.cpp
+/home/ubuntu/snowsim/CGL/src/complex.cpp
 complex.h
-/home/chang/Desktop/Research/mpm/CGL/src/complex.h
+/home/ubuntu/snowsim/CGL/src/complex.h
 
-/home/chang/Desktop/Research/mpm/CGL/src/lodepng.cpp
+/home/ubuntu/snowsim/CGL/src/lodepng.cpp
 lodepng.h
-/home/chang/Desktop/Research/mpm/CGL/src/lodepng.h
+/home/ubuntu/snowsim/CGL/src/lodepng.h
 stdio.h
 -
 stdlib.h
@@ -252,41 +252,41 @@ stdlib.h
 fstream
 -
 
-/home/chang/Desktop/Research/mpm/CGL/src/matrix3x3.cpp
+/home/ubuntu/snowsim/CGL/src/matrix3x3.cpp
 matrix3x3.h
-/home/chang/Desktop/Research/mpm/CGL/src/matrix3x3.h
+/home/ubuntu/snowsim/CGL/src/matrix3x3.h
 iostream
 -
 cmath
 -
 
-/home/chang/Desktop/Research/mpm/CGL/src/matrix4x4.cpp
+/home/ubuntu/snowsim/CGL/src/matrix4x4.cpp
 matrix4x4.h
-/home/chang/Desktop/Research/mpm/CGL/src/matrix4x4.h
+/home/ubuntu/snowsim/CGL/src/matrix4x4.h
 iostream
 -
 cmath
 -
 
-/home/chang/Desktop/Research/mpm/CGL/src/osdtext.cpp
+/home/ubuntu/snowsim/CGL/src/osdtext.cpp
 osdtext.h
-/home/chang/Desktop/Research/mpm/CGL/src/osdtext.h
+/home/ubuntu/snowsim/CGL/src/osdtext.h
 iostream
 -
 ft2build.h
-/home/chang/Desktop/Research/mpm/CGL/src/ft2build.h
+/home/ubuntu/snowsim/CGL/src/ft2build.h
 base64.h
-/home/chang/Desktop/Research/mpm/CGL/src/base64.h
+/home/ubuntu/snowsim/CGL/src/base64.h
 console.h
-/home/chang/Desktop/Research/mpm/CGL/src/console.h
+/home/ubuntu/snowsim/CGL/src/console.h
 
-/home/chang/Desktop/Research/mpm/CGL/src/quaternion.cpp
+/home/ubuntu/snowsim/CGL/src/quaternion.cpp
 quaternion.h
-/home/chang/Desktop/Research/mpm/CGL/src/quaternion.h
+/home/ubuntu/snowsim/CGL/src/quaternion.h
 
-/home/chang/Desktop/Research/mpm/CGL/src/spectrum.cpp
+/home/ubuntu/snowsim/CGL/src/spectrum.cpp
 spectrum.h
-/home/chang/Desktop/Research/mpm/CGL/src/spectrum.h
+/home/ubuntu/snowsim/CGL/src/spectrum.h
 stdio.h
 -
 string.h
@@ -296,9 +296,9 @@ ostream
 sstream
 -
 
-/home/chang/Desktop/Research/mpm/CGL/src/tinyxml2.cpp
+/home/ubuntu/snowsim/CGL/src/tinyxml2.cpp
 tinyxml2.h
-/home/chang/Desktop/Research/mpm/CGL/src/tinyxml2.h
+/home/ubuntu/snowsim/CGL/src/tinyxml2.h
 new
 -
 stddef.h
@@ -306,21 +306,21 @@ stddef.h
 cstddef
 -
 
-/home/chang/Desktop/Research/mpm/CGL/src/vector2D.cpp
+/home/ubuntu/snowsim/CGL/src/vector2D.cpp
 vector2D.h
-/home/chang/Desktop/Research/mpm/CGL/src/vector2D.h
+/home/ubuntu/snowsim/CGL/src/vector2D.h
 
-/home/chang/Desktop/Research/mpm/CGL/src/vector3D.cpp
+/home/ubuntu/snowsim/CGL/src/vector3D.cpp
 vector3D.h
-/home/chang/Desktop/Research/mpm/CGL/src/vector3D.h
+/home/ubuntu/snowsim/CGL/src/vector3D.h
 
-/home/chang/Desktop/Research/mpm/CGL/src/vector4D.cpp
+/home/ubuntu/snowsim/CGL/src/vector4D.cpp
 vector4D.h
-/home/chang/Desktop/Research/mpm/CGL/src/vector4D.h
+/home/ubuntu/snowsim/CGL/src/vector4D.h
 
-/home/chang/Desktop/Research/mpm/CGL/src/viewer.cpp
+/home/ubuntu/snowsim/CGL/src/viewer.cpp
 viewer.h
-/home/chang/Desktop/Research/mpm/CGL/src/viewer.h
+/home/ubuntu/snowsim/CGL/src/viewer.h
 stdio.h
 -
 cmath
@@ -332,9 +332,9 @@ iostream
 algorithm
 -
 GL/glew.h
-/home/chang/Desktop/Research/mpm/CGL/src/GL/glew.h
+/home/ubuntu/snowsim/CGL/src/GL/glew.h
 console.h
-/home/chang/Desktop/Research/mpm/CGL/src/console.h
+/home/ubuntu/snowsim/CGL/src/console.h
 
 /usr/include/freetype2/freetype/config/ftheader.h
 x86_64-linux-gnu/freetype2/freetype/config/ftheader.h

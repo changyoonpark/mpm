@@ -6,5 +6,5 @@ C_FLAGS = -g -fPIC   -Wall -w
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/home/chang/Desktop/Research/mpm/CGL/deps/glfw/src -I/home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/src 
+C_INCLUDES = -I/home/ubuntu/snowsim/CGL/deps/glfw/src -I/home/ubuntu/snowsim/build/CGL/deps/glfw/src 
 

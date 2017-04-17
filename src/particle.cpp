@@ -1,6 +1,6 @@
 #include "include/particle.h"
 #include "include/constants.h"
-//#include <omp.h>
+#include <omp.h>
 
 void Particle::collectVelocity(velType veltype){
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/chang/Desktop/Research/mpm
+# Install script for directory: /home/ubuntu/snowsim
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chang/Desktop/Research/mpm/")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/snowsim/")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/chang/Desktop/Research/mpm/build/CGL/cmake_install.cmake")
-  include("/home/chang/Desktop/Research/mpm/build/src/cmake_install.cmake")
+  include("/home/ubuntu/snowsim/build/CGL/cmake_install.cmake")
+  include("/home/ubuntu/snowsim/build/src/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/chang/Desktop/Research/mpm/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ubuntu/snowsim/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

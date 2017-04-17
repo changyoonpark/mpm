@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/install_manifest.txt\"")
+if (NOT EXISTS "/home/ubuntu/snowsim/build/CGL/deps/glfw/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/home/ubuntu/snowsim/build/CGL/deps/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "/home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/install_manifest.txt" files)
+file(READ "/home/ubuntu/snowsim/build/CGL/deps/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

@@ -1,4 +1,4 @@
-# Install script for directory: /home/chang/Desktop/Research/mpm/CGL/deps/glfw/src
+# Install script for directory: /home/ubuntu/snowsim/CGL/deps/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,6 +33,6 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/src/libglfw3.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ubuntu/snowsim/build/CGL/deps/glfw/src/libglfw3.a")
 endif()
 

@@ -329,7 +329,8 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 	}
 
 	int iterCount = 0;
-	while(residualSum > 1.E-5 && (iterCount < 10) ){
+	if (residualSum > 0.1)
+	while(residualSum > 0.1 && (iterCount < 5) ){
 
 		residualSum = 0;
 
