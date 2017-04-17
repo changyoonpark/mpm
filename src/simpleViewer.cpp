@@ -231,10 +231,9 @@ void SimpleView::err_callback( int error, const char* description ) {
 
 void SimpleView::start(){
   #if WITH_GUI == 1
-    // while( !glfwWindowShouldClose( window ) ){
-      // if (currentTimeStep == 0 ) update();
+    while( !glfwWindowShouldClose( window ) ){
       update();
-    // } 
+    } 
   #else
     while(1){
       update();

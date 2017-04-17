@@ -97,6 +97,7 @@ void Particle::calculateVelocityGradient(){
 
 Matrix3x3 Particle::calculateAMatrix(Vector3D& delta_u){
     //Calculate delta_F_E
+    Matrix3x3 delta_F_E;
     delta_F_E.zero();
     for(int ii = -2; ii <= 1; ii++){
     for(int jj = -2; jj <= 1; jj++){

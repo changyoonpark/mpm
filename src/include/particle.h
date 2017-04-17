@@ -44,7 +44,6 @@ struct Particle{
 
         Matrix3x3 F,F_P,F_E,F_E_inv,D;
         Matrix3x3 A;
-        Matrix3x3 delta_F_E;
         
 
         Matrix3x3 U;

@@ -296,32 +296,15 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 	//Initialize values for Conjugate Residual
 	std::cout << "Performing Implicit Velocity Update" << std::endl;
 
-	// #pragma omp parallel for num_threads(THREADCOUNT)
-	for(int i=0;i<activeNodes.size();i++){
-		auto dataIt = activeNodes.begin();
-		std::advance(dataIt,i);
-		GridNode* node = dataIt->second;	
-		// std::cout << " ----- " << std::endl;	
-		// std::cout << "Vel : " << std::endl;
-		// std::cout << node->vel << std::endl;
-		// std::cout << "Velnext : " << std::endl;
-		// std::cout << node->velNext << std::endl;
-		// std::cout << "mass : " << std::endl;
-		// std::cout << node->mass << std::endl;
-	}
-
-
-
 	double residualSum = 0;
 	std::vector<double> residuals(activeNodes.size(),0);
 
-	// #pragma omp parallel for num_threads(THREADCOUNT) reduction(+:residualSum)	
-	#pragma omp parallel for num_threads(2) reduction(+:residualSum)	
+	#pragma omp parallel for num_threads(THREADCOUNT) reduction(+:residualSum)	
 	for(int i=0;i<activeNodes.size();i++){
 		auto dataIt = activeNodes.begin();
 		std::advance(dataIt,i);
 		GridNode* node = dataIt->second;		
-		// std::cout << node->velNext << std::endl;
+
 		Vector3D r = node->r, s = node->s, p = node->p, q = node->q;
 
 		
@@ -332,37 +315,12 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 		node->gamma =  dot(node->r,node->s);		
 		node->alpha   = node->gamma / (dot(node->q,node->q) + EPS_D);
 		
-		// node->r     =  -(node->consts.beta * node->consts.dt2 / (node->mass + EPS_D)) * node->getHessianSum(node->velNext);
-		// node->s     =  node->r + (node->consts.beta * node->consts.dt2 / (node->mass + EPS_D)) * node->getHessianSum(node->r);
-		// node->p     =  node->r;
-		// node->q     =  node->s;
-		// node->gamma =  dot(node->r,node->s);		
-		// node->alpha   = node->gamma / (dot(node->q,node->q) + EPS_D);
-
-
 		residuals[i] = node->alpha * node->alpha * node->p.norm2();
 		residualSum += residuals[i];
-
-		if(residuals[i] > EPS_D){
-			std::cout << "---------" << std::endl;
-			std::cout << "velNext : " << node->velNext << std::endl;
-			std::cout << "hessiansum : " << node->getHessianSum(node->velNext) << std::endl;
-			std::cout << "r : " << node->r << std::endl;
-			std::cout << "q : " << node->q << std::endl;
-			std::cout << "s : " << node->s << std::endl;
-			std::cout << "gamma : " << node->gamma << std::endl;
-			std::cout << "alpha : " << node->alpha << std::endl;
-
-			std::cout << "initial residuals : " << std::endl;
-			std::cout << residuals[i] << std::endl;
-			std::cout << residualSum << std::endl;
-		}
 
 	}	
 
 	//Start iterations
-	std::cout << "Starting Conjugate  : " << residualSum << std::endl;
-
 	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i=0;i<activeNodes.size();i++){
 		auto dataIt = activeNodes.begin();
@@ -372,7 +330,7 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 
 	int iterCount = 0;
 	while(residualSum > 1.E-5 && (iterCount < 10) ){
-	// while(1){
+
 		residualSum = 0;
 
 		#pragma omp parallel for num_threads(THREADCOUNT) reduction(+:residualSum)
@@ -390,7 +348,7 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 			node->velNext = node->velNext + node->alpha * node->p;
 			node->r       = node->r - node->alpha * node->q;
 			node->s       = node->r + (node->consts.beta * node->consts.dt2 / (node->mass + EPS_D)) * node->getHessianSum(node->r);
-			node->beta    = dot(node->r,node->s) / node->gamma;
+			node->beta    = dot(node->r,node->s) / (node->gamma + EPS_D);
 			node->gamma   = node->beta * node->gamma;
 			node->p       = node->r + node->beta * node->p;
 			node->q       = node->s + node->beta * node->q;
@@ -400,6 +358,7 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 
 		iterCount ++;
 	}
+	std::cout << "Convergence Criterion Met." << std::endl;
 
 }
 
