@@ -428,9 +428,10 @@ void SimpleView::timeStep(){
     
     pSet->calculateParticleVelocityGradient();
     pSet->updateParticleDeformationGradient();
-
+    
     pSet->updateParticlePosition();
-    if(currentTimeStep % 4 == 0) spitToFile();
+
+    if(currentTimeStep % 1 == 0) spitToFile();
 
     std::cout << "---------------End of Timestep : " << currentTimeStep << "-----------------------" << std::endl;
     currentTimeStep ++;

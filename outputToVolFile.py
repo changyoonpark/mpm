@@ -3,7 +3,7 @@ import struct
 import numpy as np
 
 def getVolumeFile(fileDir,outputVolFileDir):
-    parts = 16
+    parts = 4
     domainSize = (1.0,1.0,1.0)
     maxDensity = 0.0
     h = 0.025
@@ -14,7 +14,9 @@ def getVolumeFile(fileDir,outputVolFileDir):
     densityList = [None]*(nx * ny * nz)
 
     for part in range(0,parts):
-        f = open(os.path.expanduser(fileDir)+"_part_{}.txt".format(part), 'r')
+        filename = os.path.expanduser(fileDir)+"_part_{}.txt".format(part)
+        print("reading "+ filename)
+        f = open(filename, 'r')
         for line in f:
             splitted = line.split(' ')
             density = float(splitted[1])
@@ -83,8 +85,8 @@ def getVolumeFile(fileDir,outputVolFileDir):
 
 
 
-for t in range(0,600):
+for t in range(0,4000,5):
     name = "./build/outputs/grid_t_{}".format(t)
     volName = "snowball.vol".format(t) 
     getVolumeFile(name,volName)
-    os.system("mitsuba snowball.xml ./outputframes/snowball_t_{}.png".format(t))
+    os.system("mitsuba -o ./outputframes/snowball_t_{}.png snowball.xml".format(t))

@@ -4,17 +4,19 @@ from numpy import random
 template = "x:{},{},{} v:{},{},{} m:{},0,0\n"
 text_file = open("./input/input.in", "w")
 
-start = [0.699,0.5,0.75]
-# h = 0.05
-h = 0.00625
-r = 0.2
+start = [0.595,0.5,0.59]
+# h = 0.075
+h = 0.01
+# h = 0.0125
+# h = 0.025
+r = 0.25
 rho = 400;
 # totmass = 3.141592 * (r*r) * (h * 3) * rho
 totmass = 3.141592 * 4./3. * (r*r*r) * rho
 # totmass = (h * 7) * (h * 7) * (h * 7) * rho 
 # totmass = 3.14 * (2.5) * (2.5) * (h * 8) * rho
 pos = []
-noise = 0.3;
+noise = 0.5;
 for i in range(-100,101):
     for j in range(-100,101):
         for k in range(-100,101):

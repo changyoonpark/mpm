@@ -7,7 +7,7 @@
 #include "grid.h"
 #include "constants.h"
 #include "mesh.h"
-#define EPS_D (0.00000000001)
+#define EPS_D_SMALL (1.E-100)
 using namespace myMath;
 
 enum velType {

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<scene version="0.5.0">
+	<integrator type="volpath_simple">
+		<integer name="maxDepth" value="8"/>
+	</integrator>
+
+	<medium type="heterogeneous" id="snow">
+		<string name="method" value="woodcock"/>
+
+		<volume name="density" type="gridvolume">
+			<string name="filename" value="snowball.vol"/>
+		</volume>
+
+		<volume name="albedo" type="constvolume">
+			<spectrum name="value" value="0.8,0.9,1.0"/>
+		</volume>
+
+		<phase type="hg">
+			<float name="g" value="0.5"/>
+		</phase>
+		<float name="scale" value="200"/>
+	</medium>
+
+	<shape type="obj">
+		<string name="filename" value="bounds.obj"/>
+
+		<ref name="interior" id="snow"/>
+	</shape>
+
+	<shape type="obj">
+		<!-- Shiny floor -->
+		<string name="filename" value="plane.obj"/>
+
+		<bsdf type="diffuse">
+			<rgb name="diffuseReflectance" value=".1, .1, .1"/>
+		</bsdf>
+		<transform name="toWorld">
+			<translate y="0" z="0.13"/>
+		</transform>
+	</shape>
+
+	<shape type="obj">
+		<!-- Shiny floor -->
+		<string name="filename" value="plane.obj"/>
+
+		<bsdf type="diffuse">
+			<rgb name="diffuseReflectance" value=".1, .1, .1"/>
+		</bsdf>
+		<transform name="toWorld">
+			<rotate y="1" angle="-90"/>
+			<translate x="0.9"/>
+		</transform>
+	</shape>
+
+	<sensor type="perspective">
+		<float name="focusDistance" value="2.91212"/>
+		<float name="fov" value="45.8402"/>
+		<string name="fovAxis" value="x"/>
+		<transform name="toWorld">
+			<scale x="-1"/>
+
+			<lookat target="-0.3515, -0.156622, 0.812211" origin="-1.09633, -0.722053, 1.16649" up="0.279064, 0.218311, 0.935128"/>
+		</transform>
+
+		<sampler type="ldsampler">
+			<integer name="sampleCount" value="1"/>
+		</sampler>
+
+		<film type="ldrfilm">
+			<float name="exposure" value="0"/>
+			<float name="gamma" value="-1"/>
+			<integer name="height" value="576"/>
+			<string name="tonemapMethod" value="gamma"/>
+			<integer name="width" value="768"/>
+
+			<rfilter type="gaussian"/>
+		</film>
+	</sensor>
+
+	<shape type="sphere">
+		<point name="center" x="-1" y="1" z="2"/>
+		<float name="radius" value=".2"/>
+
+		<emitter type="area">
+			<spectrum name="radiance" value="600"/>
+		</emitter>
+	</shape>
+</scene>

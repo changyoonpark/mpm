@@ -122,11 +122,12 @@ void GridNode::calcGeometryInteractions(){
 			double vTanLength = vTan.norm();
 
 			// if (vel.norm() > 0.01) std::cout << vTanLength << std::endl;
-			if(vTanLength <  - consts.snowModel->muStick * vn){
-				relVel = Vector3D(0.,0.,0.);
-			} else{
-				relVel = vTan + consts.snowModel->muStick * vn * vTan / vTanLength;
-			}
+			relVel = Vector3D(0.,0.,0.);
+			// if(vTanLength <  - consts.snowModel->muStick * vn){
+			// 	relVel = Vector3D(0.,0.,0.);
+			// } else{
+			// 	relVel = vTan + consts.snowModel->muStick * vn * vTan / vTanLength;
+			// }
 
 			velNext = relVel + contactingTriangle->vel;
 		}
@@ -243,7 +244,7 @@ void Grid::hashParticles(){
 
 	activeNodes.clear();
 	//Clear the pList for each Cell
-
+	std::cout << "hashing particles..." << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < nodes.size(); i++){
 		nodes[i]->isActive = false;
@@ -251,15 +252,24 @@ void Grid::hashParticles(){
 		nodes[i]->vel = Vector3D(0,0,0);
 		nodes[i]->cell->clearPList();
 	}
-
+	std::cout << "adding particles to cell..." << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < pSet->particleSet.size(); i++){
 		Particle& particle = pSet->particleSet[i];
 		particle.hash = hash(particle);
+
+		if(particle.hash.nx >= (int)(constants.domainExtent.x / constants.h) || 
+		   particle.hash.ny >= (int)(constants.domainExtent.y / constants.h) || 
+		   particle.hash.nz >= (int)(constants.domainExtent.z / constants.h)   ){
+			printf("rouge particle with particle hash : %d, %d, %d\n",particle.hash.nx,particle.hash.ny,particle.hash.nz);
+			printf("reduce timestep and try again.");
+			assert(false);
+		}
+
 		particle.cell = idxNode(particle.hash)->cell;
 		particle.cell->addToPList(&particle);
 	}
-
+	std::cout << "done" << std::endl;
 }
 
 //This Function is called every timestep.

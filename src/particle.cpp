@@ -2,6 +2,8 @@
 #include "include/constants.h"
 #include <omp.h>
 #define EPS_D_SMALL (1.E-100)
+#define DBL_MAX 1.7976931348623158e+308
+
 
 void Particle::collectVelocity(velType veltype){
 
@@ -32,23 +34,43 @@ void Particle::collectVelocity(velType veltype){
 
 void Particle::calculateSignedDistance(){
 
-    for(int ii = -2; ii <= 1; ii++)
-    for(int jj = -2; jj <= 1; jj++)
-    for(int kk = -2; kk <= 1; kk++){
-        
-        int3 nidx = int3(ii,jj,kk);
-        GridNode* gn = cell->node->neighborNode(nidx);
-        if (gn == NULL) continue;
-        if (!gn->isActive) continue;
-        signedDist += gn->signedDist * gn->W(pos);
-        gradSignedDist += gn->contactingTriangle->getNormal() * gn->W(pos);
-    }    
-    
-    if (signedDist < 0.){
-        isInsideGeometry = true;
-    } else{
-        isInsideGeometry = false;
+
+    double dist;
+    signedDist = DBL_MAX;
+
+    bool didContact = false;
+    for( auto& tri : consts.mesh->triangles){
+        if(tri.getDistance(pos,dist)){
+            if(dist < signedDist){
+                contactingTriangle = &tri;
+                signedDist = dist;      
+                didContact = true;
+            } 
+        } 
     }
+
+    if (!didContact) signedDist = DBL_MAX;
+
+    if(signedDist < 0.) isInsideGeometry = true;
+    else               isInsideGeometry = false;
+
+    // for(int ii = -2; ii <= 1; ii++)
+    // for(int jj = -2; jj <= 1; jj++)
+    // for(int kk = -2; kk <= 1; kk++){
+        
+    //     int3 nidx = int3(ii,jj,kk);
+    //     GridNode* gn = cell->node->neighborNode(nidx);
+    //     if (gn == NULL) continue;
+    //     if (!gn->isActive) continue;
+    //     signedDist += gn->signedDist * gn->W(pos);
+    //     gradSignedDist += gn->contactingTriangle->getNormal() * gn->W(pos);
+    // }    
+    
+    // if (signedDist < 0.){
+    //     isInsideGeometry = true;
+    // } else{
+    //     isInsideGeometry = false;
+    // }
 }
 
 void Particle::calculateDensityAndVolume(){
@@ -154,16 +176,17 @@ void Particle::calculateGeometryInteraction(){
 		double vn = dot(relVel, contactingTriangle->getNormal());
 		//material and boundary is coming together
 
-		if ( vn  < 0. ){
+		if ( vn  <= 0. ){
 			Vector3D vTan = relVel - vn * contactingTriangle->getNormal(); 
 			double vTanLength = vTan.norm();
 
 			// if (vel.norm() > 0.01) std::cout << vTanLength << std::endl;
-			if(vTanLength <  - consts.snowModel->muStick * vn){
-				relVel = Vector3D(0.,0.,0.);
-			} else{
-				relVel = vTan + consts.snowModel->muStick * vn * vTan / vTanLength;
-			}
+                relVel = Vector3D(0.,0.,0.);
+			// if(vTanLength <  - consts.snowModel->muStick * vn){
+			// 	relVel = Vector3D(0.,0.,0.);
+			// } else{
+			// 	relVel = vTan + consts.snowModel->muStick * vn * vTan / vTanLength;
+			// }
 
 			velNext = relVel + contactingTriangle->vel;
 		}
@@ -314,6 +337,9 @@ void ParticleSet::updateParticlePosition(){
         particleSet[i].updateVelNext();    
     }
 
+    updateParticleSignedDistance();
+    calculateGeometryInteractions();
+
 	#pragma omp parallel for num_threads(THREADCOUNT)
  	for (int i = 0; i < particleSet.size(); i++){
         particleSet[i].force = particleSet[i].mass * (particleSet[i].velNext - particleSet[i].vel)/consts.dt;      
@@ -333,6 +359,7 @@ void ParticleSet::updateParticleDeformationGradient(){
 }
 
 void ParticleSet::calculateGeometryInteractions(){
+    std::cout << "calculating geometry interactions for the particles" << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)    
 	for (int i = 0; i < particleSet.size(); i++){        
         particleSet[i].calculateGeometryInteraction();    
