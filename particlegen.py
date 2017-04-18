@@ -4,9 +4,9 @@ from numpy import random
 template = "x:{},{},{} v:{},{},{} m:{},0,0\n"
 text_file = open("./input/input.in", "w")
 
-start = [0.699,0.5,0.6]
-h = 0.05
-# h = 0.00625
+start = [0.699,0.5,0.75]
+# h = 0.05
+h = 0.00625
 r = 0.2
 rho = 400;
 # totmass = 3.141592 * (r*r) * (h * 3) * rho

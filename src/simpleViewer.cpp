@@ -1,5 +1,5 @@
 #include "include/simpleViewer.h"
-// #include <omp.h>
+#include <omp.h>
 
 Camera* SimpleView::camera;
 

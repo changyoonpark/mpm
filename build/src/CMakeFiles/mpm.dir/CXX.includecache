@@ -86,51 +86,53 @@ GL/glext.h
 GL/glu.h
 -
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/constants.cpp
+/home/chang/Desktop/mpm/src/constants.cpp
 include/constants.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/grid.cpp
+/home/chang/Desktop/mpm/src/grid.cpp
 include/grid.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/grid.h
+/home/chang/Desktop/mpm/src/include/grid.h
 include/helper.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/helper.h
+/home/chang/Desktop/mpm/src/include/helper.h
 include/constants.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
 include/mesh.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/mesh.h
+/home/chang/Desktop/mpm/src/include/mesh.h
 math.h
 -
 assert.h
 -
+omp.h
+-
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/helper.cpp
+/home/chang/Desktop/mpm/src/helper.cpp
 include/helper.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/helper.h
+/home/chang/Desktop/mpm/src/include/helper.h
 sifakis/sifakisSVD.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.h
+/home/chang/Desktop/mpm/src/sifakis/sifakisSVD.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
 mesh.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/mesh.h
+/home/chang/Desktop/mpm/src/include/mesh.h
 snowModel.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/snowModel.h
+/home/chang/Desktop/mpm/src/include/snowModel.h
 iostream
 -
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/grid.h
+/home/chang/Desktop/mpm/src/include/grid.h
 iostream
 -
 helper.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/helper.h
+/home/chang/Desktop/mpm/src/include/helper.h
 particle.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/particle.h
+/home/chang/Desktop/mpm/src/include/particle.h
 constants.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
 mesh.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/mesh.h
+/home/chang/Desktop/mpm/src/include/mesh.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/helper.h
+/home/chang/Desktop/mpm/src/include/helper.h
 ostream
 -
 cmath
@@ -144,7 +146,7 @@ vector
 iterator
 -
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/initer.h
+/home/chang/Desktop/mpm/src/include/initer.h
 iostream
 -
 fstream
@@ -154,9 +156,9 @@ map
 vector
 -
 helper.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/helper.h
+/home/chang/Desktop/mpm/src/include/helper.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/mesh.h
+/home/chang/Desktop/mpm/src/include/mesh.h
 vector
 -
 iostream
@@ -168,107 +170,109 @@ cmath
 string
 -
 helper.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/helper.h
+/home/chang/Desktop/mpm/src/include/helper.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/particle.h
+/home/chang/Desktop/mpm/src/include/particle.h
 iostream
 -
 helper.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/helper.h
+/home/chang/Desktop/mpm/src/include/helper.h
 initer.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/initer.h
+/home/chang/Desktop/mpm/src/include/initer.h
 grid.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/grid.h
+/home/chang/Desktop/mpm/src/include/grid.h
 constants.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
 mesh.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/mesh.h
+/home/chang/Desktop/mpm/src/include/mesh.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/simpleViewer.h
+/home/chang/Desktop/mpm/src/include/simpleViewer.h
 fstream
 -
 iostream
 -
 GL/glew.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/GL/glew.h
+/home/chang/Desktop/mpm/src/include/GL/glew.h
 GLFW/glfw3.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/GLFW/glfw3.h
+/home/chang/Desktop/mpm/src/include/GLFW/glfw3.h
 CGL/matrix3x3.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/CGL/matrix3x3.h
+/home/chang/Desktop/mpm/src/include/CGL/matrix3x3.h
 CGL/misc.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/CGL/misc.h
+/home/chang/Desktop/mpm/src/include/CGL/misc.h
 math.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/math.h
+/home/chang/Desktop/mpm/src/include/math.h
 particle.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/particle.h
+/home/chang/Desktop/mpm/src/include/particle.h
 grid.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/grid.h
+/home/chang/Desktop/mpm/src/include/grid.h
 mesh.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/mesh.h
+/home/chang/Desktop/mpm/src/include/mesh.h
 constants.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/snowModel.h
+/home/chang/Desktop/mpm/src/include/snowModel.h
 helper.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/helper.h
+/home/chang/Desktop/mpm/src/include/helper.h
 math.h
 -
 iostream
 -
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/initer.cpp
+/home/chang/Desktop/mpm/src/initer.cpp
 include/initer.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/initer.h
+/home/chang/Desktop/mpm/src/include/initer.h
 include/constants.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/main.cpp
+/home/chang/Desktop/mpm/src/main.cpp
 iostream
 -
 include/initer.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/initer.h
+/home/chang/Desktop/mpm/src/include/initer.h
 include/particle.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/particle.h
+/home/chang/Desktop/mpm/src/include/particle.h
 include/grid.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/grid.h
+/home/chang/Desktop/mpm/src/include/grid.h
 include/constants.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
 include/simpleViewer.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/simpleViewer.h
+/home/chang/Desktop/mpm/src/include/simpleViewer.h
 assert.h
 -
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/mesh.cpp
+/home/chang/Desktop/mpm/src/mesh.cpp
 include/mesh.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/mesh.h
+/home/chang/Desktop/mpm/src/include/mesh.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/particle.cpp
+/home/chang/Desktop/mpm/src/particle.cpp
 include/particle.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/particle.h
+/home/chang/Desktop/mpm/src/include/particle.h
 include/constants.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/constants.h
+/home/chang/Desktop/mpm/src/include/constants.h
+omp.h
+-
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Kernel_Declarations.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Kernel_Declarations.hpp
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Main_Kernel_Body.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Main_Kernel_Body.hpp
 Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
 Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
 Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp
 Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
 Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
 Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Givens_QR_Factorization_Kernel.hpp
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Preamble.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Preamble.hpp
 iomanip
 -
 iostream
@@ -278,7 +282,7 @@ immintrin.h
 xmmintrin.h
 -
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.cpp
+/home/chang/Desktop/mpm/src/sifakis/sifakisSVD.cpp
 cmath
 -
 stdio.h
@@ -286,21 +290,23 @@ stdio.h
 stdlib.h
 -
 sifakisSVD.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.h
+/home/chang/Desktop/mpm/src/sifakis/sifakisSVD.h
 Singular_Value_Decomposition_Preamble.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Preamble.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Preamble.hpp
 Singular_Value_Decomposition_Kernel_Declarations.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Kernel_Declarations.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Kernel_Declarations.hpp
 Singular_Value_Decomposition_Main_Kernel_Body.hpp
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/Singular_Value_Decomposition_Main_Kernel_Body.hpp
+/home/chang/Desktop/mpm/src/sifakis/Singular_Value_Decomposition_Main_Kernel_Body.hpp
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/sifakis/sifakisSVD.h
+/home/chang/Desktop/mpm/src/sifakis/sifakisSVD.h
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/simpleViewer.cpp
+/home/chang/Desktop/mpm/src/simpleViewer.cpp
 include/simpleViewer.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/simpleViewer.h
+/home/chang/Desktop/mpm/src/include/simpleViewer.h
+omp.h
+-
 
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/snowModel.cpp
+/home/chang/Desktop/mpm/src/snowModel.cpp
 include/snowModel.h
-/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/src/include/snowModel.h
+/home/chang/Desktop/mpm/src/include/snowModel.h
 
