@@ -1,4 +1,4 @@
-# Install script for directory: /home/chang/Desktop/mpm/src
+# Install script for directory: /home/chang/Desktop/Research/mpm/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,25 +33,25 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  if(EXISTS "$ENV{DESTDIR}/home/chang/Desktop/mpm/mpm" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/chang/Desktop/mpm/mpm")
+  if(EXISTS "$ENV{DESTDIR}/home/chang/Desktop/Research/mpm/mpm" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/chang/Desktop/Research/mpm/mpm")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/chang/Desktop/mpm/mpm"
+         FILE "$ENV{DESTDIR}/home/chang/Desktop/Research/mpm/mpm"
          RPATH "")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chang/Desktop/mpm/mpm")
+   "/home/chang/Desktop/Research/mpm/mpm")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chang/Desktop/mpm" TYPE EXECUTABLE FILES "/home/chang/Desktop/mpm/build/mpm")
-  if(EXISTS "$ENV{DESTDIR}/home/chang/Desktop/mpm/mpm" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/chang/Desktop/mpm/mpm")
+file(INSTALL DESTINATION "/home/chang/Desktop/Research/mpm" TYPE EXECUTABLE FILES "/home/chang/Desktop/Research/mpm/build/mpm")
+  if(EXISTS "$ENV{DESTDIR}/home/chang/Desktop/Research/mpm/mpm" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/chang/Desktop/Research/mpm/mpm")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/chang/Desktop/mpm/mpm")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/chang/Desktop/Research/mpm/mpm")
     endif()
   endif()
 endif()

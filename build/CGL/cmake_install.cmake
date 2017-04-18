@@ -1,8 +1,8 @@
-# Install script for directory: /home/chang/Desktop/mpm/CGL
+# Install script for directory: /home/chang/Desktop/Research/mpm/CGL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chang/Desktop/mpm/CGL")
+  set(CMAKE_INSTALL_PREFIX "/home/chang/Desktop/Research/mpm/CGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,9 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/chang/Desktop/mpm/build/CGL/deps/glew/cmake_install.cmake")
-  include("/home/chang/Desktop/mpm/build/CGL/deps/glfw/cmake_install.cmake")
-  include("/home/chang/Desktop/mpm/build/CGL/src/cmake_install.cmake")
+  include("/home/chang/Desktop/Research/mpm/build/CGL/deps/glew/cmake_install.cmake")
+  include("/home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/cmake_install.cmake")
+  include("/home/chang/Desktop/Research/mpm/build/CGL/src/cmake_install.cmake")
 
 endif()
 

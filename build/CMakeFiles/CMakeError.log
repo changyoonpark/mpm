@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_94822/fast"
-/usr/bin/make -f CMakeFiles/cmTC_94822.dir/build.make CMakeFiles/cmTC_94822.dir/build
-make[1]: Entering directory '/home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_94822.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_94822.dir/CheckSymbolExists.c.o   -c /home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_94822
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94822.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_94822.dir/CheckSymbolExists.c.o  -o cmTC_94822 -rdynamic 
-CMakeFiles/cmTC_94822.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_c2a6e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c2a6e.dir/build.make CMakeFiles/cmTC_c2a6e.dir/build
+make[1]: Entering directory '/home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2a6e.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c2a6e.dir/CheckSymbolExists.c.o   -c /home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c2a6e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2a6e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c2a6e.dir/CheckSymbolExists.c.o  -o cmTC_c2a6e -rdynamic 
+CMakeFiles/cmTC_c2a6e.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_94822.dir/build.make:97: recipe for target 'cmTC_94822' failed
-make[1]: *** [cmTC_94822] Error 1
-make[1]: Leaving directory '/home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_94822/fast' failed
-make: *** [cmTC_94822/fast] Error 2
+CMakeFiles/cmTC_c2a6e.dir/build.make:97: recipe for target 'cmTC_c2a6e' failed
+make[1]: *** [cmTC_c2a6e] Error 1
+make[1]: Leaving directory '/home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c2a6e/fast' failed
+make: *** [cmTC_c2a6e/fast] Error 2
 
-File /home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,43 +34,43 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b4251/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b4251.dir/build.make CMakeFiles/cmTC_b4251.dir/build
-make[1]: Entering directory '/home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b4251.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b4251.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_b4251
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4251.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b4251.dir/CheckFunctionExists.c.o  -o cmTC_b4251 -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_04a0e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_04a0e.dir/build.make CMakeFiles/cmTC_04a0e.dir/build
+make[1]: Entering directory '/home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_04a0e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_04a0e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_04a0e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04a0e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_04a0e.dir/CheckFunctionExists.c.o  -o cmTC_04a0e -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b4251.dir/build.make:97: recipe for target 'cmTC_b4251' failed
-make[1]: *** [cmTC_b4251] Error 1
-make[1]: Leaving directory '/home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_b4251/fast' failed
-make: *** [cmTC_b4251/fast] Error 2
+CMakeFiles/cmTC_04a0e.dir/build.make:97: recipe for target 'cmTC_04a0e' failed
+make[1]: *** [cmTC_04a0e] Error 1
+make[1]: Leaving directory '/home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_04a0e/fast' failed
+make: *** [cmTC_04a0e/fast] Error 2
 
 
 Determining if the function glXGetProcAddressEXT exists failed with the following output:
-Change Dir: /home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp
+Change Dir: /home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_edd33/fast"
-/usr/bin/make -f CMakeFiles/cmTC_edd33.dir/build.make CMakeFiles/cmTC_edd33.dir/build
-make[1]: Entering directory '/home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_edd33.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_edd33.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_edd33
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edd33.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTC_edd33.dir/CheckFunctionExists.c.o  -o cmTC_edd33 -rdynamic /usr/lib/x86_64-linux-gnu/libGL.so 
-CMakeFiles/cmTC_edd33.dir/CheckFunctionExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_47a9e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_47a9e.dir/build.make CMakeFiles/cmTC_47a9e.dir/build
+make[1]: Entering directory '/home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_47a9e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_47a9e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_47a9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47a9e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTC_47a9e.dir/CheckFunctionExists.c.o  -o cmTC_47a9e -rdynamic /usr/lib/x86_64-linux-gnu/libGL.so 
+CMakeFiles/cmTC_47a9e.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text+0x15): undefined reference to `glXGetProcAddressEXT'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_edd33.dir/build.make:98: recipe for target 'cmTC_edd33' failed
-make[1]: *** [cmTC_edd33] Error 1
-make[1]: Leaving directory '/home/chang/Desktop/mpm/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_edd33/fast' failed
-make: *** [cmTC_edd33/fast] Error 2
+CMakeFiles/cmTC_47a9e.dir/build.make:98: recipe for target 'cmTC_47a9e' failed
+make[1]: *** [cmTC_47a9e] Error 1
+make[1]: Leaving directory '/home/chang/Desktop/Research/mpm/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_47a9e/fast' failed
+make: *** [cmTC_47a9e/fast] Error 2
 
 

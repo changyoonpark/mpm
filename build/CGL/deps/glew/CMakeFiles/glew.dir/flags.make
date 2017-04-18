@@ -6,5 +6,5 @@ C_FLAGS = -g   -w
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/chang/Desktop/mpm/CGL/deps/glew/include 
+C_INCLUDES = -I/home/chang/Desktop/Research/mpm/CGL/deps/glew/include 
 

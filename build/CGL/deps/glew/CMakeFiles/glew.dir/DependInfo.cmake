@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/chang/Desktop/mpm/CGL/deps/glew/src/glew.c" "/home/chang/Desktop/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o"
-  "/home/chang/Desktop/mpm/CGL/deps/glew/src/glewinfo.c" "/home/chang/Desktop/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o"
-  "/home/chang/Desktop/mpm/CGL/deps/glew/src/visualinfo.c" "/home/chang/Desktop/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o"
+  "/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/glew.c" "/home/chang/Desktop/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o"
+  "/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/glewinfo.c" "/home/chang/Desktop/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o"
+  "/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/visualinfo.c" "/home/chang/Desktop/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

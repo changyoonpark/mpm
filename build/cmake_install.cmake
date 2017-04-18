@@ -1,8 +1,8 @@
-# Install script for directory: /home/chang/Desktop/mpm
+# Install script for directory: /home/chang/Desktop/Research/mpm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chang/Desktop/mpm/")
+  set(CMAKE_INSTALL_PREFIX "/home/chang/Desktop/Research/mpm/")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/chang/Desktop/mpm/build/CGL/cmake_install.cmake")
-  include("/home/chang/Desktop/mpm/build/src/cmake_install.cmake")
+  include("/home/chang/Desktop/Research/mpm/build/CGL/cmake_install.cmake")
+  include("/home/chang/Desktop/Research/mpm/build/src/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/chang/Desktop/mpm/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/chang/Desktop/Research/mpm/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

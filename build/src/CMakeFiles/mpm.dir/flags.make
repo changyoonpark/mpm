@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=gnu++11 -m64 -g -fopenmp -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/chang/Desktop/mpm/CGL/include 
+CXX_INCLUDES = -I/home/chang/Desktop/Research/mpm/CGL/include 
 
