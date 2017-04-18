@@ -1,6 +1,6 @@
 #include "include/particle.h"
 #include "include/constants.h"
-#include <omp.h>
+// #include <omp.h>
 #define EPS_D_SMALL (1.E-300)
 
 void Particle::collectVelocity(velType veltype){

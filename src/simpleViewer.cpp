@@ -1,5 +1,5 @@
 #include "include/simpleViewer.h"
-#include <omp.h>
+// #include <omp.h>
 
 Camera* SimpleView::camera;
 
@@ -446,8 +446,8 @@ void SimpleView::spitToFile(){
   #pragma omp parallel for num_threads(THREADCOUNT)
   for(int t = 0; t < THREADCOUNT; t ++){
     int nodesPerThread = grid->activeNodes.size() / THREADCOUNT;
-    int tid = omp_get_thread_num();
-
+    // int tid = omp_get_thread_num();
+    int tid = t;
     int startIdx = tid * nodesPerThread;
     int endIdx = (tid + 1) * nodesPerThread;
 

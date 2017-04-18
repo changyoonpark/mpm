@@ -4,7 +4,7 @@ from numpy import random
 template = "x:{},{},{} v:{},{},{} m:{},0,0\n"
 text_file = open("./input/input.in", "w")
 
-start = [0.695,0.5,0.6]
+start = [0.699,0.5,0.6]
 h = 0.05
 # h = 0.00625
 r = 0.2
@@ -14,11 +14,11 @@ totmass = 3.141592 * 4./3. * (r*r*r) * rho
 # totmass = (h * 7) * (h * 7) * (h * 7) * rho 
 # totmass = 3.14 * (2.5) * (2.5) * (h * 8) * rho
 pos = []
-noise = 1.0;
+noise = 0.3;
 for i in range(-100,101):
     for j in range(-100,101):
         for k in range(-100,101):
-            if ( sqrt((h*i)*(h*i) + (h*j)*(h*j) + (h*k)*(h*k)) < r ):
+            if ( sqrt((h*i)*(h*i) + (h*j)*(h*j) + (h*k)*(h*k)) <= r ):
                 pos.append([start[0] + h * (i + noise * (random.rand() - 1)), start[1] + h * (j + noise * (random.rand() - 1)), start[2] + h * (k + noise * (random.rand() - 1))])
 
 # for i in range(-3,4):

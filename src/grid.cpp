@@ -6,7 +6,7 @@
 
 #include <math.h>
 #include <assert.h>
-#include <omp.h>
+// #include <omp.h>
 
 #define DBL_MAX 1.7976931348623158e+308
 #define EPS_D_SMALL (1.E-300)
@@ -314,8 +314,9 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 			node->q     =  node->s;
 			node->gamma =  dot(node->r,node->s);		
 
-			node->alpha   = node->gamma / (dot(node->q,node->q));
+			node->alpha   = node->gamma / (dot(node->q,node->q) + EPS_D_SMALL);
 			residuals[i] = node->alpha * node->alpha * node->p.norm2();
+
 			if (residuals[i] != residuals[i]){
 			std::cout << node->gamma << std::endl;			
 			std::cout << "velnext : " << node->velNext << std::endl;
@@ -350,7 +351,7 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 
 
 	//Start iterations
-	while(residualSum > 1.E-5 && (iterCount < 5) ){
+	while(residualSum > 1.E-40 && (iterCount < 10) ){
 
 		residualSum = 0;
 
