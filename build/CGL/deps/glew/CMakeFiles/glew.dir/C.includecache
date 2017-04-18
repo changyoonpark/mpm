@@ -36,7 +36,7 @@ GL/glew.h
 windows.h
 -
 
-/home/ubuntu/snowsim/CGL/deps/glew/src/glew.c
+/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/glew.c
 GL/glew.h
 -
 GL/wglew.h
@@ -62,7 +62,7 @@ dlfcn.h
 mach-o/dyld.h
 -
 
-/home/ubuntu/snowsim/CGL/deps/glew/src/glewinfo.c
+/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/glewinfo.c
 stdio.h
 -
 stdlib.h
@@ -84,7 +84,7 @@ OpenGL/OpenGL.h
 OpenGL/CGLTypes.h
 -
 
-/home/ubuntu/snowsim/CGL/deps/glew/src/visualinfo.c
+/home/chang/Desktop/Research/mpm/CGL/deps/glew/src/visualinfo.c
 stdio.h
 -
 stdlib.h

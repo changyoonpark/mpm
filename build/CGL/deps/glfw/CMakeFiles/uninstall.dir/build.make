@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/snowsim
+CMAKE_SOURCE_DIR = /home/chang/Desktop/Research/mpm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/snowsim/build
+CMAKE_BINARY_DIR = /home/chang/Desktop/Research/mpm/build
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/snowsim/build
 include CGL/deps/glfw/CMakeFiles/uninstall.dir/progress.make
 
 CGL/deps/glfw/CMakeFiles/uninstall:
-	cd /home/ubuntu/snowsim/build/CGL/deps/glfw && /usr/bin/cmake -P /home/ubuntu/snowsim/build/CGL/deps/glfw/cmake_uninstall.cmake
+	cd /home/chang/Desktop/Research/mpm/build/CGL/deps/glfw && /usr/bin/cmake -P /home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/cmake_uninstall.cmake
 
 uninstall: CGL/deps/glfw/CMakeFiles/uninstall
 uninstall: CGL/deps/glfw/CMakeFiles/uninstall.dir/build.make
@@ -67,10 +67,10 @@ CGL/deps/glfw/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/build
 
 CGL/deps/glfw/CMakeFiles/uninstall.dir/clean:
-	cd /home/ubuntu/snowsim/build/CGL/deps/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/chang/Desktop/Research/mpm/build/CGL/deps/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/clean
 
 CGL/deps/glfw/CMakeFiles/uninstall.dir/depend:
-	cd /home/ubuntu/snowsim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/snowsim /home/ubuntu/snowsim/CGL/deps/glfw /home/ubuntu/snowsim/build /home/ubuntu/snowsim/build/CGL/deps/glfw /home/ubuntu/snowsim/build/CGL/deps/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chang/Desktop/Research/mpm/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chang/Desktop/Research/mpm /home/chang/Desktop/Research/mpm/CGL/deps/glfw /home/chang/Desktop/Research/mpm/build /home/chang/Desktop/Research/mpm/build/CGL/deps/glfw /home/chang/Desktop/Research/mpm/build/CGL/deps/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/depend
 

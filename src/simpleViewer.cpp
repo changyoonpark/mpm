@@ -399,6 +399,7 @@ void SimpleView::timeStep(){
     //Map particle properties onto the grid.
     grid->hashParticles();
     pSet->rasterizeParticlesOntoNodes();
+    
     // double totmass = 0., totmass2 = 0.;
     // for(auto& node : grid->nodes){
     //   totmass += node->mass;
@@ -627,6 +628,7 @@ void SimpleView::update(){
       draw_domainOutline();
       draw_faces();
       draw_spheres();
+      draw_nodeForce();
       glDisable(GL_LIGHTING);
     #endif
 

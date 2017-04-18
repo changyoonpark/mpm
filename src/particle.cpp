@@ -1,6 +1,7 @@
 #include "include/particle.h"
 #include "include/constants.h"
 #include <omp.h>
+#define EPS_D_SMALL (1.E-300)
 
 void Particle::collectVelocity(velType veltype){
 
@@ -275,7 +276,7 @@ void ParticleSet::rasterizeParticlesOntoNodes(){
 
             #pragma omp critical (velcollect)
             {
-                gn->vel += particleSet[i].vel * particleSet[i].mass * W / (gn->mass + EPS_D);
+                gn->vel += particleSet[i].vel * particleSet[i].mass * W / (gn->mass + EPS_D_SMALL);
             }   
 
         }}}

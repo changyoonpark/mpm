@@ -5,8 +5,8 @@ template = "x:{},{},{} v:{},{},{} m:{},0,0\n"
 text_file = open("./input/input.in", "w")
 
 start = [0.695,0.5,0.6]
-# h = 0.01
-h = 0.00625
+h = 0.05
+# h = 0.00625
 r = 0.2
 rho = 400;
 # totmass = 3.141592 * (r*r) * (h * 3) * rho
@@ -14,7 +14,7 @@ totmass = 3.141592 * 4./3. * (r*r*r) * rho
 # totmass = (h * 7) * (h * 7) * (h * 7) * rho 
 # totmass = 3.14 * (2.5) * (2.5) * (h * 8) * rho
 pos = []
-noise = 0;
+noise = 1.0;
 for i in range(-100,101):
     for j in range(-100,101):
         for k in range(-100,101):

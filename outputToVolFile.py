@@ -3,10 +3,7 @@ import struct
 import numpy as np
 
 def getVolumeFile(fileDir,outputVolFileDir):
-
-    f = open(os.path.expanduser(fileDir), 'r')
-
-
+    parts = 16
     domainSize = (1.0,1.0,1.0)
     maxDensity = 0.0
     h = 0.025
@@ -14,21 +11,23 @@ def getVolumeFile(fileDir,outputVolFileDir):
     nx = int(domainSize[0]/h)+1
     ny = int(domainSize[1]/h)+1
     nz = int(domainSize[2]/h)+1
-
     densityList = [None]*(nx * ny * nz)
 
-    for line in f:
-        splitted = line.split(' ')
-        density = float(splitted[1])
+    for part in range(0,parts):
+        f = open(os.path.expanduser(fileDir)+"_part_{}.txt".format(part), 'r')
+        for line in f:
+            splitted = line.split(' ')
+            density = float(splitted[1])
 
-        if density > maxDensity :
-            maxDensity = density
+            if density > maxDensity :
+                maxDensity = density
 
-        positionString = splitted[0].split(',')
-        position = (int((float(positionString[0]) + h * 0.0001) / h),
-                    int((float(positionString[1]) + h * 0.0001) / h),
-                    int((float(positionString[2]) + h * 0.0001) / h))
-        densityDict[position] = density
+            positionString = splitted[0].split(',')
+            position = (int((float(positionString[0]) + h * 0.0001) / h),
+                        int((float(positionString[1]) + h * 0.0001) / h),
+                        int((float(positionString[2]) + h * 0.0001) / h))
+            densityDict[position] = density            
+        f.close()
 
 
     for k in range(0, nz):
@@ -85,7 +84,7 @@ def getVolumeFile(fileDir,outputVolFileDir):
 
 
 for t in range(0,600):
-    name = "./framedata/grid_t_{}.txt".format(t)
+    name = "./build/outputs/grid_t_{}".format(t)
     volName = "snowball.vol".format(t) 
     getVolumeFile(name,volName)
     os.system("mitsuba snowball.xml ./outputframes/snowball_t_{}.png".format(t))

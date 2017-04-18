@@ -9,7 +9,7 @@
 #include <omp.h>
 
 #define DBL_MAX 1.7976931348623158e+308
-#define EPS_D (0.00000000001)
+#define EPS_D_SMALL (1.E-300)
 
 using namespace myMath;
 
@@ -101,11 +101,12 @@ Vector3D GridNode::getHessianSum(Vector3D& delta_u){
 			sum += particle->volume * particle->calculateAMatrix(delta_u) * (particle->F_E.T() * gW(particle->pos));
 		}
 	}
+	// if(sum == 0) std::cout << "wtf something wrong? : "<< std::endl;
 	return sum;	
 }
 
 void GridNode::updateVelocityWithNodalForce(){
-	velNext = vel + consts.dt * (consts.bodyForce - force / (mass + EPS_D));
+	velNext = vel + consts.dt * (consts.bodyForce - force / (mass + EPS_D_SMALL));
 }
 
 void GridNode::calcGeometryInteractions(){
@@ -166,7 +167,7 @@ void GridNode::sampleVelocity(){
 		}
 	}
 	
-	if (mass != 0.) vel = vel / mass;
+	if (mass != 0) vel = vel / mass;
 	else vel = Vector3D(0.,0.,0.);
 
 	// if (vel.z != 0) std::cout << "sampled vel : " << vel << std::endl;
@@ -305,32 +306,51 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 		std::advance(dataIt,i);
 		GridNode* node = dataIt->second;		
 
-		Vector3D r = node->r, s = node->s, p = node->p, q = node->q;
+		// if(node->mass > EPS_D){
+		
+			node->r     =  -(node->consts.beta * node->consts.dt2 / (node->mass + EPS_D_SMALL)) * node->getHessianSum(node->velNext);
+			node->s     =  node->r + (node->consts.beta * node->consts.dt2 / (node->mass + EPS_D_SMALL)) * node->getHessianSum(node->r);
+			node->p     =  node->r;
+			node->q     =  node->s;
+			node->gamma =  dot(node->r,node->s);		
 
-		
-		node->r     =  -(node->consts.beta * node->consts.dt2 / (node->mass + EPS_D)) * node->getHessianSum(node->velNext);
-		node->s     =  node->r + (node->consts.beta * node->consts.dt2 / (node->mass + EPS_D)) * node->getHessianSum(node->r);
-		node->p     =  node->r;
-		node->q     =  node->s;
-		node->gamma =  dot(node->r,node->s);		
-		node->alpha   = node->gamma / (dot(node->q,node->q) + EPS_D);
-		
-		residuals[i] = node->alpha * node->alpha * node->p.norm2();
+			node->alpha   = node->gamma / (dot(node->q,node->q));
+			residuals[i] = node->alpha * node->alpha * node->p.norm2();
+			if (residuals[i] != residuals[i]){
+			std::cout << node->gamma << std::endl;			
+			std::cout << "velnext : " << node->velNext << std::endl;
+			std::cout << "mass : " << node->mass << std::endl;
+			std::cout << "-(node->consts.beta * node->consts.dt2 / (node->mass + EPS_D_SMALL)) : " << -(node->consts.beta * node->consts.dt2 / (node->mass + EPS_D_SMALL)) << std::endl;
+			std::cout << "node->getHessianSum(node->velNext) : " << node->getHessianSum(node->velNext) << std::endl;			
+			std::cout << "r : " << node->q << std::endl;
+			std::cout << "s : " << node->q << std::endl;
+			std::cout << "p : " << node->q << std::endl;			
+			std::cout << "q : " << node->q << std::endl;
+			std::cout << (dot(node->q,node->q)) << std::endl;
+			std::cout << node->alpha << std::endl;
+			std::cout << "---" << std::endl;
+			}
+		// } else{
+		// 	node->r = node->r * 0;
+		// 	node->s = node->s * 0;
+		// 	node->p = node->p * 0;
+		// 	node->q = node->q * 0;
+		// 	node->gamma = 0;
+		// 	node->alpha = 0;
+		// 	residuals[i] = 0;
+		// }
+
 		residualSum += residuals[i];
 
 	}	
 
-	//Start iterations
-	#pragma omp parallel for num_threads(THREADCOUNT)
-	for(int i=0;i<activeNodes.size();i++){
-		auto dataIt = activeNodes.begin();
-		std::advance(dataIt,i);
-		GridNode* node = dataIt->second;		
-	}
-
 	int iterCount = 0;
-	if (residualSum > 0.1)
-	while(residualSum > 0.1 && (iterCount < 5) ){
+	// if (residualSum > 0.1)
+	std::cout << "initial residual sum : " << residualSum << std::endl;
+
+
+	//Start iterations
+	while(residualSum > 1.E-5 && (iterCount < 5) ){
 
 		residualSum = 0;
 
@@ -340,18 +360,33 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 			std::advance(dataIt,i);
 			GridNode* node = dataIt->second;
 
-			node->alpha   = node->gamma / (dot(node->q,node->q) + EPS_D);
+			// if(node->mass > EPS_D){
 
-			residuals[i] = node->alpha * node->alpha * node->p.norm2();
+				node->alpha   = node->gamma / (dot(node->q,node->q) + EPS_D_SMALL);
+
+				residuals[i] = node->alpha * node->alpha * node->p.norm2();
+
+				node->velNext = node->velNext + node->alpha * node->p;
+				node->r       = node->r - node->alpha * node->q;
+				node->s       = node->r + (node->consts.beta * node->consts.dt2 / (node->mass + EPS_D_SMALL)) * node->getHessianSum(node->r);
+				node->beta    = dot(node->r,node->s) / (node->gamma + EPS_D_SMALL);
+				node->gamma   = node->beta * node->gamma;
+				node->p       = node->r + node->beta * node->p;
+				node->q       = node->s + node->beta * node->q;
+
+			// } else{
+
+			// 	node->r = node->r * 0;
+			// 	node->s = node->s * 0;
+			// 	node->p = node->p * 0;
+			// 	node->q = node->q * 0;
+			// 	node->gamma = 0;
+			// 	node->alpha = 0;
+			// 	residuals[i] = 0;				
+
+			// }
+
 			residualSum += residuals[i];
-
-			node->velNext = node->velNext + node->alpha * node->p;
-			node->r       = node->r - node->alpha * node->q;
-			node->s       = node->r + (node->consts.beta * node->consts.dt2 / (node->mass + EPS_D)) * node->getHessianSum(node->r);
-			node->beta    = dot(node->r,node->s) / (node->gamma + EPS_D);
-			node->gamma   = node->beta * node->gamma;
-			node->p       = node->r + node->beta * node->p;
-			node->q       = node->s + node->beta * node->q;
 
 		}
 		std::cout << "Conjugate Residual : " << residualSum << std::endl;
