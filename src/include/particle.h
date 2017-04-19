@@ -25,6 +25,8 @@ struct Particle{
 
         unsigned int pID;
 
+        bool isActive;
+
         double mass;
         double volume;
         double density;
@@ -82,7 +84,8 @@ struct Particle{
                 : hash  ( int3(0,0,0) ),
                 consts( _consts ) 
         {
-            
+            isActive = true;
+
             F  =  F  .identity();
             F_E = F_E.identity();
             F_P = F_P.identity();       

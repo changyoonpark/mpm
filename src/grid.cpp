@@ -260,10 +260,13 @@ void Grid::hashParticles(){
 
 		if(particle.hash.nx >= (int)(constants.domainExtent.x / constants.h) || 
 		   particle.hash.ny >= (int)(constants.domainExtent.y / constants.h) || 
-		   particle.hash.nz >= (int)(constants.domainExtent.z / constants.h)   ){
+		   particle.hash.nz >= (int)(constants.domainExtent.z / constants.h) ||
+		   particle.hash.nx < 0 || particle.hash.ny < 0 || particle.hash.nz < 0){
 			printf("rouge particle with particle hash : %d, %d, %d\n",particle.hash.nx,particle.hash.ny,particle.hash.nz);
-			printf("reduce timestep and try again.");
-			assert(false);
+			particle.active = false;
+			continue;
+			// printf("reduce timestep and try again.");
+			// assert(false);
 		}
 
 		particle.cell = idxNode(particle.hash)->cell;

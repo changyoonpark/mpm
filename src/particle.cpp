@@ -346,6 +346,8 @@ void ParticleSet::updateParticlePosition(){
         particleSet[i].vel = particleSet[i].velNext;
         particleSet[i].pos += particleSet[i].vel * consts.dt;
         particleSet[i].initParticle();
+
+
     }
  
 }
