@@ -12,21 +12,21 @@ Constants::Constants(std::string meshin){
         //                          );
         snowModel = new SnowModel(0.025, //theta_compression
                                   0.0075, //theta_stretch
-                                  1.0, //muStick
-                                  8.0e5, //Youngs Modulus
+                                  0.7, //muStick
+                                  1.5e5, //Youngs Modulus
                                   0.2, //Poisson Ratio
                                   10., //xi
-                                  0.98 //FLIP contribution
+                                  0.95 //FLIP contribution
                                   );
 
         mesh = new Mesh(meshin);
         beta = 0.5;
         // h = 0.008333;
+        h = 0.01;
+        // h = 0.01;
         // h = 0.0125;
-        // h = 0.025;
-        h = 0.0125;
-        dt = 0.0005;
+        dt = 0.0002;
         dt2 = dt * dt;
-        domainExtent = Vector3D(1.,1.,1.);        
+        domainExtent = Vector3D(1.,1.0,1.);        
         bodyForce = Vector3D(0.,0.,-30.0);
     };

@@ -64,7 +64,7 @@
 		</transform>
 
 		<sampler type="ldsampler">
-			<integer name="sampleCount" value="1"/>
+			<integer name="sampleCount" value="64"/>
 		</sampler>
 
 		<film type="ldrfilm">

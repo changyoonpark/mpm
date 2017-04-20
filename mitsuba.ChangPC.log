@@ -1,28 +1,28 @@
-2017-04-18 14:23:55 INFO  main [mitsuba.cpp:275] Mitsuba version 0.5.0 (Linux, 64 bit), Copyright (c) 2014 Wenzel Jakob
-2017-04-18 14:23:55 INFO  main [mitsuba.cpp:377] Parsing scene description from "snowball.xml" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/volpath_simple.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/gridvolume.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/constvolume.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/hg.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/heterogeneous.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/obj.so" ..
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] Loading geometry from "bounds.obj" ..
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] bounds: 12 triangles, 30 vertices (merged 6 vertices).
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] Done with "bounds.obj" (took 0 ms)
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/null.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/diffuse.so" ..
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] Loading geometry from "plane.obj" ..
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] plane: 2 triangles, 4 vertices (merged 2 vertices).
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] Done with "plane.obj" (took 0 ms)
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] Loading geometry from "plane.obj" ..
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] plane: 2 triangles, 4 vertices (merged 2 vertices).
-2017-04-18 14:23:55 INFO  main [WavefrontOBJ] Done with "plane.obj" (took 0 ms)
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/ldrfilm.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/perspective.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/area.so" ..
-2017-04-18 14:23:55 INFO  main [PluginManager] Loading plugin "plugins/sphere.so" ..
-2017-04-18 14:23:55 INFO  ren0 [KDTreeBase] Constructing a SAH kd-tree (17 primitives) ..
-2017-04-18 14:23:55 INFO  ren0 [KDTreeBase] Finished -- took 0 ms.
-2017-04-18 14:23:55 INFO  ren0 [SamplingIntegrator] Starting render job (768x576, 1 sample, 4 cores, SSE2 enabled) ..
+2017-04-20 11:01:43 INFO  main [mitsuba.cpp:275] Mitsuba version 0.5.0 (Linux, 64 bit), Copyright (c) 2014 Wenzel Jakob
+2017-04-20 11:01:43 INFO  main [mitsuba.cpp:377] Parsing scene description from "snowball.xml" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/volpath_simple.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/gridvolume.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/constvolume.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/hg.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/heterogeneous.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/obj.so" ..
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Loading geometry from "bounds.obj" ..
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] bounds: 12 triangles, 30 vertices (merged 6 vertices).
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Done with "bounds.obj" (took 0 ms)
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/null.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/diffuse.so" ..
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Loading geometry from "plane.obj" ..
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] plane: 2 triangles, 4 vertices (merged 2 vertices).
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Done with "plane.obj" (took 0 ms)
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Loading geometry from "plane.obj" ..
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] plane: 2 triangles, 4 vertices (merged 2 vertices).
+2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Done with "plane.obj" (took 0 ms)
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/ldrfilm.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/perspective.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/area.so" ..
+2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/sphere.so" ..
+2017-04-20 11:01:43 INFO  ren0 [KDTreeBase] Constructing a SAH kd-tree (17 primitives) ..
+2017-04-20 11:01:43 INFO  ren0 [KDTreeBase] Finished -- took 0 ms.
+2017-04-20 11:01:43 INFO  ren0 [SamplingIntegrator] Starting render job (768x576, 64 samples, 4 cores, SSE2 enabled) ..

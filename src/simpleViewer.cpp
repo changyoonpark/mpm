@@ -423,10 +423,11 @@ void SimpleView::timeStep(){
     //Grid Velocity update.
     grid->calculateNodalForcesAndUpdateVelocities();
     grid->calculateGeometryInteractions();
-    grid->solveForVelNextAndUpdateVelocities();
+    // grid->solveForVelNextAndUpdateVelocities();
 
     
     pSet->calculateParticleVelocityGradient();
+
     pSet->updateParticleDeformationGradient();
     
     pSet->updateParticlePosition();
@@ -447,8 +448,8 @@ void SimpleView::spitToFile(){
   #pragma omp parallel for num_threads(THREADCOUNT)
   for(int t = 0; t < THREADCOUNT; t ++){
     int nodesPerThread = grid->activeNodes.size() / THREADCOUNT;
-    // int tid = omp_get_thread_num();
-    int tid = t;
+    int tid = omp_get_thread_num();
+    // int tid = t;
     int startIdx = tid * nodesPerThread;
     int endIdx = (tid + 1) * nodesPerThread;
 
@@ -457,7 +458,6 @@ void SimpleView::spitToFile(){
       endIdx = grid->activeNodes.size();
     } 
     
-    std::ofstream timeStepData;
     std::string fileName = "./outputs/grid_t_";
 
     fileName += std::to_string(currentTimeStep);
@@ -465,17 +465,54 @@ void SimpleView::spitToFile(){
     fileName += std::to_string(tid);
     fileName += ".txt";
 
-    timeStepData.open(fileName);
+    std::ofstream timeStepData;
+    timeStepData.open(fileName, std::ofstream::out | std::ofstream::trunc);
+
+  
+    if(!timeStepData) std::cout << "file cant be opened" << std::endl;
     for(int i=startIdx;i<endIdx;i++){
       auto dataIt = grid->activeNodes.begin();
       std::advance(dataIt,i);
       GridNode* gn = dataIt->second;
       timeStepData << gn->x.x << "," <<  gn->x.y << "," << gn->x.z << " ";
       timeStepData << gn->mass / h3 << "\n";
+      timeStepData.flush();
     }
     timeStepData.close();
   }
 
+
+
+  #pragma omp parallel for num_threads(THREADCOUNT)
+  for(int t = 0; t < THREADCOUNT; t ++){
+    int particlesPerThread = pSet->particleSet.size() / THREADCOUNT;
+    int tid = omp_get_thread_num();
+    // int tid = t;
+    int startIdx = tid * particlesPerThread;
+    int endIdx = (tid + 1) * particlesPerThread;
+
+    if (tid == THREADCOUNT - 1){
+      particlesPerThread = pSet->particleSet.size() - particlesPerThread * (THREADCOUNT - 1);      
+      endIdx = pSet->particleSet.size();
+    } 
+    
+    std::string fileName = "./outputs/particles_t_";
+    fileName += std::to_string(currentTimeStep);
+    fileName += "_part_";
+    fileName += std::to_string(tid);
+    fileName += ".txt";
+
+    std::ofstream timeStepData;
+    timeStepData.open(fileName, std::ofstream::out | std::ofstream::trunc);
+
+    if(!timeStepData) std::cout << "file cant be opened" << std::endl;
+    for(int i=startIdx;i<endIdx;i++){
+      Particle p = pSet->particleSet[i];
+      timeStepData << p.pos.x << "," <<  p.pos.y << "," << p.pos.z << "\n";
+      timeStepData.flush();
+    }
+    timeStepData.close();
+  }
 
 }
 
@@ -586,38 +623,38 @@ void SimpleView::setGLSettings(){
 }
 
 void SimpleView::draw_domainOutline(){
-    glBegin(GL_LINE_STRIP);        
-        glVertex3f( 0.0, 0.0, 0.0 );
-        glVertex3f( domainExtent.x, 0.0, 0.0 );
-        glVertex3f( domainExtent.x, domainExtent.y, 0.0 );
-        glVertex3f( 0.0, domainExtent.y, 0.0 );
-        glVertex3f( 0.0, 0.0, 0.0 );
-    glEnd();    
+    // glBegin(GL_LINE_STRIP);        
+    //     glVertex3f( 0.0, 0.0, 0.0 );
+    //     glVertex3f( domainExtent.x, 0.0, 0.0 );
+    //     glVertex3f( domainExtent.x, domainExtent.y, 0.0 );
+    //     glVertex3f( 0.0, domainExtent.y, 0.0 );
+    //     glVertex3f( 0.0, 0.0, 0.0 );
+    // glEnd();    
 
-    glBegin(GL_LINE_STRIP);        
-        glVertex3f( 0.0, 0.0, domainExtent.z );
-        glVertex3f( domainExtent.x, 0.0, domainExtent.z );
-        glVertex3f( domainExtent.x, domainExtent.y, domainExtent.z );
-        glVertex3f( 0.0, domainExtent.y, domainExtent.z );
-        glVertex3f( 0.0, 0.0, domainExtent.z );
-    glEnd();    
+    // glBegin(GL_LINE_STRIP);        
+    //     glVertex3f( 0.0, 0.0, domainExtent.z );
+    //     glVertex3f( domainExtent.x, 0.0, domainExtent.z );
+    //     glVertex3f( domainExtent.x, domainExtent.y, domainExtent.z );
+    //     glVertex3f( 0.0, domainExtent.y, domainExtent.z );
+    //     glVertex3f( 0.0, 0.0, domainExtent.z );
+    // glEnd();    
 
-    glBegin(GL_LINES);        
-        glVertex3f( 0.0, 0.0, 0.0 );
-        glVertex3f( 0.0, 0.0, domainExtent.z );
-    glEnd();
-    glBegin(GL_LINES);        
-        glVertex3f( domainExtent.x, 0.0, 0.0 );
-        glVertex3f( domainExtent.x, 0.0, domainExtent.z );
-    glEnd();
-    glBegin(GL_LINES);        
-        glVertex3f( domainExtent.x, domainExtent.y, 0.0 );
-        glVertex3f( domainExtent.x, domainExtent.y, domainExtent.z );
-    glEnd();
-    glBegin(GL_LINES);        
-        glVertex3f( 0.0, domainExtent.y, 0.0 );
-        glVertex3f( 0.0, domainExtent.y, domainExtent.z );
-    glEnd();    
+    // glBegin(GL_LINES);        
+    //     glVertex3f( 0.0, 0.0, 0.0 );
+    //     glVertex3f( 0.0, 0.0, domainExtent.z );
+    // glEnd();
+    // glBegin(GL_LINES);        
+    //     glVertex3f( domainExtent.x, 0.0, 0.0 );
+    //     glVertex3f( domainExtent.x, 0.0, domainExtent.z );
+    // glEnd();
+    // glBegin(GL_LINES);         
+    //     glVertex3f( domainExtent.x, domainExtent.y, 0.0 );
+    //     glVertex3f( domainExtent.x, domainExtent.y, domainExtent.z );
+    // glEnd();
+    // glBegin(GL_LINES);        
+    //     glVertex3f( 0.0, domainExtent.y, 0.0 );
+    //     glVertex3f( 0.0, domainExtent.y, domainExtent.z );
+    // glEnd();    
 }
 
 void SimpleView::update(){
@@ -629,7 +666,8 @@ void SimpleView::update(){
       draw_domainOutline();
       draw_faces();
       draw_spheres();
-      draw_nodeForce();
+      draw_nodes();
+      // draw_nodeForce();
       glDisable(GL_LIGHTING);
     #endif
 
@@ -666,7 +704,7 @@ void SimpleView::init(){
 
 
     camera->place(domainExtent / 2.,
-                  0.,0.,
+                  3.14/2.,0.,
                  // -2.0,
                  // 1.0,
                 //  1.0,

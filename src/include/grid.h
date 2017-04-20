@@ -7,7 +7,7 @@
 #include "constants.h"
 #include "mesh.h"
 
-#define MAX_PARTICLE_PER_CELL 20
+#define MAX_PARTICLE_PER_CELL 100
 
 
 using namespace myMath;

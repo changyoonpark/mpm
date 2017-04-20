@@ -85,7 +85,7 @@ def getVolumeFile(fileDir,outputVolFileDir):
 
 
 
-for t in range(0,4000,5):
+for t in range(0,1400,2):
     name = "./build/outputs/grid_t_{}".format(t)
     volName = "snowball.vol".format(t) 
     getVolumeFile(name,volName)

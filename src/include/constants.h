@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-#define THREADCOUNT 16
+#define THREADCOUNT 4
 #define WITH_GUI 0
 
 struct Constants{
