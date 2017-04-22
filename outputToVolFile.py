@@ -2,8 +2,10 @@ import os
 import struct
 import numpy as np
 
+parts = 16
+
 def getVolumeFile(fileDir,outputVolFileDir):
-    parts = 4
+
     domainSize = (1.0,1.0,1.0)
     maxDensity = 0.0
     h = 0.025
@@ -66,27 +68,48 @@ def getVolumeFile(fileDir,outputVolFileDir):
 
     fout.write(string)
     fout.write(buf)
-
-    # f = open(os.path.expanduser('./build/outputs/particle_t_704.txt'), 'r')
-    # fparticle = open(os.path.expanduser('./build/outputs/mitsuba_particle_t_704.txt'), 'w+')
-    # form = "<shape type=\"sphere\">\
-    #         <point name=\"center\" x=\"{}\" y=\"{}\" z=\"{}\"/>\
-    #         <float name=\"radius\" value=\"{}\"/>\
-    #         <bsdf type=\"diffuse\">\
-    #         <rgb name=\"diffuseReflectance\" value=\"0.4, 0.5, 0.6\"/>\
-    #         </bsdf>\
-    #         </shape>\n"
-
-    # for line in f:
-    #     splitted = line.split(",")
-    #     fparticle.write(form.format(float(splitted[0]),float(splitted[1]),float(splitted[2]),0.1 * h * np.random.rand() ))
-
+ 
     print("to mitsuba VOL format conversion done")
 
+def writeSpheres(xmlfileDir,frame):
+    xmltext = ""
 
+    form = "<shape type=\"sphere\">\
+            <point name=\"center\" x=\"{}\" y=\"{}\" z=\"{}\"/>\
+            <float name=\"radius\" value=\"{}\"/>\
+            <bsdf type=\"diffuse\">\
+            <rgb name=\"diffuseReflectance\" value=\"0.4, 0.5, 0.6\"/>\
+            </bsdf>\
+            </shape>\n"
 
-for t in range(0,1400,2):
+    xmlfile = open(os.path.expanduser(xmlfileDir), 'r+')
+    xmllines = []
+    for line in xmlfile:
+        xmllines.append(line)
+    xmlfile.close()
+    xmllines = xmllines[0:88]
+
+    fileDir = "./build/outputs/particles_t_"
+    fileDir += str(frame)
+    fileDir += "_part_"
+
+    for i in range(0,parts):
+        print(fileDir + str(i) + ".txt")
+        f = open(os.path.expanduser(fileDir + str(i) + ".txt"), 'r')        
+        for line in f:
+            # print(line)
+            splitted = line.split(",")         
+            xmllines.append(form.format(float(splitted[0]),float(splitted[1]),float(splitted[2]),0.008))
+        f.close()
+
+    xmllines.append("</scene>")
+    xmlfile = open(os.path.expanduser(xmlfileDir), 'w')
+    xmlfile.write("".join(xmllines))
+
+# writeSpheres('./snowball.xml',900)
+for t in range(900,901,5):
     name = "./build/outputs/grid_t_{}".format(t)
     volName = "snowball.vol".format(t) 
     getVolumeFile(name,volName)
-    os.system("mitsuba -o ./outputframes/snowball_t_{}.png snowball.xml".format(t))
+    writeSpheres("./snowball.xml",t)
+    # os.system("mitsuba -o ./outputframes/snowball_t_{}.png snowball.xml".format(t))
