@@ -1,28 +1,191 @@
-2017-04-20 11:01:43 INFO  main [mitsuba.cpp:275] Mitsuba version 0.5.0 (Linux, 64 bit), Copyright (c) 2014 Wenzel Jakob
-2017-04-20 11:01:43 INFO  main [mitsuba.cpp:377] Parsing scene description from "snowball.xml" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/volpath_simple.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/gridvolume.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/constvolume.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/hg.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/heterogeneous.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/obj.so" ..
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Loading geometry from "bounds.obj" ..
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] bounds: 12 triangles, 30 vertices (merged 6 vertices).
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Done with "bounds.obj" (took 0 ms)
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/null.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/diffuse.so" ..
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Loading geometry from "plane.obj" ..
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] plane: 2 triangles, 4 vertices (merged 2 vertices).
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Done with "plane.obj" (took 0 ms)
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Loading geometry from "plane.obj" ..
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] plane: 2 triangles, 4 vertices (merged 2 vertices).
-2017-04-20 11:01:43 INFO  main [WavefrontOBJ] Done with "plane.obj" (took 0 ms)
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/ldsampler.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/gaussian.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/ldrfilm.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/perspective.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/area.so" ..
-2017-04-20 11:01:43 INFO  main [PluginManager] Loading plugin "plugins/sphere.so" ..
-2017-04-20 11:01:43 INFO  ren0 [KDTreeBase] Constructing a SAH kd-tree (17 primitives) ..
-2017-04-20 11:01:43 INFO  ren0 [KDTreeBase] Finished -- took 0 ms.
-2017-04-20 11:01:43 INFO  ren0 [SamplingIntegrator] Starting render job (768x576, 64 samples, 4 cores, SSE2 enabled) ..
+2017-04-24 10:38:04 INFO  main [mainwindow.cpp:80] Mitsuba version 0.5.0 (Linux, 64 bit), Copyright (c) 2014 Wenzel Jakob
+2017-04-24 10:38:04 INFO  main [mainwindow.cpp:83] Configured for RGB-based rendering
+2017-04-24 10:38:04 DEBUG main [X11Session] Initializing X11 session
+2017-04-24 10:38:04 DEBUG main [X11Session] VidMode extension 2.2 found
+2017-04-24 10:38:04 DEBUG main [X11Session] GLX Version 1.4 found
+2017-04-24 10:38:04 DEBUG main [GLXRenderer] Using an existing GLX context
+2017-04-24 10:38:04 DEBUG main [GLRenderer] OpenGL renderer : GeForce GTX 1070/PCIe/SSE2
+2017-04-24 10:38:04 DEBUG main [GLRenderer] OpenGL vendor   : NVIDIA Corporation
+2017-04-24 10:38:04 DEBUG main [GLRenderer] OpenGL version  : 4.5.0 NVIDIA 367.35
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Framebuffers objects are supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: GLSL is supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Floating point textures are supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Floating point color buffers are supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Fast buffer blitting is supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Multisample framebuffer objects are supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Vertex buffer objects are supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Geometry shaders are supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Custom texture filtering is supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Synchronization objects are supported.
+2017-04-24 10:38:04 DEBUG main [GLRenderer] Capabilities: Bindless rendering is supported.
+2017-04-24 10:38:04 DEBUG main [Thread] Spawning thread "prvw"
+2017-04-24 10:38:04 DEBUG prvw [X11Device] Initializing X11 device
+2017-04-24 10:38:04 DEBUG prvw [GLXRenderer] Initializing GLX renderer
+2017-04-24 10:38:04 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Accumulation program']
+2017-04-24 10:38:04 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Directional shadow map generator']
+2017-04-24 10:38:04 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Paraboloid shadow map generator', maxVertices=4]
+2017-04-24 10:38:04 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Cube/Hemicube shadow map generator (5/6 pass version)']
+2017-04-24 10:38:04 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Cube shadow map generator (1 pass version)', maxVertices=18]
+2017-04-24 10:38:04 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Hemicube shadow map generator (1 pass version)', maxVertices=15]
+2017-04-24 10:38:04 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Tonemapper [Gamma]']
+2017-04-24 10:38:04 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Tonemapper [Reinhard et al. 2002]']
+2017-04-24 10:38:04 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Downsampling program']
+2017-04-24 10:38:04 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Log-luminance program']
+2017-04-24 10:38:04 DEBUG main [Thread] Spawning thread "wrk0"
+2017-04-24 10:38:04 DEBUG main [Thread] Spawning thread "wrk1"
+2017-04-24 10:38:04 DEBUG main [Thread] Spawning thread "wrk2"
+2017-04-24 10:38:04 DEBUG main [Thread] Spawning thread "wrk3"
+2017-04-24 10:38:09 DEBUG main [Thread] Spawning thread "load"
+2017-04-24 10:38:09 INFO  load [sceneloader.cpp:114] Parsing scene description from "/home/chang/Desktop/Research/mpm/snowball.xml" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/volpath_simple.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/gridvolume.so" ..
+2017-04-24 10:38:09 DEBUG load [GridDataSource] Mapped "snowball.vol" into memory: 41x41x41 (1 channels, format = float32), 269.3 KiB, AABB3[min=[0, 0, 0], max=[1, 1, 1]]
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/constvolume.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/hg.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/heterogeneous.so" ..
+2017-04-24 10:38:09 DEBUG load [materials.h:195] Medium parameters: sigmaS=[14800, 17600, 20200], sigmaA=[640, 3400, 9600], g=0
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/obj.so" ..
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] Loading geometry from "bounds.obj" ..
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] bounds: 12 triangles, 30 vertices (merged 6 vertices).
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] Done with "bounds.obj" (took 0 ms)
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/null.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/diffuse.so" ..
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] Loading geometry from "plane.obj" ..
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] plane: 2 triangles, 4 vertices (merged 2 vertices).
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] Done with "plane.obj" (took 0 ms)
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] Loading geometry from "plane.obj" ..
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] plane: 2 triangles, 4 vertices (merged 2 vertices).
+2017-04-24 10:38:09 INFO  load [WavefrontOBJ] Done with "plane.obj" (took 0 ms)
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/ldsampler.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/gaussian.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/ldrfilm.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/perspective.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/area.so" ..
+2017-04-24 10:38:09 INFO  load [PluginManager] Loading plugin "plugins/sphere.so" ..
+2017-04-24 10:38:10 INFO  load [KDTreeBase] Constructing a SAH kd-tree (15017 primitives) ..
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] Creating a preliminary index list (58.7 KiB)
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] Computed scene bounds in 1 ms
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] kd-tree configuration:
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Traversal cost           : 15.00
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Query cost               : 20.00
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Empty space bonus        : 0.90
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Max. tree depth          : 24
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Scene bounding box (min) : [-1.2, -1, -1]
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Scene bounding box (max) : [2, 2, 2.2]
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Min-max bins             : 128
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    O(n log n) method        : use for <= 65536 primitives
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Perfect splits           : yes
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Retract bad splits       : yes
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Stopping primitive count : 6
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Build tree in parallel   : no
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] 
+2017-04-24 10:38:10 INFO  load [KDTreeBase] Finished -- took 129 ms.
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] Temporary memory statistics:
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Classification storage : 18.3 KiB
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Indirection entries    : 0 (0 B)
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Main thread:
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]       Left events   : 4 chunks (2.8 MiB)
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]       Right events  : 3 chunks (2.6 MiB)
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]       kd-tree nodes : 34467 entries, 1 blocks (512.0 KiB)
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]       Indices       : 73811 entries, 1 blocks (512.0 KiB)
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Total: 6.3 MiB
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] Optimizing memory layout ..
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] Finished -- took 0 ms.
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] Structural kd-tree statistics:
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Parallel work units         : 0
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Node storage cost           : 235.4 KiB
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Index storage cost          : 288.3 KiB
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Inner nodes                 : 15063
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Leaf nodes                  : 15064
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Nonempty leaf nodes         : 14533
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Leaf node histogram         : 0(531) 1(281) 2(834) 3(1601) 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]                                  4(2534) 5(3451) 6(3650) 7(979) 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]                                  8(568) 9(294) 10(176) 11(86) 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]                                  12(40) 13(21) 14(12) 15(2) 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] 
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] Qualitative kd-tree statistics:
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Retracted splits            : 4453
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Pruned primitives           : 0
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Largest leaf node           : 18 primitives
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Avg. prims/nonempty leaf    : 5.08
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Expected traversals/query   : 8.87
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Expected leaf visits/query  : 3.32
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Expected prim. visits/query : 7.77
+2017-04-24 10:38:10 DEBUG load [KDTreeBase]    Final cost                  : 288.56
+2017-04-24 10:38:10 DEBUG load [KDTreeBase] 
+2017-04-24 10:38:10 DEBUG load [ShapeKDTree] Precomputing triangle intersection information (703.9 KiB)
+2017-04-24 10:38:10 DEBUG load [ShapeKDTree] Finished -- took 0 ms.
+2017-04-24 10:38:10 DEBUG load [ShapeKDTree] 
+2017-04-24 10:38:10 DEBUG load [Thread] Thread "load" has finished
+2017-04-24 10:38:15 INFO  prvw [PluginManager] Loading plugin "plugins/halton.so" ..
+2017-04-24 10:38:15 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'vpl=AreaLightShader, bsdf=NullShader, ds']
+2017-04-24 10:38:15 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'vpl=AreaLightShader, bsdf=SmoothDiffuseShader[ConstantSpectrumTextureShader], ds']
+2017-04-24 10:38:15 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'vpl=AreaLightShader, bsdf=SmoothDiffuseShader[ConstantSpectrumTextureShader], emitter=AreaLightShader, ds']
+2017-04-24 10:38:17 DEBUG main [Thread] Spawning thread "rend"
+2017-04-24 10:38:17 INFO  rend [SamplingIntegrator] Starting render job (768x576, 1 sample, 4 cores, SSE2 enabled) ..
+2017-04-24 10:38:20 INFO  rend [RenderJob] Render time: 3.2890s
+2017-04-24 10:38:20 DEBUG rend [LDRFilm] Developing film ..
+2017-04-24 10:38:20 INFO  rend [LDRFilm] Writing image to "/home/chang/Desktop/Research/mpm/snowball.png" ..
+2017-04-24 10:38:20 DEBUG rend [Bitmap] Writing a 768x576 PNG file
+2017-04-24 10:38:20 DEBUG rend [Thread] Thread "rend" has finished
+2017-04-24 10:38:24 DEBUG main [Thread] Spawning thread "rend"
+2017-04-24 10:38:24 INFO  rend [SamplingIntegrator] Starting render job (768x576, 2 samples, 4 cores, SSE2 enabled) ..
+2017-04-24 10:38:30 INFO  rend [RenderJob] Render time: 6.1040s
+2017-04-24 10:38:30 DEBUG rend [LDRFilm] Developing film ..
+2017-04-24 10:38:30 INFO  rend [LDRFilm] Writing image to "/home/chang/Desktop/Research/mpm/snowball.png" ..
+2017-04-24 10:38:30 DEBUG rend [Bitmap] Writing a 768x576 PNG file
+2017-04-24 10:38:30 DEBUG rend [Thread] Thread "rend" has finished
+2017-04-24 10:38:39 DEBUG main [GLProgram] Freeing GPU program "vpl=AreaLightShader, bsdf=NullShader, ds"
+2017-04-24 10:38:39 DEBUG main [GLProgram] Freeing GPU program "vpl=AreaLightShader, bsdf=SmoothDiffuseShader[ConstantSpectrumTextureShader], ds"
+2017-04-24 10:38:39 DEBUG main [GLProgram] Freeing GPU program "vpl=AreaLightShader, bsdf=SmoothDiffuseShader[ConstantSpectrumTextureShader], emitter=AreaLightShader, ds"
+2017-04-24 10:38:39 DEBUG prvw [GLProgram] Freeing GPU program "Directional shadow map generator"
+2017-04-24 10:38:39 DEBUG prvw [GLProgram] Freeing GPU program "Paraboloid shadow map generator"
+2017-04-24 10:38:39 DEBUG prvw [GLProgram] Freeing GPU program "Cube/Hemicube shadow map generator (5/6 pass version)"
+2017-04-24 10:38:39 DEBUG prvw [GLProgram] Freeing GPU program "Cube shadow map generator (1 pass version)"
+2017-04-24 10:38:39 DEBUG prvw [GLProgram] Freeing GPU program "Hemicube shadow map generator (1 pass version)"
+2017-04-24 10:38:39 DEBUG prvw [GLProgram] Freeing GPU program "Accumulation program"
+2017-04-24 10:38:39 DEBUG prvw [GLXRenderer] Shutting down GLX Renderer
+2017-04-24 10:38:39 DEBUG prvw [X11Device] Shutting down X11 device
+2017-04-24 10:38:39 DEBUG prvw [Thread] Thread "prvw" has finished
+2017-04-24 10:38:40 DEBUG wrk1 [Thread] Thread "wrk1" has finished
+2017-04-24 10:38:40 DEBUG wrk3 [Thread] Thread "wrk3" has finished
+2017-04-24 10:38:40 DEBUG wrk2 [Thread] Thread "wrk2" has finished
+2017-04-24 10:38:40 DEBUG wrk0 [Thread] Thread "wrk0" has finished
+2017-04-24 10:38:40 DEBUG main [GLProgram] Freeing GPU program "Log-luminance program"
+2017-04-24 10:38:40 DEBUG main [GLProgram] Freeing GPU program "Downsampling program"
+2017-04-24 10:38:40 DEBUG main [GLProgram] Freeing GPU program "Tonemapper [Reinhard et al. 2002]"
+2017-04-24 10:38:40 DEBUG main [GLProgram] Freeing GPU program "Tonemapper [Gamma]"
+2017-04-24 10:38:40 DEBUG main [X11Session] Shutting down X11 session
+2017-04-24 10:38:40 DEBUG main [X11Device] Destroying X11 device
+2017-04-24 10:38:40 DEBUG main [X11Session] Destroying X11 session
+2017-04-24 10:38:40 INFO  main [statistics.cpp:142] Statistics:
+------------------------------------------------------------
+ * Loaded plugins :
+    -  plugins/area.so [Area light]
+    -  plugins/constvolume.so [Constant data source]
+    -  plugins/diffuse.so [Smooth diffuse BRDF]
+    -  plugins/gaussian.so [Gaussian reconstruction filter]
+    -  plugins/gridvolume.so [Grid data source]
+    -  plugins/halton.so [Halton QMC sampler]
+    -  plugins/heterogeneous.so [Heterogeneous medium]
+    -  plugins/hg.so [Henyey-Greenstein phase function]
+    -  plugins/ldrfilm.so [Low dynamic range film]
+    -  plugins/ldsampler.so [Low discrepancy sampler]
+    -  plugins/null.so [Null BSDF]
+    -  plugins/obj.so [OBJ triangle mesh loader]
+    -  plugins/perspective.so [Perspective camera]
+    -  plugins/sphere.so [Sphere intersection primitive]
+    -  plugins/volpath_simple.so [Simple volumetric path tracer]
+
+  * General :
+    -  Detected medium inconsistencies : 26
+    -  Normal rays traced : 3.588 M
+    -  Shadow rays traced : 2.088 M
+
+  * Volumetric path tracer :
+    -  Average path length : 4.06 (3.59 M / 884.74 K)
+------------------------------------------------------------

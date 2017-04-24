@@ -264,9 +264,9 @@ void Grid::hashParticles(){
 		   particle.hash.nx < 0 || particle.hash.ny < 0 || particle.hash.nz < 0){
 			printf("rouge particle with particle hash : %d, %d, %d\n",particle.hash.nx,particle.hash.ny,particle.hash.nz);
 			particle.isActive = false;
-			continue;
-			// printf("reduce timestep and try again.");
-			// assert(false);
+			// continue;
+			printf("reduce timestep and try again.");
+			assert(false);
 		}
 
 		particle.cell = idxNode(particle.hash)->cell;

@@ -2,7 +2,7 @@ import os
 import struct
 import numpy as np
 
-parts = 16
+parts = 4
 
 def getVolumeFile(fileDir,outputVolFileDir):
 
@@ -107,7 +107,7 @@ def writeSpheres(xmlfileDir,frame):
     xmlfile.write("".join(xmllines))
 
 # writeSpheres('./snowball.xml',900)
-for t in range(900,901,5):
+for t in range(0,1,5):
     name = "./build/outputs/grid_t_{}".format(t)
     volName = "snowball.vol".format(t) 
     getVolumeFile(name,volName)
