@@ -398,7 +398,8 @@ void SimpleView::timeStep(){
 
     //Map particle properties onto the grid.
     grid->hashParticles();
-    pSet->rasterizeParticlesOntoNodes();
+    // pSet->rasterizeParticlesOntoNodes();
+    grid->rasterizeNodes();
     
     // double totmass = 0., totmass2 = 0.;
     // for(auto& node : grid->nodes){
@@ -447,15 +448,16 @@ void SimpleView::spitToFile(){
 
   #pragma omp parallel for num_threads(THREADCOUNT)
   for(int t = 0; t < THREADCOUNT; t ++){
-    int nodesPerThread = grid->activeNodes.size() / THREADCOUNT;
+    // int nodesPerThread = grid->activeNodes.size() / THREADCOUNT;
+    int nodesPerThread = grid->nodes.size() / THREADCOUNT;
     int tid = omp_get_thread_num();
     // int tid = t;
     int startIdx = tid * nodesPerThread;
     int endIdx = (tid + 1) * nodesPerThread;
 
     if (tid == THREADCOUNT - 1){
-      nodesPerThread = grid->activeNodes.size() - nodesPerThread * (THREADCOUNT - 1);      
-      endIdx = grid->activeNodes.size();
+      nodesPerThread = grid->nodes.size() - nodesPerThread * (THREADCOUNT - 1);      
+      endIdx = grid->nodes.size();
     } 
     
     std::string fileName = "./outputs/grid_t_";
@@ -471,9 +473,10 @@ void SimpleView::spitToFile(){
   
     if(!timeStepData) std::cout << "file cant be opened" << std::endl;
     for(int i=startIdx;i<endIdx;i++){
-      auto dataIt = grid->activeNodes.begin();
-      std::advance(dataIt,i);
-      GridNode* gn = dataIt->second;
+      // auto dataIt = grid->nodes.begin();
+      // std::advance(dataIt,i);
+      // GridNode* gn = dataIt->second;
+      GridNode* gn = grid->nodes[i];
       timeStepData << gn->x.x << "," <<  gn->x.y << "," << gn->x.z << " ";
       timeStepData << gn->mass / h3 << "\n";
       timeStepData.flush();

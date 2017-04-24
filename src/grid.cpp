@@ -247,7 +247,8 @@ void Grid::hashParticles(){
 	std::cout << "hashing particles..." << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
 	for(int i = 0; i < nodes.size(); i++){
-		nodes[i]->isActive = false;
+		// nodes[i]->isActive = false;
+		nodes[i]->isActive = true;
 		nodes[i]->mass = 0.;
 		nodes[i]->vel = Vector3D(0,0,0);
 		nodes[i]->cell->clearPList();
@@ -289,13 +290,13 @@ void Grid::rasterizeNodes(){
 void Grid::calculateNodalForcesAndUpdateVelocities(){
 	std::cout << "updating nodal forces" << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
-	for(int i=0;i<activeNodes.size();i++){
-		auto dataIt = activeNodes.begin();
-		std::advance(dataIt,i);
-		GridNode* node = dataIt->second;
+	// for(int i=0;i<activeNodes.size();i++){
+	// 	auto dataIt = activeNodes.begin();
+	// 	std::advance(dataIt,i);
+	// 	GridNode* node = dataIt->second;
 
-	// for(int i=0;i<nodes.size();i++){
-	// 	GridNode* node = nodes[i];
+	for(int i=0;i<nodes.size();i++){
+		GridNode* node = nodes[i];
 
 		node->calcNodalForce();
 		// node->calcImplicitNodalForce();
@@ -314,10 +315,13 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 	std::vector<double> residuals(activeNodes.size(),0);
 
 	#pragma omp parallel for num_threads(THREADCOUNT) reduction(+:residualSum)	
-	for(int i=0;i<activeNodes.size();i++){
-		auto dataIt = activeNodes.begin();
-		std::advance(dataIt,i);
-		GridNode* node = dataIt->second;		
+	// for(int i=0;i<activeNodes.size();i++){
+	// 	auto dataIt = activeNodes.begin();
+	// 	std::advance(dataIt,i);
+	// 	GridNode* node = dataIt->second;		
+
+		for(int i=0;i<nodes.size();i++){
+			GridNode* node = nodes[i];
 
 		// if(node->mass > EPS_D){
 		
@@ -369,10 +373,13 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 		residualSum = 0;
 
 		#pragma omp parallel for num_threads(THREADCOUNT) reduction(+:residualSum)
-		for(int i=0;i<activeNodes.size();i++){
-			auto dataIt = activeNodes.begin();
-			std::advance(dataIt,i);
-			GridNode* node = dataIt->second;
+		// for(int i=0;i<activeNodes.size();i++){
+		// 	auto dataIt = activeNodes.begin();
+		// 	std::advance(dataIt,i);
+		// 	GridNode* node = dataIt->second;
+
+			for(int i=0;i<nodes.size();i++){
+				GridNode* node = nodes[i];
 
 			// if(node->mass > EPS_D){
 
@@ -414,10 +421,13 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 void Grid::calculateGeometryInteractions(){
 	std::cout << "calculating geometry interactions" << std::endl;
 	#pragma omp parallel for num_threads(THREADCOUNT)
-	for(int i=0;i<activeNodes.size();i++){
-		auto dataIt = activeNodes.begin();
-		std::advance(dataIt,i);
-		GridNode* node = dataIt->second;
+	// for(int i=0;i<activeNodes.size();i++){
+	// 	auto dataIt = activeNodes.begin();
+	// 	std::advance(dataIt,i);
+	// 	GridNode* node = dataIt->second;
+	for(int i=0;i<nodes.size();i++){
+		GridNode* node = nodes[i];
+
 		node->calcGeometryInteractions();
 	}
 	std::cout << "done" << std::endl;
