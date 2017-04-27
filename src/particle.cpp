@@ -1,6 +1,7 @@
 #include "include/particle.h"
 #include "include/constants.h"
-// #include <omp.h>
+#include <omp.h>
+
 #define EPS_D_SMALL (1.E-100)
 #define DBL_MAX 1.7976931348623158e+308
 

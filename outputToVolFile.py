@@ -2,7 +2,7 @@ import os
 import struct
 import numpy as np
 
-parts = 4
+parts = 32
 
 def getVolumeFile(fileDir,outputVolFileDir):
 
@@ -20,16 +20,15 @@ def getVolumeFile(fileDir,outputVolFileDir):
         print("reading "+ filename)
         f = open(filename, 'r')
         for line in f:
-            splitted = line.split(' ')
-            density = float(splitted[1])
+            splitted = line.split(',')
+            density = float(splitted[3])
 
             if density > maxDensity :
                 maxDensity = density
 
-            positionString = splitted[0].split(',')
-            position = (int((float(positionString[0]) + h * 0.0001) / h),
-                        int((float(positionString[1]) + h * 0.0001) / h),
-                        int((float(positionString[2]) + h * 0.0001) / h))
+            position = (int((float(splitted[0]) + h * 0.0001) / h),
+                        int((float(splitted[1]) + h * 0.0001) / h),
+                        int((float(splitted[2]) + h * 0.0001) / h))
             densityDict[position] = density            
         f.close()
 
@@ -87,7 +86,7 @@ def writeSpheres(xmlfileDir,frame):
     for line in xmlfile:
         xmllines.append(line)
     xmlfile.close()
-    xmllines = xmllines[0:88]
+    xmllines = xmllines[0:89]
 
     fileDir = "./build/outputs/particles_t_"
     fileDir += str(frame)
@@ -107,9 +106,13 @@ def writeSpheres(xmlfileDir,frame):
     xmlfile.write("".join(xmllines))
 
 # writeSpheres('./snowball.xml',900)
-for t in range(0,1,5):
+stride = 4
+for t in range(0,2000,stride):
+    # os.system("scp -i snowsim.pem ubuntu@ec2-54-153-67-54.us-west-1.compute.amazonaws.com:~/snowsim/mpm/build/outputs/particles_t_{}_* ./build/outputs/".format(t))
+    # os.system("scp -i snowsim.pem ubuntu@ec2-54-153-67-54.us-west-1.compute.amazonaws.com:~/snowsim/mpm/build/outputs/grid_t_{}_* ./build/outputs/".format(t))
+
     name = "./build/outputs/grid_t_{}".format(t)
     volName = "snowball.vol".format(t) 
     getVolumeFile(name,volName)
     writeSpheres("./snowball.xml",t)
-    # os.system("mitsuba -o ./outputframes/snowball_t_{}.png snowball.xml".format(t))
+    os.system("mitsuba -o ./outputframes/snowball_t_{:0>4}.png snowball.xml".format(int(t/stride)))

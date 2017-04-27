@@ -9,11 +9,11 @@ text_file = open("./input/input.in", "w")
 # h = 0.0125
 # h = 0.025
 r = 0.15
-start = [0.5,0.005,0.2]
+start = [0.5,0.005,0.3]
 
-rho = 100;
+rho = 200;
 snowvolfrac = 0.2
-totParticles = 30000;
+totParticles = 5000;
 # totmass = 3.141592 * (r*r) * 0.005 * rho
 totmass = 3.141592 * 4./3. * (r*r*r) * rho * snowvolfrac
 # totmass = (h * 7) * (h * 7) * (h * 7) * rho 

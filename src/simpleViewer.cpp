@@ -1,5 +1,5 @@
 #include "include/simpleViewer.h"
-// #include <omp.h>
+#include <omp.h>
 
 Camera* SimpleView::camera;
 
@@ -433,7 +433,7 @@ void SimpleView::timeStep(){
     
     pSet->updateParticlePosition();
 
-    if(currentTimeStep % 1 == 0) spitToFile();
+    if(currentTimeStep % 20 == 0) spitToFile();
 
     std::cout << "---------------End of Timestep : " << currentTimeStep << "-----------------------" << std::endl;
     currentTimeStep ++;
@@ -477,7 +477,7 @@ void SimpleView::spitToFile(){
       // std::advance(dataIt,i);
       // GridNode* gn = dataIt->second;
       GridNode* gn = grid->nodes[i];
-      timeStepData << gn->x.x << "," <<  gn->x.y << "," << gn->x.z << " ";
+      timeStepData << gn->x.x << "," <<  gn->x.y << "," << gn->x.z << ",";
       timeStepData << gn->mass / h3 << "\n";
       timeStepData.flush();
     }
