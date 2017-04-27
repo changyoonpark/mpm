@@ -8,13 +8,13 @@
 
 #include <assert.h>
 
-#include <omp.h>
+// #include <omp.h>
 
 
 int main (int argc, char* argv[]){
 
     InitData    idat("../input/input.in");
-    Constants   constants("../input/box.in");
+    Constants   constants("../input/slimbox.in");
     ParticleSet pSet(constants,  idat);
     Grid        grid(constants, &pSet);
 

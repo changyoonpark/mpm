@@ -1,6 +1,6 @@
 #include "include/particle.h"
 #include "include/constants.h"
-#include <omp.h>
+// #include <omp.h>
 #define EPS_D_SMALL (1.E-100)
 #define DBL_MAX 1.7976931348623158e+308
 
@@ -91,7 +91,7 @@ void Particle::calculateDensityAndVolume(){
 
     density = density / (consts.h * consts.h * consts.h );
     volume = mass / density;
-    printf("Volume = %f, Density = %f\n",volume,density);
+    // printf("Volume = %f, Density = %f\n",volume,density);
 }
 
 
@@ -344,6 +344,9 @@ void ParticleSet::updateParticlePosition(){
  	for (int i = 0; i < particleSet.size(); i++){
         particleSet[i].force = particleSet[i].mass * (particleSet[i].velNext - particleSet[i].vel)/consts.dt;      
         particleSet[i].vel = particleSet[i].velNext;
+        if (DIMENSION == 2){
+            particleSet[i].vel.y = 0;
+        }
         particleSet[i].pos += particleSet[i].vel * consts.dt;
         particleSet[i].initParticle();
 

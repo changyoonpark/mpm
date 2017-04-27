@@ -6,7 +6,7 @@
 
 #include <math.h>
 #include <assert.h>
-#include <omp.h>
+// #include <omp.h>
 
 #define DBL_MAX 1.7976931348623158e+308
 #define EPS_D_SMALL (1.E-100)
@@ -218,7 +218,7 @@ const int3 Grid::hash(Particle& p){
 	// std::cout << p.pos.y << "->" << (int) ceil(p.pos.y/constants.h) << std::endl;
 	// std::cout << p.pos.z << "->" << (int) ceil(p.pos.z/constants.h) << std::endl;
 	
-	return int3((int) ceil(p.pos.x/constants.h), (int) ceil(p.pos.y/constants.h), (int) ceil(p.pos.z/constants.h));
+	return int3((int) ceil((p.pos.x-1.E-10)/constants.h), (int) ceil((p.pos.y-1.E-10)/constants.h), (int) ceil((p.pos.z-1.E-10)/constants.h));
 }
  
 GridNode* Grid::idxNode(int3 idxx){
@@ -258,7 +258,7 @@ void Grid::hashParticles(){
 	for(int i = 0; i < pSet->particleSet.size(); i++){
 		Particle& particle = pSet->particleSet[i];
 		particle.hash = hash(particle);
-
+		// printf("particle hash : %d, %d, %d\n",particle.hash.nx,particle.hash.ny,particle.hash.nz);		
 		if(particle.hash.nx >= (int)(constants.domainExtent.x / constants.h) || 
 		   particle.hash.ny >= (int)(constants.domainExtent.y / constants.h) || 
 		   particle.hash.nz >= (int)(constants.domainExtent.z / constants.h) ||
@@ -312,7 +312,7 @@ void Grid::solveForVelNextAndUpdateVelocities(){
 	std::cout << "Performing Implicit Velocity Update" << std::endl;
 
 	double residualSum = 0;
-	std::vector<double> residuals(activeNodes.size(),0);
+	std::vector<double> residuals(nodes.size(),0);
 
 	#pragma omp parallel for num_threads(THREADCOUNT) reduction(+:residualSum)	
 	// for(int i=0;i<activeNodes.size();i++){
