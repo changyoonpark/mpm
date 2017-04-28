@@ -41,22 +41,22 @@ pre = 0
 dt = 0.0002
 for t in range(0,3800,outputInterval):
 
-    if t == 0:
-        particleData = getData("particles",t,parts)
-        start = shiftData(particleData["ypos"], 1.25)
+    # if t == 0:
+    #     particleData = getData("particles",t,parts)
+    #     start = shiftData(particleData["ypos"], 1.25)
 
-        for i in range(50,int(0.5/(dt * outputInterval))):
-            particleData["ypos"] = shiftData(start, - 0.5 * 10 * (i*dt*outputInterval) ** 2 )
-            (fig, ax) = plt.subplots(figsize=(12, 12),nrows = 1,ncols = 1)      
-            ax.set_xlim(0, 1)
-            ax.set_ylim(0, 2)
-            ax.set_aspect('equal')
-            ax.scatter(particleData["xpos"],particleData["ypos"],color=(0.2,0.2,0.8),alpha=0.5,s=10,edgecolor= None)
-            # plt.show()
-            plt.savefig('./build/outputs/plots/{}.png'.format(int(pre + t/outputInterval)))
-            plt.close()
-            print(i*dt*outputInterval)
-            pre += 1
+    #     for i in range(50,int(0.5/(dt * outputInterval))):
+    #         particleData["ypos"] = shiftData(start, - 0.5 * 10 * (i*dt*outputInterval) ** 2 )
+    #         (fig, ax) = plt.subplots(figsize=(12, 12),nrows = 1,ncols = 1)      
+    #         ax.set_xlim(0, 1)
+    #         ax.set_ylim(0, 2)
+    #         ax.set_aspect('equal')
+    #         ax.scatter(particleData["xpos"],particleData["ypos"],color=(0.2,0.2,0.8),alpha=0.5,s=10,edgecolor= None)
+    #         # plt.show()
+    #         plt.savefig('./build/outputs/plots/{}.png'.format(int(pre + t/outputInterval)))
+    #         plt.close()
+    #         print(i*dt*outputInterval)
+    #         pre += 1
 
     particleData = getData("particles",t,parts)
     (fig, ax) = plt.subplots(figsize=(12, 12),nrows = 1,ncols = 1)      

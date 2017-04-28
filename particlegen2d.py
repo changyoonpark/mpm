@@ -1,5 +1,53 @@
+
 from math import sqrt
+from math import atan,pow
+from math import cos,sin,tan,exp
 from numpy import random
+
+
+
+class Vec2:
+
+    def __init__ (self,x,y,tup = None):
+        if tup is not None :
+            self.x = tup[0]
+            self.y = tup[1]
+        else:
+            self.x = x
+            self.y = y
+
+    def length(self):
+        return sqrt(self.x*self.x+self.y*self.y)
+
+    def dot(self,other):
+        return self.x * other.x + self.y * other.y
+
+    def dir(self):
+        return self * (1./self.length())
+        # return Vec2(self.x / self.length(), self.y / self.length())
+
+    def __mul__ (self,other):
+        return Vec2(self.x * other, self.y * other)
+
+    def __rmul__ (self,other):
+        return Vec2(self.x * other, self.y * other)
+
+    def __truediv__(self,other):
+        return Vec2(self.x / other, self.y / other)
+
+    def __add__ (self,other):
+        return Vec2(self.x + other.x, self.y + other.y)
+
+    def __sub__ (self,other):
+        return Vec2(self.x - other.x, self.y - other.y)
+        
+    def __neg__ (self):
+        return Vec2(-self.x,-self.y)
+
+    def __str__ (self):
+        return "Vector : ({},{})".format(self.x, self.y)
+
+
 
 template = "x:{},{},{} v:{},{},{} m:{},0,0\n"
 text_file = open("./input/input.in", "w")
@@ -9,32 +57,84 @@ text_file = open("./input/input.in", "w")
 # h = 0.0125
 # h = 0.025
 r = 0.15
-start = [0.5,0.005,0.3]
+start = [0.5,0.005,0.2+0.15]
 
-rho = 200;
+rho = 100;
 snowvolfrac = 0.2
-totParticles = 5000;
-# totmass = 3.141592 * (r*r) * 0.005 * rho
-totmass = 3.141592 * 4./3. * (r*r*r) * rho * snowvolfrac
-# totmass = (h * 7) * (h * 7) * (h * 7) * rho 
-# totmass = 3.14 * (2.5) * (2.5) * (h * 8) * rho
+totParticles = 30000;
+totmass = 3.141592 * (r*r) * rho * snowvolfrac
 pos = []
-# noise = 0.5;
-# for i in range(-100,101):
-#     for j in range(-100,101):
-#         for k in range(-100,101):
-#             if ( sqrt((h*i)*(h*i) + (h*j)*(h*j) + (h*k)*(h*k)) <= r ):
-#                 pos.append([start[0] + h * (i + noise * (random.rand() - 1)), start[1] + h * (j + noise * (random.rand() - 1)), start[2] + h * (k + noise * (random.rand() - 1))])
+
+
+class Elipse:
+
+
+    def gaussianFlipperTester(self,pos):
+        theta = atan( (pos[2] - self.center.y)/(pos[0] - self.center.x) )
+        theta = theta + self.angle
+        r = self.a*self.b/sqrt( (self.b * cos(theta))**2 + (self.a * sin(theta))**2 )
+        d = ( Vec2(pos[0],pos[2]) - self.center ).length()
+        # if d > r:
+        #     return False
+
+        x = r / d
+        value = exp(-(x)**2) * 0.9
+        if random.rand() < value: 
+            return True
+        else:
+            return False
+
+    def tester(self,pos):
+        theta = atan( (pos[2] - self.center.y)/(pos[0] - self.center.x) )
+        theta = theta + self.angle
+        if (Vec2(pos[0],pos[2]) - self.center ).length() < self.a*self.b/sqrt( (self.b * cos(theta))**2 + (self.a * sin(theta))**2 ):
+            return True
+        else:
+            return False
+
+    def __init__(self,a,b,center,angle):
+        self.a = a
+        self.b = b
+        self.center = center
+        self.angle = angle
+
+
+
+
+# def test(pos):
+#     if sqrt( (posToAdd[0] - start[0]) * (posToAdd[0] - start[0]) +
+#              (posToAdd[2] - start[2]) * (posToAdd[2] - start[2]) ) < r:
+
+snowball = Elipse(r,r,Vec2(start[0],start[2]),3.14/2)
+
+cracks = []
+for i in range(0,80):
+    posToAdd = (start[0] + 2 * (random.rand() - 0.5) * r, start[1], start[2] + 2 * (random.rand() - 0.5) * r)
+
+    if snowball.tester(posToAdd):
+        crackl = 0.3 * r * random.rand()
+        crackw = crackl
+        # crackl = 0.3 * r * random.rand()
+        # crackw = 0.3 * r * random.rand()
+        cracks.append(Elipse(crackl,crackw,Vec2(posToAdd[0],posToAdd[2]),3.141592 * random.rand()))
+
 
 while len(pos) < totParticles:
 
     posToAdd = (start[0] + 2 * (random.rand() - 0.5) * r, start[1], start[2] + 2 * (random.rand() - 0.5) * r)
 
-    if sqrt( (posToAdd[0] - start[0]) * (posToAdd[0] - start[0]) +
-             (posToAdd[2] - start[2]) * (posToAdd[2] - start[2]) ) < r:
-        pos.append(posToAdd)
-
-
+    foo = True
+    if snowball.tester(posToAdd):
+        for crack in cracks:
+            # if (not crack.gaussianFlipperTester(posToAdd)):
+            if (crack.tester(posToAdd) and random.rand() > 0.4 ):
+                foo = False
+                break  
+        if foo :    
+            pos.append(posToAdd)
+    # if snowball.gaussianFlipperTester(posToAdd):
+    #     pos.append(posToAdd)
+    print("adding particle... {}".format(len(pos)))
 
 # for i in range(-3,4):
 #     for j in range(-3,4):

@@ -1,3 +1,3 @@
-sudo apt-get -y install libglfw3 && sudo apt-get -y install libglfw3-dev && sudo apt-get -y install cmake && sudo apt-get -y install libfreetype6-dev && sudo apt-get -y install python3-pip && sudo apt-get -y install g++ && pip3 install numpy && sudo apt-get -y install libfreetype6-dev
-mkdir snowsim && sudo mount -t tmpfs -o size=8000m tmpfs snowsim && cd snowsim && git clone https://github.com/changyoonpark/mpm.git && cd mpm
+sudo apt-get -y install libglfw3 && sudo apt-get -y install libglfw3-dev && sudo apt-get -y install cmake && sudo apt-get -y install libfreetype6-dev && sudo apt-get -y install python3-pip && sudo apt-get -y install g++ && pip3 install numpy && sudo apt-get -y install libfreetype6-dev && sudo apt-get update && sudo apt-get install g++
+mkdir snowsim && sudo mount -t tmpfs -o size=40000m tmpfs snowsim && cd snowsim && git clone https://github.com/changyoonpark/mpm.git && cd mpm
 rm -rf build && mkdir build && cd build && mkdir outputs && cmake .. && make
