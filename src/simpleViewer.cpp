@@ -331,12 +331,12 @@ void SimpleView::draw_nodeForce(){
         glBegin(GL_LINE_STRIP);           
         glColor3f(1.0,0.0,0.0);  
         glVertex3f( node->x.x, node->x.y, node->x.z);
-        glVertex3f( node->x.x,
-                    node->x.y,
-                    node->x.z + node->mass);
-        // glVertex3f( node->x.x + node->force.x * 0.2,
-        //             node->x.y + node->force.y * 0.2,
-        //             node->x.z + node->force.z * 0.2);
+        // glVertex3f( node->x.x,
+        //             node->x.y,
+        //             node->x.z + node->mass);
+        glVertex3f( node->x.x + node->force.x * 0.2,
+                    node->x.y + node->force.y * 0.2,
+                    node->x.z + node->force.z * 0.2);
         glEnd();
     }  
 }

@@ -56,12 +56,13 @@ text_file = open("./input/input.in", "w")
 # h = 0.01
 # h = 0.0125
 # h = 0.025
-r = 0.15
-start = [0.5,0.005,0.2+0.15]
 
-rho = 100;
+r = 0.2
+start = [0.5,0.01,0.05+0+r]
+
+rho = 2.5
 snowvolfrac = 0.2
-totParticles = 30000;
+totParticles = 10000
 totmass = 3.141592 * (r*r) * rho * snowvolfrac
 pos = []
 
@@ -108,14 +109,14 @@ class Elipse:
 snowball = Elipse(r,r,Vec2(start[0],start[2]),3.14/2)
 
 cracks = []
-for i in range(0,80):
+for i in range(0,10):
     posToAdd = (start[0] + 2 * (random.rand() - 0.5) * r, start[1], start[2] + 2 * (random.rand() - 0.5) * r)
-
+ 
     if snowball.tester(posToAdd):
-        crackl = 0.3 * r * random.rand()
-        crackw = crackl
         # crackl = 0.3 * r * random.rand()
-        # crackw = 0.3 * r * random.rand()
+        # crackw = crackl
+        crackl = 0.8 * r * random.rand()
+        crackw = 0.05 * r * random.rand()
         cracks.append(Elipse(crackl,crackw,Vec2(posToAdd[0],posToAdd[2]),3.141592 * random.rand()))
 
 
@@ -154,7 +155,7 @@ for p in pos:
     #                                     0,0,0.,
     #                                     pmass))
     text_file.write(template.format(p[0],p[1],p[2],
-                                    0,0,-10,
+                                    0,0,-20,
                                     pmass))
 
 print("{} particles generated. total mass : {} kg".format(len(pos),totmass))

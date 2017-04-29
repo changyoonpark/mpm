@@ -14,7 +14,7 @@
 int main (int argc, char* argv[]){
 
     InitData    idat("../input/input.in");
-    Constants   constants("../input/slimbox.in");
+    Constants   constants("../input/slimbox2.in");
     ParticleSet pSet(constants,  idat);
     Grid        grid(constants, &pSet);
 
