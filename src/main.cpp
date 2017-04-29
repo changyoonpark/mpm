@@ -10,7 +10,7 @@
 
 #include <omp.h>
 
-
+ 
 int main (int argc, char* argv[]){
 
     InitData    idat("../input/input.in");

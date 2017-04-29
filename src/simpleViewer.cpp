@@ -670,7 +670,7 @@ void SimpleView::update(){
       draw_faces();
       draw_spheres();
       draw_nodes();
-      // draw_nodeForce();
+      draw_nodeForce();
       glDisable(GL_LIGHTING);
     #endif
 

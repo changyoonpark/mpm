@@ -60,9 +60,9 @@ text_file = open("./input/input.in", "w")
 r = 0.2
 start = [0.5,0.01,0.05+0+r]
 
-rho = 2.5
+rho = 100
 snowvolfrac = 0.2
-totParticles = 10000
+totParticles = 5000
 totmass = 3.141592 * (r*r) * rho * snowvolfrac
 pos = []
 
@@ -109,7 +109,7 @@ class Elipse:
 snowball = Elipse(r,r,Vec2(start[0],start[2]),3.14/2)
 
 cracks = []
-for i in range(0,10):
+for i in range(0,5):
     posToAdd = (start[0] + 2 * (random.rand() - 0.5) * r, start[1], start[2] + 2 * (random.rand() - 0.5) * r)
  
     if snowball.tester(posToAdd):
@@ -128,7 +128,8 @@ while len(pos) < totParticles:
     if snowball.tester(posToAdd):
         for crack in cracks:
             # if (not crack.gaussianFlipperTester(posToAdd)):
-            if (crack.tester(posToAdd) and random.rand() > 0.4 ):
+            if (crack.tester(posToAdd) ):
+            # if (crack.tester(posToAdd) and random.rand() > 0.4 ):
                 foo = False
                 break  
         if foo :    
@@ -155,7 +156,7 @@ for p in pos:
     #                                     0,0,0.,
     #                                     pmass))
     text_file.write(template.format(p[0],p[1],p[2],
-                                    0,0,-20,
+                                    0.0,0.0,-5.0,
                                     pmass))
 
 print("{} particles generated. total mass : {} kg".format(len(pos),totmass))
