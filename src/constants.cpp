@@ -27,6 +27,6 @@ Constants::Constants(std::string meshin){
         // h = 0.0125;
         dt = 0.0001;
         dt2 = dt * dt;
-        domainExtent = Vector3D(1.,0.02,0.75);        
+        domainExtent = Vector3D(1.,0.02,0.60);        
         bodyForce = Vector3D(0.,0.,-10.0);
     };

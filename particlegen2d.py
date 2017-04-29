@@ -56,7 +56,7 @@ text_file = open("./input/input.in", "w")
 # h = 0.025
 
 r = 0.2
-start = [0.5,0.01,0.05+0+r]
+start = [0.5,0.01,0.05+0.1+r]
 
 rho = 100
 snowvolfrac = 0.2
@@ -160,7 +160,7 @@ for p in pos:
     xpos.append(p[0])
     ypos.append(p[2])
     text_file.write(template.format(p[0],p[1],p[2],
-                                    0.0,0.0,-5.0,
+                                    0.0,0.0,-4.0,
                                     pmass))
 
 print("{} particles generated. total mass : {} kg".format(len(pos),totmass))
@@ -168,7 +168,7 @@ print("{} particles generated. total mass : {} kg".format(len(pos),totmass))
 
 (fig, ax) = plt.subplots(figsize=(12, 12),nrows = 1,ncols = 1)      
 ax.set_xlim(0.2, 0.8)
-ax.set_ylim(0, 0.5)
+ax.set_ylim(0, 0.60)
 ax.set_aspect('equal')
 ax.scatter(xpos,ypos,color=(0.2,0.2,0.8),alpha=0.5,s=100,linewidth = 0,edgecolor= None)
 plt.show()
