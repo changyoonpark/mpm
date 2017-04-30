@@ -5,46 +5,48 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/osdfont.c" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/osdfont.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/osdfont.c" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/osdfont.c.o"
   )
-set(CMAKE_C_COMPILER_ID "Clang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../CGL/include"
   "../CGL/deps/glew/include"
-  "/usr/local/include/freetype2"
+  "/usr/include/freetype2"
+  "/usr/include/x86_64-linux-gnu/freetype2"
   "../CGL/include/CGL"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/base64.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/base64.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/color.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/color.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/complex.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/complex.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/lodepng.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/matrix3x3.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/matrix4x4.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/osdtext.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/osdtext.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/quaternion.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/spectrum.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/tinyxml2.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/vector2D.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/vector3D.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/vector4D.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/src/viewer.cpp" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/src/CMakeFiles/CGL.dir/viewer.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/base64.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/base64.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/color.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/color.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/complex.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/complex.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/lodepng.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/matrix3x3.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/matrix4x4.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/osdtext.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/osdtext.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/quaternion.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/spectrum.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/tinyxml2.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/vector2D.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/vector3D.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/vector4D.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o"
+  "/home/ubuntu/snowsim/mpm/CGL/src/viewer.cpp" "/home/ubuntu/snowsim/mpm/build/CGL/src/CMakeFiles/CGL.dir/viewer.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../CGL/include"
   "../CGL/deps/glew/include"
-  "/usr/local/include/freetype2"
+  "/usr/include/freetype2"
+  "/usr/include/x86_64-linux-gnu/freetype2"
   "../CGL/include/CGL"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/DependInfo.cmake"
+  "/home/ubuntu/snowsim/mpm/build/CGL/deps/glew/CMakeFiles/glew.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

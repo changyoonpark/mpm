@@ -1,8 +1,8 @@
-# Install script for directory: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm
+# Install script for directory: /home/ubuntu/snowsim/mpm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/snowsim/mpm/")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,10 +27,15 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/cmake_install.cmake")
-  include("/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/src/cmake_install.cmake")
+  include("/home/ubuntu/snowsim/mpm/build/CGL/cmake_install.cmake")
+  include("/home/ubuntu/snowsim/mpm/build/src/cmake_install.cmake")
 
 endif()
 
@@ -42,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ubuntu/snowsim/mpm/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

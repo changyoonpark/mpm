@@ -6,8 +6,8 @@
 
 #include <iostream>
 
-#define THREADCOUNT 2
-#define WITH_GUI 1
+#define THREADCOUNT 64
+#define WITH_GUI 0
 #define DIMENSION 2
 
 struct Constants{

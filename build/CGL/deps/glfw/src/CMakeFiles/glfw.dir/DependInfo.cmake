@@ -4,20 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/cocoa_init.m" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/cocoa_monitor.m" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/cocoa_window.m" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/context.c" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/context.c.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/init.c" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/init.c.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/input.c" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/input.c.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/iokit_joystick.m" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/mach_time.c" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/mach_time.c.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/monitor.c" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/nsgl_context.m" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/posix_tls.c" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o"
-  "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/src/window.c" "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/context.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/glx_context.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/init.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/input.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/linux_joystick.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/monitor.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/posix_time.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/posix_tls.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/window.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/x11_init.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/x11_monitor.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/x11_window.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o"
+  "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/src/xkb_unicode.c" "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
   )
-set(CMAKE_C_COMPILER_ID "Clang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C

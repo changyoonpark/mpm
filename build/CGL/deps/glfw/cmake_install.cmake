@@ -1,4 +1,4 @@
-# Install script for directory: /Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw
+# Install script for directory: /home/ubuntu/snowsim/mpm/CGL/deps/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -27,22 +27,27 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/CGL/deps/glfw/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/snowsim/mpm/CGL/deps/glfw/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES
-    "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/glfw3Config.cmake"
-    "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/glfw3ConfigVersion.cmake"
+    "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/glfw3Config.cmake"
+    "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/glfw3ConfigVersion.cmake"
     )
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw/glfwTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw/glfwTargets.cmake"
-         "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/CMakeFiles/Export/lib/cmake/glfw/glfwTargets.cmake")
+         "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/CMakeFiles/Export/lib/cmake/glfw/glfwTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw/glfwTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -51,19 +56,19 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/CMakeFiles/Export/lib/cmake/glfw/glfwTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/CMakeFiles/Export/lib/cmake/glfw/glfwTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/CMakeFiles/Export/lib/cmake/glfw/glfwTargets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/CMakeFiles/Export/lib/cmake/glfw/glfwTargets-debug.cmake")
   endif()
 endif()
 
-if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/glfw3.pc")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/glfw3.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/chang/Library/Mobile Documents/com~apple~CloudDocs/Research/mpm/build/CGL/deps/glfw/src/cmake_install.cmake")
+  include("/home/ubuntu/snowsim/mpm/build/CGL/deps/glfw/src/cmake_install.cmake")
 
 endif()
 

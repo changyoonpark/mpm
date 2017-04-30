@@ -14,7 +14,7 @@ start = [0.90 - r,1.0,0.3]
 
 rho = 400;
 snowvolfrac = 0.2
-totParticles = 50000;
+totParticles = 75000;
 # totmass = 3.141592 * (r*r) * 0.005 * rho
 totmass = 3.141592 * 4./3. * (r*r*r) * rho * snowvolfrac
 # totmass = (h * 7) * (h * 7) * (h * 7) * rho 
@@ -56,7 +56,7 @@ for p in pos:
     #                                     0,0,0.,
     #                                     pmass))
     text_file.write(template.format(p[0],p[1],p[2],
-                                    -4,0,-1,
+                                    -5,0,-1,
                                     pmass))
 
 print("{} particles generated. total mass : {} kg".format(len(pos),totmass))

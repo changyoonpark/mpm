@@ -235,7 +235,7 @@ void SimpleView::start(){
       update();
     } 
   #else
-    while(currentTimeStep < 4000){
+    while(1){
       update();
     }
   #endif  

@@ -22,10 +22,10 @@ Constants::Constants(std::string meshin){
         mesh = new Mesh(meshin);
         beta = 0.5;
         // h = 0.008333;
-        h = 0.025;
         // h = 0.01;
-        // h = 0.0125;
-        dt = 0.0001;
+        // h = 0.01;
+        h = 0.0125;
+        dt = 0.00005;
         dt2 = dt * dt;
         domainExtent = Vector3D(1.0,2.0,0.51);        
         bodyForce = Vector3D(0.,0.,-10.0);
