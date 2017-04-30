@@ -2,18 +2,19 @@ from math import sqrt
 from numpy import random
 
 template = "x:{},{},{} v:{},{},{} m:{},0,0\n"
-text_file = open("./input/input.in", "w")
+text_file = open("./input/input_3d.in", "w")
 
 # h = 0.075
 # h = 0.01
 # h = 0.0125
 # h = 0.025
-r = 0.25
-start = [0.95 - r,0.5,0.59]
+r = 0.15
+start = [0.90 - r,1.0,0.3]
+# start = [0.05 + r,0.5,0.3]
 
 rho = 400;
 snowvolfrac = 0.2
-totParticles = 25000;
+totParticles = 50000;
 # totmass = 3.141592 * (r*r) * 0.005 * rho
 totmass = 3.141592 * 4./3. * (r*r*r) * rho * snowvolfrac
 # totmass = (h * 7) * (h * 7) * (h * 7) * rho 
@@ -55,7 +56,7 @@ for p in pos:
     #                                     0,0,0.,
     #                                     pmass))
     text_file.write(template.format(p[0],p[1],p[2],
-                                    10,0,-5,
+                                    -4,0,-1,
                                     pmass))
 
 print("{} particles generated. total mass : {} kg".format(len(pos),totmass))

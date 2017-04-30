@@ -36,10 +36,10 @@ def getData(datatype,time,parts) :
 # def particlePlot(particleData,ax):
 
 outputInterval = 20
-parts = 4
+parts = 32
 pre = 0
 dt = 0.0002
-for t in range(0,3800,outputInterval):
+for t in range(0,4000,outputInterval):
 
     # if t == 0:
     #     particleData = getData("particles",t,parts)
@@ -61,9 +61,9 @@ for t in range(0,3800,outputInterval):
     particleData = getData("particles",t,parts)
     (fig, ax) = plt.subplots(figsize=(12, 12),nrows = 1,ncols = 1)      
     ax.set_xlim(0, 1)
-    ax.set_ylim(0, 2)
+    ax.set_ylim(0, 0.6)
     ax.set_aspect('equal')
-    ax.scatter(particleData["xpos"],particleData["ypos"],color=(0.2,0.2,0.8),alpha=0.5,s=10,edgecolor= None)
+    ax.scatter(particleData["xpos"],particleData["ypos"],color=(0.2,0.2,0.8),alpha=0.5,s=70,linewidth=0,edgecolor= None)
     # plt.show()
     plt.savefig('./build/outputs/plots/{}.png'.format(int(pre + t/outputInterval)))
     plt.close()

@@ -13,8 +13,8 @@
  
 int main (int argc, char* argv[]){
 
-    InitData    idat("../input/input.in");
-    Constants   constants("../input/slimbox2.in");
+    InitData    idat("../input/input_3d.in");
+    Constants   constants("../input/box.in");
     ParticleSet pSet(constants,  idat);
     Grid        grid(constants, &pSet);
 
