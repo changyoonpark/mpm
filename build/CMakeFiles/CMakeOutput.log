@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/ubuntu/snowsim/mpm/build
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1546c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1546c.dir/build.make CMakeFiles/cmTC_1546c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b4a13/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b4a13.dir/build.make CMakeFiles/cmTC_b4a13.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1546c.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_1546c.dir/testCCompiler.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_1546c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1546c.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_1546c.dir/testCCompiler.c.o  -o cmTC_1546c -rdynamic 
+Building C object CMakeFiles/cmTC_b4a13.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_b4a13.dir/testCCompiler.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b4a13
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4a13.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b4a13.dir/testCCompiler.c.o  -o cmTC_b4a13 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_857d7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_857d7.dir/build.make CMakeFiles/cmTC_857d7.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a101c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a101c.dir/build.make CMakeFiles/cmTC_a101c.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_857d7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_857d7.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o  -o cmTC_857d7 -rdynamic  
+Building C object CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_a101c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a101c.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o  -o cmTC_a101c -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,8 +59,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_857d7' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb1x6Z4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_857d7 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a101c' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvtL6wc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a101c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
@@ -68,14 +68,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_857d7/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_857d7.dir/build.make CMakeFiles/cmTC_857d7.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a101c/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a101c.dir/build.make CMakeFiles/cmTC_a101c.dir/build]
   ignore line: [make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_857d7]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_857d7.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o  -o cmTC_857d7 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_a101c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a101c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o  -o cmTC_a101c -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_857d7' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb1x6Z4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_857d7 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a101c' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvtL6wc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a101c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccb1x6Z4.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccvtL6wc.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_857d7] ==> ignore
+    arg [cmTC_a101c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_857d7.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_a101c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -155,14 +155,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1f57f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1f57f.dir/build.make CMakeFiles/cmTC_1f57f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_63e3e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_63e3e.dir/build.make CMakeFiles/cmTC_63e3e.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1f57f.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_1f57f.dir/feature_tests.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_1f57f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f57f.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_1f57f.dir/feature_tests.c.o  -o cmTC_1f57f -rdynamic 
+Building C object CMakeFiles/cmTC_63e3e.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_63e3e.dir/feature_tests.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_63e3e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63e3e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_63e3e.dir/feature_tests.c.o  -o cmTC_63e3e -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
@@ -175,14 +175,14 @@ make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_77007/fast"
-/usr/bin/make -f CMakeFiles/cmTC_77007.dir/build.make CMakeFiles/cmTC_77007.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_17ea5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_17ea5.dir/build.make CMakeFiles/cmTC_17ea5.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_77007.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_77007.dir/feature_tests.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_77007
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77007.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_77007.dir/feature_tests.c.o  -o cmTC_77007 -rdynamic 
+Building C object CMakeFiles/cmTC_17ea5.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_17ea5.dir/feature_tests.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_17ea5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17ea5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_17ea5.dir/feature_tests.c.o  -o cmTC_17ea5 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
@@ -195,14 +195,14 @@ make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3c348/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3c348.dir/build.make CMakeFiles/cmTC_3c348.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b8c85/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b8c85.dir/build.make CMakeFiles/cmTC_b8c85.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3c348.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_3c348.dir/feature_tests.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_3c348
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c348.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_3c348.dir/feature_tests.c.o  -o cmTC_3c348 -rdynamic 
+Building C object CMakeFiles/cmTC_b8c85.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_b8c85.dir/feature_tests.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b8c85
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8c85.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b8c85.dir/feature_tests.c.o  -o cmTC_b8c85 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
@@ -213,28 +213,28 @@ make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9342e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9342e.dir/build.make CMakeFiles/cmTC_9342e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_db7a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_db7a0.dir/build.make CMakeFiles/cmTC_db7a0.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9342e.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_9342e.dir/testCXXCompiler.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_9342e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9342e.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_9342e.dir/testCXXCompiler.cxx.o  -o cmTC_9342e -rdynamic 
+Building CXX object CMakeFiles/cmTC_db7a0.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_db7a0.dir/testCXXCompiler.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_db7a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db7a0.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_db7a0.dir/testCXXCompiler.cxx.o  -o cmTC_db7a0 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2e623/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2e623.dir/build.make CMakeFiles/cmTC_2e623.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_64a84/fast"
+/usr/bin/make -f CMakeFiles/cmTC_64a84.dir/build.make CMakeFiles/cmTC_64a84.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_2e623
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e623.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2e623 -rdynamic  
+Building CXX object CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_64a84
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64a84.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_64a84 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -244,8 +244,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2e623' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6SzaYx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2e623 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_64a84' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfYpNRI.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_64a84 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
@@ -253,14 +253,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_2e623/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_2e623.dir/build.make CMakeFiles/cmTC_2e623.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_64a84/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_64a84.dir/build.make CMakeFiles/cmTC_64a84.dir/build]
   ignore line: [make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_2e623]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e623.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2e623 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_64a84]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64a84.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_64a84 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -270,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2e623' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6SzaYx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2e623 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_64a84' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfYpNRI.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_64a84 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc6SzaYx.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccfYpNRI.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2e623] ==> ignore
+    arg [cmTC_64a84] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_2e623.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_64a84.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -338,14 +338,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_95b4a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_95b4a.dir/build.make CMakeFiles/cmTC_95b4a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_66186/fast"
+/usr/bin/make -f CMakeFiles/cmTC_66186.dir/build.make CMakeFiles/cmTC_66186.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_95b4a.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_95b4a.dir/feature_tests.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_95b4a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95b4a.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_95b4a.dir/feature_tests.cxx.o  -o cmTC_95b4a -rdynamic 
+Building CXX object CMakeFiles/cmTC_66186.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_66186.dir/feature_tests.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_66186
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66186.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_66186.dir/feature_tests.cxx.o  -o cmTC_66186 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
@@ -411,14 +411,14 @@ make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_48b75/fast"
-/usr/bin/make -f CMakeFiles/cmTC_48b75.dir/build.make CMakeFiles/cmTC_48b75.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_0b19c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0b19c.dir/build.make CMakeFiles/cmTC_0b19c.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_48b75.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_48b75.dir/feature_tests.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_48b75
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48b75.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_48b75.dir/feature_tests.cxx.o  -o cmTC_48b75 -rdynamic 
+Building CXX object CMakeFiles/cmTC_0b19c.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_0b19c.dir/feature_tests.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0b19c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b19c.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_0b19c.dir/feature_tests.cxx.o  -o cmTC_0b19c -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
@@ -484,14 +484,14 @@ make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ef279/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ef279.dir/build.make CMakeFiles/cmTC_ef279.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9054c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9054c.dir/build.make CMakeFiles/cmTC_9054c.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ef279.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_ef279.dir/feature_tests.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_ef279
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef279.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_ef279.dir/feature_tests.cxx.o  -o cmTC_ef279 -rdynamic 
+Building CXX object CMakeFiles/cmTC_9054c.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_9054c.dir/feature_tests.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_9054c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9054c.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_9054c.dir/feature_tests.cxx.o  -o cmTC_9054c -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
@@ -555,140 +555,140 @@ make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6fc1d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6fc1d.dir/build.make CMakeFiles/cmTC_6fc1d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ca7ea/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ca7ea.dir/build.make CMakeFiles/cmTC_ca7ea.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6fc1d.dir/CheckIncludeFile.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_6fc1d.dir/CheckIncludeFile.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_6fc1d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fc1d.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_6fc1d.dir/CheckIncludeFile.c.o  -o cmTC_6fc1d -rdynamic 
+Building C object CMakeFiles/cmTC_ca7ea.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_ca7ea.dir/CheckIncludeFile.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ca7ea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca7ea.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ca7ea.dir/CheckIncludeFile.c.o  -o cmTC_ca7ea -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bcd44/fast"
-/usr/bin/make -f CMakeFiles/cmTC_bcd44.dir/build.make CMakeFiles/cmTC_bcd44.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e169a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e169a.dir/build.make CMakeFiles/cmTC_e169a.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bcd44.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bcd44.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_bcd44
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcd44.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_bcd44.dir/CheckFunctionExists.c.o  -o cmTC_bcd44 -rdynamic -lpthread 
+Building C object CMakeFiles/cmTC_e169a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e169a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e169a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e169a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e169a.dir/CheckFunctionExists.c.o  -o cmTC_e169a -rdynamic -lpthread 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_291bc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_291bc.dir/build.make CMakeFiles/cmTC_291bc.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_afe5f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_afe5f.dir/build.make CMakeFiles/cmTC_afe5f.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_291bc.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_291bc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_291bc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_291bc.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_291bc.dir/CheckFunctionExists.c.o  -o cmTC_291bc -rdynamic /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+Building C object CMakeFiles/cmTC_afe5f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTC_afe5f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_afe5f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afe5f.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTC_afe5f.dir/CheckFunctionExists.c.o  -o cmTC_afe5f -rdynamic /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8748d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8748d.dir/build.make CMakeFiles/cmTC_8748d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5eed6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5eed6.dir/build.make CMakeFiles/cmTC_5eed6.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8748d.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_8748d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_8748d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8748d.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_8748d.dir/CheckFunctionExists.c.o  -o cmTC_8748d -rdynamic 
+Building C object CMakeFiles/cmTC_5eed6.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_5eed6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5eed6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5eed6.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTC_5eed6.dir/CheckFunctionExists.c.o  -o cmTC_5eed6 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a7fd8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a7fd8.dir/build.make CMakeFiles/cmTC_a7fd8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6b85e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6b85e.dir/build.make CMakeFiles/cmTC_6b85e.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a7fd8.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_a7fd8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a7fd8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7fd8.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_a7fd8.dir/CheckFunctionExists.c.o  -o cmTC_a7fd8 -rdynamic 
+Building C object CMakeFiles/cmTC_6b85e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_6b85e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6b85e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b85e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTC_6b85e.dir/CheckFunctionExists.c.o  -o cmTC_6b85e -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_37755/fast"
-/usr/bin/make -f CMakeFiles/cmTC_37755.dir/build.make CMakeFiles/cmTC_37755.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1bc16/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1bc16.dir/build.make CMakeFiles/cmTC_1bc16.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_37755.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_37755.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_37755
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37755.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_37755.dir/CheckFunctionExists.c.o  -o cmTC_37755 -rdynamic 
+Building C object CMakeFiles/cmTC_1bc16.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTC_1bc16.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1bc16
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bc16.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTC_1bc16.dir/CheckFunctionExists.c.o  -o cmTC_1bc16 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3ac2f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3ac2f.dir/build.make CMakeFiles/cmTC_3ac2f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2fe62/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2fe62.dir/build.make CMakeFiles/cmTC_2fe62.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3ac2f.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_3ac2f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_3ac2f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ac2f.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_3ac2f.dir/CheckFunctionExists.c.o  -o cmTC_3ac2f -rdynamic 
+Building C object CMakeFiles/cmTC_2fe62.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTC_2fe62.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2fe62
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fe62.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTC_2fe62.dir/CheckFunctionExists.c.o  -o cmTC_2fe62 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function glXGetProcAddress exists passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_239b9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_239b9.dir/build.make CMakeFiles/cmTC_239b9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c4dd3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4dd3.dir/build.make CMakeFiles/cmTC_c4dd3.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_239b9.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=glXGetProcAddress   -o CMakeFiles/cmTC_239b9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_239b9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_239b9.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddress    CMakeFiles/cmTC_239b9.dir/CheckFunctionExists.c.o  -o cmTC_239b9 -rdynamic /usr/lib/x86_64-linux-gnu/libGL.so 
+Building C object CMakeFiles/cmTC_c4dd3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=glXGetProcAddress   -o CMakeFiles/cmTC_c4dd3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c4dd3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4dd3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddress    CMakeFiles/cmTC_c4dd3.dir/CheckFunctionExists.c.o  -o cmTC_c4dd3 -rdynamic /usr/lib/x86_64-linux-gnu/libGL.so 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function glXGetProcAddressARB exists passed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_88da3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_88da3.dir/build.make CMakeFiles/cmTC_88da3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_06ea8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_06ea8.dir/build.make CMakeFiles/cmTC_06ea8.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_88da3.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=glXGetProcAddressARB   -o CMakeFiles/cmTC_88da3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_88da3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88da3.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressARB    CMakeFiles/cmTC_88da3.dir/CheckFunctionExists.c.o  -o cmTC_88da3 -rdynamic /usr/lib/x86_64-linux-gnu/libGL.so 
+Building C object CMakeFiles/cmTC_06ea8.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=glXGetProcAddressARB   -o CMakeFiles/cmTC_06ea8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_06ea8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06ea8.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressARB    CMakeFiles/cmTC_06ea8.dir/CheckFunctionExists.c.o  -o cmTC_06ea8 -rdynamic /usr/lib/x86_64-linux-gnu/libGL.so 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 
 Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1ae7c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1ae7c.dir/build.make CMakeFiles/cmTC_1ae7c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_18901/fast"
+/usr/bin/make -f CMakeFiles/cmTC_18901.dir/build.make CMakeFiles/cmTC_18901.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1ae7c.dir/src.c.o
-/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_1ae7c.dir/src.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_1ae7c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ae7c.dir/link.txt --verbose=1
-/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_1ae7c.dir/src.c.o  -o cmTC_1ae7c -rdynamic 
+Building C object CMakeFiles/cmTC_18901.dir/src.c.o
+/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_18901.dir/src.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_18901
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18901.dir/link.txt --verbose=1
+/usr/bin/cc   -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_18901.dir/src.c.o  -o cmTC_18901 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -705,14 +705,14 @@ int main() {
 Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cf9a8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cf9a8.dir/build.make CMakeFiles/cmTC_cf9a8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_941f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_941f5.dir/build.make CMakeFiles/cmTC_941f5.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cf9a8.dir/src.cxx.o
-/usr/bin/c++     -std=gnu++11 -m64 -g -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_cf9a8.dir/src.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_cf9a8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf9a8.dir/link.txt --verbose=1
-/usr/bin/c++    -std=gnu++11 -m64 -g -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_cf9a8.dir/src.cxx.o  -o cmTC_cf9a8 -rdynamic 
+Building CXX object CMakeFiles/cmTC_941f5.dir/src.cxx.o
+/usr/bin/c++     -std=gnu++11 -m64 -g -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_941f5.dir/src.cxx.o -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_941f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_941f5.dir/link.txt --verbose=1
+/usr/bin/c++    -std=gnu++11 -m64 -g -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_941f5.dir/src.cxx.o  -o cmTC_941f5 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
 
 Source file was:

@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c7a8b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c7a8b.dir/build.make CMakeFiles/cmTC_c7a8b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_bc891/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc891.dir/build.make CMakeFiles/cmTC_bc891.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c7a8b.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_c7a8b.dir/CheckSymbolExists.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_c7a8b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7a8b.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_c7a8b.dir/CheckSymbolExists.c.o  -o cmTC_c7a8b -rdynamic 
-CMakeFiles/cmTC_c7a8b.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_bc891.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_bc891.dir/CheckSymbolExists.c.o   -c /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_bc891
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc891.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_bc891.dir/CheckSymbolExists.c.o  -o cmTC_bc891 -rdynamic 
+CMakeFiles/cmTC_bc891.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_c7a8b.dir/build.make:97: recipe for target 'cmTC_c7a8b' failed
-make[1]: *** [cmTC_c7a8b] Error 1
+CMakeFiles/cmTC_bc891.dir/build.make:97: recipe for target 'cmTC_bc891' failed
+make[1]: *** [cmTC_bc891] Error 1
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_c7a8b/fast' failed
-make: *** [cmTC_c7a8b/fast] Error 2
+Makefile:126: recipe for target 'cmTC_bc891/fast' failed
+make: *** [cmTC_bc891/fast] Error 2
 
 File /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,41 +36,41 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5967a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5967a.dir/build.make CMakeFiles/cmTC_5967a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4be3d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4be3d.dir/build.make CMakeFiles/cmTC_4be3d.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5967a.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5967a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_5967a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5967a.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5967a.dir/CheckFunctionExists.c.o  -o cmTC_5967a -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_4be3d.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4be3d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4be3d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4be3d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4be3d.dir/CheckFunctionExists.c.o  -o cmTC_4be3d -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_5967a.dir/build.make:97: recipe for target 'cmTC_5967a' failed
-make[1]: *** [cmTC_5967a] Error 1
+CMakeFiles/cmTC_4be3d.dir/build.make:97: recipe for target 'cmTC_4be3d' failed
+make[1]: *** [cmTC_4be3d] Error 1
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_5967a/fast' failed
-make: *** [cmTC_5967a/fast] Error 2
+Makefile:126: recipe for target 'cmTC_4be3d/fast' failed
+make: *** [cmTC_4be3d/fast] Error 2
 
 
 Determining if the function glXGetProcAddressEXT exists failed with the following output:
 Change Dir: /home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_33e0a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_33e0a.dir/build.make CMakeFiles/cmTC_33e0a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_857e1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_857e1.dir/build.make CMakeFiles/cmTC_857e1.dir/build
 make[1]: Entering directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_33e0a.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_33e0a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_33e0a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33e0a.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTC_33e0a.dir/CheckFunctionExists.c.o  -o cmTC_33e0a -rdynamic /usr/lib/x86_64-linux-gnu/libGL.so 
-CMakeFiles/cmTC_33e0a.dir/CheckFunctionExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_857e1.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_857e1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_857e1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_857e1.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTC_857e1.dir/CheckFunctionExists.c.o  -o cmTC_857e1 -rdynamic /usr/lib/x86_64-linux-gnu/libGL.so 
+CMakeFiles/cmTC_857e1.dir/CheckFunctionExists.c.o: In function `main':
 CheckFunctionExists.c:(.text+0x15): undefined reference to `glXGetProcAddressEXT'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_33e0a.dir/build.make:98: recipe for target 'cmTC_33e0a' failed
-make[1]: *** [cmTC_33e0a] Error 1
+CMakeFiles/cmTC_857e1.dir/build.make:98: recipe for target 'cmTC_857e1' failed
+make[1]: *** [cmTC_857e1] Error 1
 make[1]: Leaving directory '/home/ubuntu/snowsim/mpm/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_33e0a/fast' failed
-make: *** [cmTC_33e0a/fast] Error 2
+Makefile:126: recipe for target 'cmTC_857e1/fast' failed
+make: *** [cmTC_857e1/fast] Error 2
 
 
